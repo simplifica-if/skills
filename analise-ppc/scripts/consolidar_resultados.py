@@ -92,7 +92,7 @@ def _carregar_politica() -> dict[str, Any]:
 
 
 def _carregar_validacoes_cruzadas(rodada_dir: Path) -> list[dict[str, Any]]:
-    caminho = rodada_dir / "validacoes-cruzadas.json"
+    caminho = round_paths(rodada_dir)["validacoes_cruzadas"]
     if not caminho.exists():
         return []
     payload = read_json(caminho)

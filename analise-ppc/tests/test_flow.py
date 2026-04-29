@@ -233,7 +233,11 @@ def _criar_catalogo_cnct_teste(tmp_path: Path) -> Path:
 def test_preparar_documento_markdown_cria_rodada(tmp_path: Path) -> None:
     rodada_dir = _criar_rodada(tmp_path)
     caminhos = round_paths(rodada_dir)
+    assert caminhos["suporte_dir"] == rodada_dir / "arquivos-suporte"
+    assert caminhos["suporte_dir"].is_dir()
     assert caminhos["ppc"].exists()
+    assert caminhos["ppc"].parent == caminhos["suporte_dir"]
+    assert not (rodada_dir / "PPC.md").exists()
     assert caminhos["metadata"].exists()
     assert caminhos["pre_validacoes"].exists()
     assert caminhos["condicionais_rodada"].exists()
@@ -303,8 +307,8 @@ def test_preparar_documento_docx_usa_conversao_interna(tmp_path: Path) -> None:
     assert caminhos["ppc"].exists()
     assert caminhos["ppc_bruto"].exists()
     assert caminhos["preparacao_docx"].exists()
-    assert (payload["rodada_dir"] / "artefatos-conversao").is_dir()
-    assert (payload["rodada_dir"] / "artefatos-conversao" / "PPC_dados.json").exists()
+    assert caminhos["artefatos_conversao_dir"].is_dir()
+    assert (caminhos["artefatos_conversao_dir"] / "PPC_dados.json").exists()
     assert caminhos["pre_validacoes"].exists()
     assert caminhos["condicionais_rodada"].exists()
     assert caminhos["contexto_estrutural"].exists()
@@ -434,7 +438,7 @@ def test_preparar_documento_docx_nao_referencia_imagem_nao_extraida(tmp_path: Pa
 
     payload = preparar_documento(arquivo_docx, output_base=tmp_path / "output")
     caminhos = round_paths(payload["rodada_dir"])
-    dados = read_json(payload["rodada_dir"] / "artefatos-conversao" / "PPC_dados.json")
+    dados = read_json(caminhos["artefatos_conversao_dir"] / "PPC_dados.json")
 
     assert "imagens/representacao_grafica.png" not in caminhos["ppc"].read_text(encoding="utf-8")
     assert "imagens/representacao_grafica.png" not in caminhos["ppc_bruto"].read_text(encoding="utf-8")
@@ -895,7 +899,7 @@ def test_avaliar_lote_anexa_representacao_grafica_para_ct_curr_10(
     monkeypatch.setenv("MOCK_PROVIDER_EXIT_CODE", "0")
 
     caminhos = round_paths(rodada_dir)
-    artefatos_dir = rodada_dir / "artefatos-conversao"
+    artefatos_dir = caminhos["artefatos_conversao_dir"]
     imagens_dir = artefatos_dir / "imagens"
     imagens_dir.mkdir(parents=True, exist_ok=True)
     imagem = imagens_dir / "representacao_grafica.png"
@@ -1005,6 +1009,9 @@ def test_consolidar_e_gerar_relatorio_html(tmp_path: Path, monkeypatch: pytest.M
     assert consolidado["parecer_final"].exists()
 
     relatorio = gerar_relatorio_html(rodada_dir)
+    assert relatorio["relatorio_html"] == rodada_dir / "relatorio-analise.html"
+    assert relatorio["relatorio_html"].exists()
+    assert caminhos["resultados_fichas"].parent == caminhos["suporte_dir"]
     html = relatorio["relatorio_html"].read_text(encoding="utf-8")
     assert 'id="filtro-busca"' in html
     assert 'data-quick-filter="bloq-nao-atende"' in html

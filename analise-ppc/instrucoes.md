@@ -4,6 +4,8 @@
 
 Esta skill executa análise IA-first de PPCs de cursos técnicos do IFPR. Ela trabalha com `PPC.md` completo em cada lote, fichas JSON, validações cruzadas, consolidação determinística e relatório HTML estático em página única.
 
+O output padrão fica em `analise-ppc/output/<rodada>/`. Em novas rodadas, o arquivo que deve ser aberto pelo usuário fica sozinho na raiz da rodada como `relatorio-analise.html`; todos os insumos e artefatos de suporte ficam em `arquivos-suporte/`.
+
 ## Dependências
 
 Instale as dependências Python a partir da raiz do projeto onde a skill está instalada:
@@ -53,9 +55,19 @@ python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py gerar-relatorio-htm
 - `templates/`: HTML, CSS e JavaScript do relatório.
 - `output/`: rodadas criadas em tempo de execução.
 
+## Entrega do relatório
+
+Ao concluir `gerar-relatorio-html` ou `reavaliar` com relatório, use o caminho `relatorio_html` ou a URL `relatorio_url` retornada pelo comando para avisar a pessoa:
+
+```text
+Relatório pronto: [abrir relatório](file:///.../relatorio-analise.html)
+```
+
+Não peça para a pessoa procurar o arquivo dentro dos artefatos. O relatório final é autocontido: CSS, JavaScript e dados consolidados são embutidos no próprio HTML.
+
 ## Observações operacionais
 
-- A preparação de `DOCX` é autocontida e gera `PPC.md`, `PPC-bruto.md` e `artefatos-conversao/`.
+- A preparação de `DOCX` é autocontida e gera `PPC.md`, `PPC-bruto.md` e `artefatos-conversao/` dentro de `arquivos-suporte/`.
 - A comparação com CNCT usa o CSV interno da skill em `base-analise/dados/cnct/catalogo_cnct.csv`
 - Quando a representação gráfica é extraída como imagem, o lote que contém a ficha `CT-CURR-10` recebe esse arquivo como anexo visual no provider `codex` (`codex exec --image`).
 - Providers sem suporte a anexos visuais neste fluxo não devem ser usados para fechar `CT-CURR-10` por análise visual.

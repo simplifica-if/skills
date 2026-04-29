@@ -74,7 +74,7 @@ def localizar_artefatos_conversao_docx(rodada_dir: Path, metadata: dict[str, Any
     metadata = metadata or {}
     artefatos = dict(metadata.get("artefatos_conversao_docx") or {})
     if not artefatos:
-        caminho_manifesto = rodada_dir / "preparacao-docx.json"
+        caminho_manifesto = round_paths(rodada_dir)["preparacao_docx"]
         if caminho_manifesto.exists():
             payload = _carregar_json_se_existir(str(caminho_manifesto))
             if payload:

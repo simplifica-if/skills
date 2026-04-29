@@ -33,6 +33,8 @@ Read .claude/skills/analise-ppc/instrucoes.md
 6. Consolidar resultados.
 7. Gerar o relatório HTML.
 
+Ao final, informe explicitamente o link de abertura do relatório retornado pelo comando. O relatório final fica em `output/<rodada>/relatorio-analise.html` e os arquivos de suporte da rodada ficam em `output/<rodada>/arquivos-suporte/`.
+
 ## Ponto de entrada
 
 Execute os comandos a partir da raiz do projeto onde a skill está instalada:

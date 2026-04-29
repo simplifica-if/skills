@@ -33,8 +33,8 @@ def _criar_rodada(output_base: Path, nome_base: str) -> Path:
     return rodada_dir
 
 
-def _preparar_markdown(arquivo: Path, rodada_dir: Path) -> dict[str, Any]:
-    caminho_ppc = copy_file(arquivo, rodada_dir / "PPC.md")
+def _preparar_markdown(arquivo: Path, caminhos: dict[str, Path]) -> dict[str, Any]:
+    caminho_ppc = copy_file(arquivo, caminhos["ppc"])
     texto = caminho_ppc.read_text(encoding="utf-8")
     identificacao = infer_identificacao_from_markdown(texto, fallback_nome=arquivo.stem)
     return {
@@ -43,10 +43,10 @@ def _preparar_markdown(arquivo: Path, rodada_dir: Path) -> dict[str, Any]:
     }
 
 
-def _preparar_docx(arquivo: Path, rodada_dir: Path) -> dict[str, Any]:
+def _preparar_docx(arquivo: Path, caminhos: dict[str, Path]) -> dict[str, Any]:
     from conversao_docx import ConversionService
 
-    artefatos_base = rodada_dir / "artefatos-conversao"
+    artefatos_base = caminhos["artefatos_conversao_dir"]
     ensure_directory(artefatos_base)
     artefatos = ConversionService().convert(
         arquivo_docx=arquivo,
@@ -55,9 +55,9 @@ def _preparar_docx(arquivo: Path, rodada_dir: Path) -> dict[str, Any]:
     )
     if artefatos.markdown is None:
         raise RuntimeError("A conversão DOCX não gerou Markdown normalizado.")
-    caminho_ppc = copy_file(artefatos.markdown, rodada_dir / "PPC.md")
+    caminho_ppc = copy_file(artefatos.markdown, caminhos["ppc"])
     if artefatos.markdown_bruto:
-        copy_file(artefatos.markdown_bruto, rodada_dir / "PPC-bruto.md")
+        copy_file(artefatos.markdown_bruto, caminhos["ppc_bruto"])
     identificacao = infer_identificacao_from_markdown(caminho_ppc.read_text(encoding="utf-8"), fallback_nome=arquivo.stem)
     if artefatos.dados and artefatos.dados.exists():
         try:
@@ -72,7 +72,7 @@ def _preparar_docx(arquivo: Path, rodada_dir: Path) -> dict[str, Any]:
         "matriz_curricular": str(artefatos.matriz_curricular) if artefatos.matriz_curricular else None,
         "ementario": str(artefatos.ementario) if artefatos.ementario else None,
     }
-    write_json(rodada_dir / "preparacao-docx.json", conversao_docx)
+    write_json(caminhos["preparacao_docx"], conversao_docx)
     return {
         "ppc_path": caminho_ppc,
         "identificacao": identificacao,
@@ -95,13 +95,14 @@ def preparar_documento(
 
     rodada_dir = _criar_rodada(output_base or OUTPUT_DIR, arquivo_entrada.stem.lower().replace(" ", "-"))
     caminhos = round_paths(rodada_dir)
+    ensure_directory(caminhos["suporte_dir"])
     ensure_directory(caminhos["batches_dir"])
     ensure_directory(caminhos["resultados_dir"])
 
     if arquivo_entrada.suffix.lower() == ".md":
-        artefatos = _preparar_markdown(arquivo_entrada, rodada_dir)
+        artefatos = _preparar_markdown(arquivo_entrada, caminhos)
     else:
-        artefatos = _preparar_docx(arquivo_entrada, rodada_dir)
+        artefatos = _preparar_docx(arquivo_entrada, caminhos)
 
     identificacao = artefatos["identificacao"]
     metadata = {
@@ -109,8 +110,9 @@ def preparar_documento(
         "campus": identificacao["campus"],
         "modalidade": identificacao["modalidade"],
         "arquivo_origem": str(arquivo_entrada),
-        "ppc_markdown": "PPC.md",
+        "ppc_markdown": str(caminhos["ppc"].relative_to(rodada_dir)),
         "rodada_dir": str(rodada_dir.resolve()),
+        "suporte_dir": str(caminhos["suporte_dir"].resolve()),
         "criado_em": now_iso(),
     }
     for chave in ("forma_oferta", "modalidade_ensino", "eixo_tecnologico"):

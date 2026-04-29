@@ -410,5 +410,7 @@ def reavaliar_rodada(
             "parecer_final": str(consolidado["parecer_final"]),
             "situacao": consolidado["parecer"]["situacao"],
         }
-        payload["relatorio_html"] = str(relatorio["relatorio_html"])
+        relatorio_html = relatorio["relatorio_html"].resolve()
+        payload["relatorio_html"] = str(relatorio_html)
+        payload["relatorio_url"] = relatorio_html.as_uri()
     return payload

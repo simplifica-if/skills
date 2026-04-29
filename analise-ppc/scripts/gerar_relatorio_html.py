@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from common import TEMPLATES_DIR, read_json
+from common import TEMPLATES_DIR, read_json, round_paths
 
 
 def _escape_script_json(payload: Any) -> str:
@@ -17,15 +17,16 @@ def _classe_valor(valor: str) -> str:
 
 
 def gerar_relatorio_html(rodada_dir: Path) -> dict[str, Path]:
-    metadata = read_json(rodada_dir / "metadata.json")
-    resultados = read_json(rodada_dir / "resultados-fichas.json")
-    achados = read_json(rodada_dir / "achados.json")
-    parecer = read_json(rodada_dir / "parecer-final.json")
-    pre_validacoes = read_json(rodada_dir / "pre-validacoes.json") if (rodada_dir / "pre-validacoes.json").exists() else {}
-    condicionais_rodada = read_json(rodada_dir / "condicionais-rodada.json") if (rodada_dir / "condicionais-rodada.json").exists() else {}
-    contexto_estrutural = read_json(rodada_dir / "contexto-estrutural.json") if (rodada_dir / "contexto-estrutural.json").exists() else {}
-    validacoes_cruzadas = read_json(rodada_dir / "validacoes-cruzadas.json") if (rodada_dir / "validacoes-cruzadas.json").exists() else {}
-    uso_tokens = read_json(rodada_dir / "uso-tokens.json") if (rodada_dir / "uso-tokens.json").exists() else {}
+    caminhos = round_paths(rodada_dir)
+    metadata = read_json(caminhos["metadata"])
+    resultados = read_json(caminhos["resultados_fichas"])
+    achados = read_json(caminhos["achados"])
+    parecer = read_json(caminhos["parecer_final"])
+    pre_validacoes = read_json(caminhos["pre_validacoes"]) if caminhos["pre_validacoes"].exists() else {}
+    condicionais_rodada = read_json(caminhos["condicionais_rodada"]) if caminhos["condicionais_rodada"].exists() else {}
+    contexto_estrutural = read_json(caminhos["contexto_estrutural"]) if caminhos["contexto_estrutural"].exists() else {}
+    validacoes_cruzadas = read_json(caminhos["validacoes_cruzadas"]) if caminhos["validacoes_cruzadas"].exists() else {}
+    uso_tokens = read_json(caminhos["uso_tokens"]) if caminhos["uso_tokens"].exists() else {}
 
     template_html = (TEMPLATES_DIR / "relatorio.html").read_text(encoding="utf-8")
     template_css = (TEMPLATES_DIR / "relatorio.css").read_text(encoding="utf-8")
@@ -62,6 +63,6 @@ def gerar_relatorio_html(rodada_dir: Path) -> dict[str, Path]:
     for marcador, valor in substituicoes.items():
         html = html.replace(marcador, valor)
 
-    destino = rodada_dir / "relatorio-analise.html"
+    destino = caminhos["relatorio_html"]
     destino.write_text(html, encoding="utf-8")
     return {"relatorio_html": destino}

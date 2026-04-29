@@ -25,6 +25,15 @@ def _print_payload(payload: object) -> None:
     print(json.dumps(payload, ensure_ascii=False, indent=2))
 
 
+def _relatorio_payload(path: Path) -> dict[str, str]:
+    relatorio = path.resolve()
+    return {
+        "relatorio_html": str(relatorio),
+        "relatorio_url": relatorio.as_uri(),
+        "mensagem": f"Relatório pronto: {relatorio.as_uri()}",
+    }
+
+
 def cmd_preparar_documento(args: argparse.Namespace) -> int:
     payload = preparar_documento(
         arquivo_entrada=Path(args.arquivo),
@@ -122,7 +131,7 @@ def cmd_consolidar(args: argparse.Namespace) -> int:
 
 def cmd_gerar_relatorio_html(args: argparse.Namespace) -> int:
     payload = gerar_relatorio_html(Path(args.rodada_dir))
-    _print_payload({"relatorio_html": str(payload["relatorio_html"])})
+    _print_payload(_relatorio_payload(payload["relatorio_html"]))
     return 0
 
 
