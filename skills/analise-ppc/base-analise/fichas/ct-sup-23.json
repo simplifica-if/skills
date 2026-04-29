@@ -1,0 +1,34 @@
+{
+  "id": "CT-SUP-23",
+  "titulo": "Coordenação do curso com atribuições, regime e participação institucional explicitados",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "08"
+  ],
+  "consultas": [
+    "coordenação do curso",
+    "coordenador do curso",
+    "atribuições da coordenação",
+    "manual de competências",
+    "regime de trabalho",
+    "colegiado",
+    "instâncias colegiadas",
+    "gestão acadêmica"
+  ],
+  "referencias_normativas": [
+    "Manual de Competências do IFPR"
+  ],
+  "pergunta": "O PPC explicita de modo suficiente as atribuições da coordenação do curso, o vínculo com o Manual de Competências do IFPR, o regime de trabalho compatível e a participação em instâncias colegiadas?",
+  "rubrica": "Verificar se a seção 8.1.1 ou equivalente identifica a coordenação do curso como instância acadêmico-administrativa do curso e se descreve, de modo reconhecível, suas atribuições, com referência ao Manual de Competências do IFPR ou fonte institucional equivalente. Confirmar também se o texto informa que a função é exercida em regime de trabalho compatível com suas atribuições e se menciona participação em colegiados ou instâncias acadêmicas relacionadas ao curso. O desempenho esperado pode aparecer de forma sintética no papel institucional da coordenação ou de forma distribuída nas atribuições descritas.",
+  "boa_evidencia": "Trecho que apresenta a coordenação do curso, explicita seu papel acadêmico e administrativo, lista atribuições compatíveis com o Manual de Competências do IFPR, menciona regime de trabalho compatível e registra participação em colegiados ou instâncias acadêmicas do curso.",
+  "ma_evidencia": "Texto genérico sobre coordenação sem atribuições concretas, sem referência institucional para as competências, sem menção ao regime de trabalho compatível ou sem qualquer indicação de participação em colegiados e instâncias acadêmicas.",
+  "escalonar_quando": "Escalonar se o PPC listar atribuições, mas não indicar o regime de trabalho; se mencionar o Manual de Competências sem detalhamento mínimo; se a participação em colegiados estiver apenas implícita; ou se o papel esperado da coordenação permanecer excessivamente genérico.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

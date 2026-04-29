@@ -1,0 +1,28 @@
+{
+  "id": "CT-IDENT-02",
+  "titulo": "Coerência da apresentação institucional do curso",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "01"
+  ],
+  "consultas": [
+    "apresentação do projeto",
+    "campus",
+    "modalidade",
+    "carga horária"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A apresentação do curso oferece um quadro institucional coerente quanto a campus, modalidade, carga horária e duração?",
+  "rubrica": "Buscar consistência interna entre os elementos de identificação básicos e verificar se não há conflito explícito entre eles.",
+  "boa_evidencia": "Quadro-resumo, introdução e apresentação apontando os mesmos dados centrais do curso.",
+  "ma_evidencia": "Modalidade divergente, campus contraditório ou carga horária incompatível entre trechos centrais.",
+  "escalonar_quando": "Escalonar se a identificação estiver fragmentada em trechos contraditórios ou incompletos.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

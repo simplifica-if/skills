@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <style>
+{{CSS}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="report-header">
+      <p class="eyebrow">Análise de PPC · IA-first</p>
+      <h1>{{CURSO}}</h1>
+      <p class="lead">{{RESUMO}}</p>
+      <div class="table-scroll">
+        <table class="data-table compact-table header-table" aria-label="Síntese do relatório">
+          <tbody>
+            <tr>
+              <th scope="row">Campus</th>
+              <td>{{CAMPUS}}</td>
+              <th scope="row">Modalidade</th>
+              <td>{{MODALIDADE}}</td>
+              <th scope="row">Situação</th>
+              <td><span class="status-badge estado-{{SITUACAO_CLASSE}}">{{SITUACAO}}</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </header>
+
+    <section class="report-section metadata">
+      <h2>Metadados do PPC</h2>
+      <div class="table-scroll">
+        <table class="data-table key-value-table">
+          <tbody>
+            <tr>
+              <th scope="row">Curso</th>
+              <td>{{CURSO}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Campus</th>
+              <td>{{CAMPUS}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Modalidade</th>
+              <td>{{MODALIDADE}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Rodada</th>
+              <td>{{RODADA_DIR}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Resumo executivo</h2>
+      <p id="resumo-executivo">{{RESUMO}}</p>
+      <div class="table-scroll">
+        <table class="data-table metrics-table" aria-label="Métricas do relatório">
+          <thead>
+            <tr>
+              <th scope="col">Indicador</th>
+              <th scope="col">Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Situação final</th>
+              <td id="metric-situacao"><span class="status-badge estado-{{SITUACAO_CLASSE}}">{{SITUACAO}}</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Fichas</th>
+              <td id="metric-fichas">{{TOTAL_FICHAS}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Achados</th>
+              <td id="metric-achados">{{TOTAL_ACHADOS}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Uso de tokens</h2>
+      <div class="table-scroll">
+        <table class="data-table metrics-table" id="tabela-uso-tokens-resumo" aria-label="Resumo de uso de tokens">
+          <thead>
+            <tr>
+              <th scope="col">Indicador</th>
+              <th scope="col">Valor</th>
+            </tr>
+          </thead>
+          <tbody id="resumo-uso-tokens"></tbody>
+        </table>
+      </div>
+      <div class="table-scroll token-scope-scroll">
+        <table class="data-table token-scope-table" id="tabela-uso-tokens-escopos" aria-label="Uso de tokens por escopo">
+          <thead>
+            <tr>
+              <th scope="col">Escopo</th>
+              <th scope="col">Entrada</th>
+              <th scope="col">Cache de entrada</th>
+              <th scope="col">Saída</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="lista-uso-tokens-escopos"></tbody>
+        </table>
+      </div>
+      <div id="uso-tokens-vazio" class="empty-state" hidden>Uso de tokens não contabilizado.</div>
+    </section>
+
+    <section class="report-section">
+      <h2>Pré-validações estruturais</h2>
+      <div class="table-scroll">
+        <table class="data-table" id="tabela-pre-validacoes">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Status</th>
+              <th scope="col">Criticidade</th>
+              <th scope="col">Fonte</th>
+              <th scope="col">Detalhe</th>
+            </tr>
+          </thead>
+          <tbody id="lista-pre-validacoes"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Condicionais da rodada</h2>
+      <div class="table-scroll">
+        <table class="data-table" id="tabela-condicionais">
+          <thead>
+            <tr>
+              <th scope="col">Condição</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Status</th>
+              <th scope="col">Fonte</th>
+              <th scope="col">Evidência</th>
+            </tr>
+          </thead>
+          <tbody id="lista-condicionais"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Validações cruzadas</h2>
+      <div class="table-scroll">
+        <table class="data-table cross-validation-table" id="tabela-validacoes-cruzadas">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Título</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Criticidade</th>
+              <th scope="col">Seções</th>
+            </tr>
+          </thead>
+          <tbody id="lista-validacoes-cruzadas"></tbody>
+        </table>
+      </div>
+      <div id="validacoes-cruzadas-vazio" class="empty-state" hidden>Revisão transversal não executada.</div>
+    </section>
+
+    <section class="report-section">
+      <h2>Filtros rápidos</h2>
+      <div class="quick-filters">
+        <button type="button" data-quick-filter="todos">Todos os itens</button>
+        <button type="button" data-quick-filter="bloq-nao-atende">Bloqueantes não atendidos</button>
+        <button type="button" data-quick-filter="obrig-nao-atende">Obrigatórios não atendidos</button>
+        <button type="button" data-quick-filter="inconclusivos">Inconclusivos</button>
+        <button type="button" data-quick-filter="revisao-humana">Revisão humana obrigatória</button>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Filtros</h2>
+      <div class="filter-grid">
+        <label>
+          <span>Busca textual</span>
+          <input id="filtro-busca" type="search" placeholder="Buscar por ficha, justificativa, evidência ou lacuna">
+        </label>
+        <label>
+          <span>Estado</span>
+          <select id="filtro-estado"></select>
+        </label>
+        <label>
+          <span>Criticidade</span>
+          <select id="filtro-criticidade"></select>
+        </label>
+        <label>
+          <span>Seção preferencial</span>
+          <select id="filtro-secao"></select>
+        </label>
+        <label>
+          <span>Revisão humana obrigatória</span>
+          <select id="filtro-revisao"></select>
+        </label>
+        <label>
+          <span>Batch</span>
+          <select id="filtro-batch"></select>
+        </label>
+      </div>
+      <div class="results-meta">
+        <span>Itens visíveis: <strong id="resultados-contagem">0</strong></span>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Itens revisados</h2>
+      <div class="table-scroll">
+        <table class="data-table reviewed-items-table" id="tabela-itens">
+          <thead>
+            <tr>
+              <th scope="col">Ficha</th>
+              <th scope="col">Título</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Criticidade</th>
+              <th scope="col">Confiança</th>
+              <th scope="col">Seções</th>
+              <th scope="col">Revisão humana</th>
+              <th scope="col">Batch</th>
+            </tr>
+          </thead>
+          <tbody id="lista-itens"></tbody>
+        </table>
+      </div>
+      <div id="estado-vazio" class="empty-state" hidden>Nenhum item corresponde aos filtros aplicados.</div>
+    </section>
+  </main>
+
+  <script id="report-data" type="application/json">{{REPORT_DATA}}</script>
+  <script>
+{{JS}}
+  </script>
+</body>
+</html>

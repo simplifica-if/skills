@@ -1,0 +1,25 @@
+{
+  "id": "VC-04-05-ESTAGIO",
+  "titulo": "Estágio e práticas profissionais coerentes com perfil e área de atuação",
+  "dominio": "validacao_cruzada",
+  "criticidade": "OBRIG",
+  "tipo": "coerencia",
+  "secoes_relacionadas": [
+    "04",
+    "05"
+  ],
+  "condicionais_relacionadas": [
+    "tem_estagio"
+  ],
+  "pergunta": "Quando o PPC prevê estágio ou práticas profissionais articuladas, elas são coerentes com o perfil do egresso, as competências profissionais e a área de atuação descritos na seção 04?",
+  "rubrica": "Avaliar se estágio, campos de estágio, práticas profissionais, projetos integradores ou atividades equivalentes da organização curricular dialogam materialmente com o perfil profissional, competências e áreas de atuação do egresso. Não basta haver estágio formal; é preciso que sua finalidade e seus campos sejam compatíveis com a formação prometida.",
+  "boa_evidencia": "Trechos das seções 04 e 05 mostram que estágio, práticas ou campos previstos correspondem às competências, responsabilidades e ambientes profissionais descritos para o egresso.",
+  "ma_evidencia": "Estágio ou práticas profissionais aparecem desconectados do perfil, sem campo de atuação compatível, ou a seção 04 promete competências que não encontram experiência profissional correspondente na organização curricular.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

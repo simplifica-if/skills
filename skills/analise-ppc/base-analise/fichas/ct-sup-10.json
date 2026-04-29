@@ -1,0 +1,29 @@
+{
+  "id": "CT-SUP-10",
+  "titulo": "Políticas transversais de atendimento e diversidade",
+  "dominio": "suporte",
+  "criticidade": "REC",
+  "secoes_preferenciais": [
+    "07"
+  ],
+  "consultas": [
+    "neabi",
+    "nuged",
+    "diversidade",
+    "equidade",
+    "direitos humanos"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC registra políticas ou instâncias transversais de diversidade, equidade e direitos estudantis?",
+  "rubrica": "Identificar se o documento reconhece e articula políticas institucionais transversais relevantes para o estudante.",
+  "boa_evidencia": "Menções claras a NEABI, NUGED ou políticas institucionais correlatas.",
+  "ma_evidencia": "Ausência total de menção ou referências apenas decorativas.",
+  "escalonar_quando": "Escalonar se o tema aparecer de forma tangencial, sem indicação institucional clara.",
+  "evidencia_minima": 1,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

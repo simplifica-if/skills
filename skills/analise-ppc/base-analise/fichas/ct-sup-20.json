@@ -1,0 +1,32 @@
+{
+  "id": "CT-SUP-20",
+  "titulo": "Recursos de acessibilidade e medidas de permanência estão previstos",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "07"
+  ],
+  "consultas": [
+    "acessibilidade",
+    "materiais acessíveis",
+    "sinalização",
+    "critérios diferenciados de avaliação",
+    "acompanhamento"
+  ],
+  "referencias_normativas": [
+    "Resolução CONSUP/IFPR 148/2023",
+    "Resolução CONSUP/IFPR 159/2023"
+  ],
+  "pergunta": "O PPC prevê recursos de acessibilidade e medidas pedagógicas de acompanhamento suficientes para apoiar permanência e aprendizagem?",
+  "rubrica": "Verificar se o documento menciona recursos acessíveis, adaptações de materiais, critérios ou procedimentos diferenciados de avaliação e acompanhamento periódico das medidas adotadas.",
+  "boa_evidencia": "Previsão reconhecível de recursos de acessibilidade, materiais adequados e medidas de acompanhamento pedagógico para permanência estudantil.",
+  "ma_evidencia": "Seção de inclusão sem recursos concretos, sem medidas pedagógicas observáveis ou sem acompanhamento das ações previstas.",
+  "escalonar_quando": "Escalonar se o PPC trouxer alguns recursos ou medidas, mas a suficiência prática do apoio à permanência continuar incerta.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

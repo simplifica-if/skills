@@ -1,0 +1,31 @@
+{
+  "id": "CT-SUP-01",
+  "titulo": "Sistema de avaliação coerente com o IFPR",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "06"
+  ],
+  "consultas": [
+    "conceito a",
+    "conceito b",
+    "conceito c",
+    "conceito d",
+    "avaliação da aprendizagem"
+  ],
+  "referencias_normativas": [
+    "Resolução IFPR 50/2017"
+  ],
+  "pergunta": "O sistema de avaliação da aprendizagem está descrito de forma coerente com a regulamentação institucional do IFPR?",
+  "rubrica": "Verificar se conceitos, critérios e dispositivos avaliativos aparecem de forma inteligível e compatível com a normativa institucional.",
+  "boa_evidencia": "Descrição dos conceitos, da lógica de avaliação e da aprovação/reprovação.",
+  "ma_evidencia": "Avaliação tratada genericamente, sem conceitos ou sem referência institucional reconhecível.",
+  "escalonar_quando": "Escalonar se o sistema parecer parcialmente descrito ou com terminologia híbrida.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

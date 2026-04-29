@@ -1,0 +1,39 @@
+{
+  "id": "CT-TRANS-05",
+  "titulo": "Riscos globais e diligências prioritárias",
+  "dominio": "transversal",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11"
+  ],
+  "consultas": [
+    "justificativa",
+    "matriz curricular",
+    "avaliação",
+    "infraestrutura",
+    "referências"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "Quais são os riscos globais do PPC e quais diligências emergem como prioritárias para decisão humana?",
+  "rubrica": "Cartão de síntese transversal voltado a risco e encaminhamento. Não substitui o parecer, mas organiza o foco da revisão final.",
+  "boa_evidencia": "Conjunto articulado de achados mostrando onde a proposta está sólida e onde precisa de diligência.",
+  "ma_evidencia": "Síntese superficial, sem priorização de riscos ou sem lastro documental.",
+  "escalonar_quando": "Escalonar sempre que houver múltiplos pontos críticos inconclusivos ou dependência forte de revisão humana.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

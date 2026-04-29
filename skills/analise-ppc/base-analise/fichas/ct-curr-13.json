@@ -1,0 +1,30 @@
+{
+  "id": "CT-CURR-13",
+  "titulo": "Aproveitamento de estudos com critérios e procedimento definidos",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "aproveitamento de estudos",
+    "critérios de aproveitamento",
+    "procedimentos de solicitação",
+    "documentação necessária"
+  ],
+  "referencias_normativas": [
+    "Resolução CNE/CP 1/2021"
+  ],
+  "pergunta": "O PPC trata o aproveitamento de estudos com critérios, documentação e procedimento minimamente definidos?",
+  "rubrica": "Verificar se o texto descreve como o estudante solicita o aproveitamento, quais critérios orientam a análise e quais documentos ou condicionantes são exigidos.",
+  "boa_evidencia": "Seção específica com critérios objetivos, documentação exigida, etapas do pedido e parâmetros de equivalência.",
+  "ma_evidencia": "Menção genérica ao aproveitamento sem regras, fluxo, documentação ou critérios observáveis.",
+  "escalonar_quando": "Escalonar se o PPC citar o aproveitamento de estudos, mas não deixar claro como ele é processado ou quais parâmetros orientam a decisão.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

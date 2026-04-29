@@ -1,0 +1,28 @@
+{
+  "id": "CT-SUP-03",
+  "titulo": "Política de assistência estudantil e acompanhamento",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "07"
+  ],
+  "consultas": [
+    "assistência estudantil",
+    "auxílio",
+    "bolsa",
+    "acompanhamento pedagógico"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC apresenta política de assistência estudantil e acompanhamento discente de forma concreta?",
+  "rubrica": "Verificar se há descrição institucional de apoio ao estudante, permanência e acompanhamento pedagógico.",
+  "boa_evidencia": "Menção a políticas, setores e formas de apoio ao estudante com alguma concretude operacional.",
+  "ma_evidencia": "Apenas afirmação genérica de acolhimento sem mecanismos ou setores identificáveis.",
+  "escalonar_quando": "Escalonar se houver apoio descrito de forma muito abstrata ou incompleta.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

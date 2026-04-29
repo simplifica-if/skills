@@ -1,0 +1,36 @@
+{
+  "id": "CT-SUP-14",
+  "titulo": "Referências institucionais e referenciais essenciais do curso",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "11"
+  ],
+  "consultas": [
+    "cnct",
+    "pdi",
+    "ppi",
+    "regimento geral",
+    "referências institucionais",
+    "legislação profissional",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.legislacao_profissional"
+  ],
+  "referencias_normativas": [
+    "Catálogo Nacional de Cursos Técnicos",
+    "Plano de Desenvolvimento Institucional do IFPR",
+    "Projeto Pedagógico Institucional do IFPR",
+    "Regimento Geral do IFPR"
+  ],
+  "pergunta": "O PPC referencia, de forma reconhecível, os marcos institucionais, o CNCT e a legislação profissional indicada para o curso quando houver?",
+  "rubrica": "Verificar se a seção de referências inclui CNCT, PDI, PPI, Regimento Geral do IFPR e, quando `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.legislacao_profissional` trouxer norma específica, se essa legislação profissional aparece ou é tratada adequadamente.",
+  "boa_evidencia": "Lista que articula referências nacionais e institucionais centrais, CNCT e legislação profissional específica indicada pelo catálogo para a identidade e a oferta do curso técnico.",
+  "ma_evidencia": "Referências genéricas, sem os marcos institucionais do IFPR, sem CNCT ou sem legislação profissional específica indicada pelo catálogo quando aplicável.",
+  "escalonar_quando": "Escalonar se parte dos referenciais essenciais estiver presente, mas a suficiência institucional, setorial ou profissional da base documental permanecer duvidosa.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "CT-IDENT-05",
+  "titulo": "Concepção de EPT explicitada",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "03"
+  ],
+  "consultas": [
+    "educação profissional e tecnológica",
+    "trabalho como princípio educativo",
+    "formação integral"
+  ],
+  "referencias_normativas": [
+    "Resolução CNE/CP 1/2021"
+  ],
+  "pergunta": "A concepção do curso explicita a perspectiva de Educação Profissional e Tecnológica com base normativa e pedagógica reconhecível?",
+  "rubrica": "Verificar se o PPC articula EPT, trabalho, ciência, cultura e tecnologia para além de uma citação superficial.",
+  "boa_evidencia": "Seção conceitual que explicita princípios, base legal e visão formativa coerente com a EPT.",
+  "ma_evidencia": "Citações soltas sem desenvolvimento conceitual ou ausência de concepção pedagógica explícita.",
+  "escalonar_quando": "Escalonar se a seção mencionar EPT apenas nominalmente, sem explicar implicações curriculares.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

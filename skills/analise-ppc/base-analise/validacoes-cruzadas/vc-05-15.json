@@ -1,0 +1,24 @@
+{
+  "id": "VC-05-15",
+  "titulo": "AEE não compõe matriz, ementário seriado, fluxograma ou integralização",
+  "dominio": "validacao_cruzada",
+  "criticidade": "BLOQ",
+  "tipo": "consistencia",
+  "secoes_relacionadas": [
+    "05"
+  ],
+  "condicionais_relacionadas": [
+    "tem_aee"
+  ],
+  "pergunta": "Dentro da seção 05, o PPC trata o AEE apenas de forma descritiva, sem incorporá-lo à matriz, ao ementário seriado, ao fluxograma, à carga horária total ou à integralização do curso?",
+  "rubrica": "Avaliar, dentro da seção 05, se quadros de matriz, sínteses curriculares, representações gráficas, ementário e demais subseções mantêm a mesma decisão estrutural: o AEE pode ser mencionado de forma descritiva, mas não deve aparecer como componente curricular, disciplina, unidade seriada, carga horária de integralização ou requisito de certificação.",
+  "boa_evidencia": "Matriz, ementário, fluxograma e sínteses curriculares não listam o AEE como componente curricular e o tratam apenas como serviço/modalidade transversal ou organização institucional.",
+  "ma_evidencia": "A seção 05 inclui o AEE na matriz, no ementário seriado, no fluxograma, na carga horária total do curso, na integralização ou em outra estrutura típica de componente curricular.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

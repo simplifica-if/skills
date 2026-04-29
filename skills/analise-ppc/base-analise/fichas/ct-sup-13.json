@@ -1,0 +1,30 @@
+{
+  "id": "CT-SUP-13",
+  "titulo": "Referências com aderência formal mínima à ABNT",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "11"
+  ],
+  "consultas": [
+    "abnt",
+    "nbr 6023",
+    "referências",
+    "data de acesso"
+  ],
+  "referencias_normativas": [
+    "ABNT NBR 6023"
+  ],
+  "pergunta": "A seção de referências mantém aderência formal mínima a padrões bibliográficos reconhecíveis, especialmente ABNT, sem inconsistências evidentes?",
+  "rubrica": "Avaliar se a lista apresenta padrão minimamente consistente de referência, com sinais formais compatíveis com a ABNT e dados essenciais quando cabíveis, como URL e data de acesso.",
+  "boa_evidencia": "Referências com padrão formal consistente e, nos itens eletrônicos, presença de URL e data de acesso quando necessário.",
+  "ma_evidencia": "Lista heterogênea ou desorganizada, com ausência recorrente de elementos formais indispensáveis ou formatação incompatível de modo generalizado.",
+  "escalonar_quando": "Escalonar se houver padrão formal parcial, mas não for claro se os problemas são pontuais ou estruturais.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

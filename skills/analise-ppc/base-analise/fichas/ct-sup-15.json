@@ -1,0 +1,29 @@
+{
+  "id": "CT-SUP-15",
+  "titulo": "Habilitação docente compatível com os componentes da oferta",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "08"
+  ],
+  "consultas": [
+    "corpo docente",
+    "titulação",
+    "licenciatura",
+    "componentes curriculares",
+    "experiência profissional"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC demonstra que os docentes previstos têm habilitação e formação compatíveis com os componentes curriculares do curso?",
+  "rubrica": "Avaliar se a seção docente define requisitos de titulação e formação coerentes para componentes da formação geral e técnica, com vínculo reconhecível entre docentes e componentes da oferta.",
+  "boa_evidencia": "Quadro docente com formação, titulação e eventual experiência profissional alinhadas aos componentes sob responsabilidade de cada docente.",
+  "ma_evidencia": "Listagem de nomes ou títulos sem critério de habilitação, sem relação visível com os componentes ou com incompatibilidades evidentes de formação.",
+  "escalonar_quando": "Escalonar se houver compatibilidade parcial, mas não for possível confirmar a habilitação de parte relevante dos componentes ou docentes.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

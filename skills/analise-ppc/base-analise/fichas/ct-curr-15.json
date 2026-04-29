@@ -1,0 +1,30 @@
+{
+  "id": "CT-CURR-15",
+  "titulo": "Certificação de conhecimentos anteriores tratada, quando aplicável",
+  "dominio": "curriculo",
+  "criticidade": "REC",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "certificação",
+    "conhecimentos anteriores",
+    "certificação de saberes",
+    "legislação vigente"
+  ],
+  "referencias_normativas": [
+    "Resolução CNE/CP 1/2021"
+  ],
+  "pergunta": "Quando o PPC admite certificação de conhecimentos anteriores, o tratamento desse tema está descrito com clareza suficiente?",
+  "rubrica": "Verificar se o PPC prevê a possibilidade de certificação, sua base normativa e o procedimento ou fluxo básico para análise do pedido, quando aplicável ao curso.",
+  "boa_evidencia": "Previsão explícita da certificação com referência normativa e descrição do processamento do pedido ou do mecanismo equivalente.",
+  "ma_evidencia": "Menção vaga à certificação sem norma, sem procedimento ou sem delimitação de como o estudante pode acessá-la.",
+  "escalonar_quando": "Escalonar se o PPC indicar certificação de conhecimentos anteriores, mas o procedimento ou a base normativa permanecerem ambíguos.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

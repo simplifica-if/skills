@@ -1,0 +1,29 @@
+{
+  "id": "CT-IDENT-11",
+  "titulo": "Campos de atuação profissional do egresso estão explicitados",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "04"
+  ],
+  "consultas": [
+    "perfil do egresso",
+    "atuação profissional",
+    "campo de atuação",
+    "inserção profissional",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.campo_atuacao"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC explicita, de modo claro, campos de atuação profissional compatíveis com o campo de atuação previsto no CNCT?",
+  "rubrica": "Comparar as áreas, ambientes, contextos e funções de atuação profissional descritos no PPC com `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.campo_atuacao`.",
+  "boa_evidencia": "Trechos que descrevem áreas, ambientes e funções de atuação profissional vinculados à formação técnica oferecida e compatíveis com o campo `Campo de Atuação` do CNCT.",
+  "ma_evidencia": "Perfil sem campo de atuação delimitado, com descrição vaga de inserção profissional ou com campos de atuação que contradizem o CNCT.",
+  "escalonar_quando": "Escalonar se houver menção a atuação profissional, mas sem delimitação suficiente de contextos, funções, vínculo com a habilitação ou aderência ao campo CNCT.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

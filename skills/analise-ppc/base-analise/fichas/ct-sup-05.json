@@ -1,0 +1,29 @@
+{
+  "id": "CT-SUP-05",
+  "titulo": "Corpo docente compatível com a oferta formativa",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "08"
+  ],
+  "consultas": [
+    "corpo docente",
+    "professores",
+    "titulação",
+    "formação",
+    "experiência"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O quadro docente descrito é compatível, em termos de formação e vínculo com a matriz, com a oferta do curso?",
+  "rubrica": "Avaliar se o PPC demonstra que haverá docentes aptos a desenvolver os componentes curriculares centrais.",
+  "boa_evidencia": "Quadro de docentes com formação, titulação ou experiência compatível com os componentes da oferta.",
+  "ma_evidencia": "Listagem sem qualificação suficiente ou sem relação observável com a matriz curricular.",
+  "escalonar_quando": "Escalonar se houver quadro docente parcial ou com vínculo fraco com os componentes.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

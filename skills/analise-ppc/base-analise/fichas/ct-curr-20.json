@@ -1,0 +1,40 @@
+{
+  "id": "CT-CURR-20",
+  "titulo": "Estágio curricular disciplinado quando previsto",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "estágio curricular",
+    "estágio obrigatório",
+    "estágio não obrigatório",
+    "Lei nº 11.788/2008",
+    "Resolução Consup/IFPR nº 82/2022",
+    "carga horária do estágio",
+    "orientação de estágio",
+    "orientação alternativa",
+    "necessidades educacionais específicas",
+    "campo de estágio",
+    "Regulamento Geral de Estágio",
+    "RGE"
+  ],
+  "referencias_normativas": [
+    "CNCT",
+    "Lei nº 11.788/2008",
+    "Resolução Consup/IFPR nº 82/2022"
+  ],
+  "pergunta": "Quando o PPC prevê estágio obrigatório ou não obrigatório, ele disciplina sua natureza, carga horária, orientação, campos e relação com o perfil profissional?",
+  "rubrica": "Verificar se o PPC declara se o estágio é obrigatório ou não obrigatório, compara a obrigatoriedade com o CNCT quando houver campo aplicável, indica carga horária e período quando obrigatório, explicita que o estágio ocorre em áreas de formação coerentes com o perfil profissional, descreve modalidade de orientação, prevê orientação alternativa quando houver estudantes com necessidades educacionais específicas e referencia a Lei nº 11.788/2008, a Resolução Consup/IFPR nº 82/2022 e o Regulamento Geral de Estágio do campus quando aplicável.",
+  "boa_evidencia": "Seção de estágio que distingue estágio obrigatório e não obrigatório, informa carga horária ou não obrigatoriedade, modalidade de orientação, eventual orientação alternativa, campo de realização, vínculo com perfil profissional e base normativa institucional.",
+  "ma_evidencia": "Estágio citado sem definição de obrigatoriedade, carga horária, orientação, campo, relação com o perfil ou base normativa; ou ausência de justificativa quando o CNCT exigir estágio.",
+  "escalonar_quando": "Escalonar se o PPC mencionar estágio, mas não permitir concluir se ele é requisito de aprovação/certificação, se está incluído na matriz ou se atende às condições do CNCT e da regulamentação institucional.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "CT-CURR-18",
+  "titulo": "Componentes obrigatórios e conteúdos legais da FGB contemplados",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "formação geral básica",
+    "componentes obrigatórios",
+    "língua portuguesa",
+    "literatura",
+    "língua inglesa",
+    "arte",
+    "educação física",
+    "matemática",
+    "biologia",
+    "física",
+    "química",
+    "filosofia",
+    "geografia",
+    "história",
+    "sociologia",
+    "história e cultura afro-brasileira e indígena",
+    "educação digital",
+    "perspectivas femininas",
+    "filmes de produção nacional"
+  ],
+  "referencias_normativas": [
+    "Lei nº 9.394/1996",
+    "Lei nº 14.945/2024",
+    "Resolução CNE/CEB nº 2/2024"
+  ],
+  "pergunta": "A estrutura curricular contempla os componentes obrigatórios da Formação Geral Básica e os conteúdos legais específicos aplicáveis ao ensino médio integrado?",
+  "rubrica": "Verificar se a matriz e as ementas tornam observável a presença dos componentes obrigatórios da Formação Geral Básica e de conteúdos legais específicos, incluindo história e cultura afro-brasileira e indígena, educação digital, abordagens com experiências e perspectivas femininas, temas transversais e exibição de filmes de produção nacional quando aplicável. Não exigir distribuição fixa por ano quando a norma ou o PPC não a estabelecer, mas exigir rastreabilidade curricular suficiente.",
+  "boa_evidencia": "Matriz e ementas indicam os componentes da FGB e mostram onde os conteúdos legais aparecem, seja em componentes próprios, projetos integradores, práticas interdisciplinares ou ementas explicitamente relacionadas.",
+  "ma_evidencia": "Ausência de componentes obrigatórios, omissão de conteúdos legais centrais ou menções genéricas sem possibilidade de localizar sua oferta curricular.",
+  "escalonar_quando": "Escalonar se a presença de componentes ou conteúdos depender de inferência frágil, se houver nomenclaturas ambíguas ou se as ementas não permitirem confirmar a cobertura material.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

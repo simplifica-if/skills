@@ -1,0 +1,28 @@
+{
+  "id": "CT-SUP-16",
+  "titulo": "Quantitativo e disponibilidade docente sustentam a oferta",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "08"
+  ],
+  "consultas": [
+    "número de docentes",
+    "regime de trabalho",
+    "carga horária docente",
+    "suficiência"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC mostra, de modo observável, que o número de docentes e sua disponibilidade sustentam a oferta do curso?",
+  "rubrica": "Verificar se o documento traz sinais quantitativos ou descritivos de suficiência do corpo docente, incluindo número de docentes, regime de trabalho, disponibilidade ou distribuição compatível com a oferta.",
+  "boa_evidencia": "Quadro ou descrição que demonstra quantitativo docente suficiente e compatibilidade entre carga, regime de trabalho e componentes do curso.",
+  "ma_evidencia": "Previsão vaga do corpo docente, sem demonstrar quantidade suficiente, disponibilidade ou sustentação da matriz curricular.",
+  "escalonar_quando": "Escalonar se o PPC listar docentes, mas a suficiência quantitativa ou a disponibilidade para manter a oferta permanecerem incertas.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

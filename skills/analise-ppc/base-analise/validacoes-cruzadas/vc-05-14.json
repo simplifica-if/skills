@@ -1,0 +1,24 @@
+{
+  "id": "VC-05-14",
+  "titulo": "Tratamento de estágio é internamente consistente na organização curricular",
+  "dominio": "validacao_cruzada",
+  "criticidade": "OBRIG",
+  "tipo": "consistencia",
+  "secoes_relacionadas": [
+    "05"
+  ],
+  "condicionais_relacionadas": [
+    "tem_estagio"
+  ],
+  "pergunta": "As subseções de organização curricular tratam estágio, carga horária, matriz, orientação e convênios de forma consistente entre si?",
+  "rubrica": "Avaliar, dentro da seção 05, se a matriz, a seção de estágio, as características do estágio e os convênios mantêm a mesma decisão sobre obrigatoriedade, carga horária, inclusão na integralização, modalidade de orientação, trâmites e relação com campos de estágio.",
+  "boa_evidencia": "Matriz, texto de estágio e convênios indicam a mesma situação do estágio, com carga horária e trâmites compatíveis e sem contradições entre obrigatório, não obrigatório ou inexistente.",
+  "ma_evidencia": "A matriz inclui estágio que o texto diz não existir, há carga horária divergente, convênios são descritos sem previsão de estágio, ou a obrigatoriedade muda entre subseções.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

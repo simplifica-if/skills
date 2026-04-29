@@ -1,0 +1,38 @@
+{
+  "id": "CT-CURR-22",
+  "titulo": "AEE não incorporado como componente curricular da matriz ou do histórico",
+  "dominio": "curriculo",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "05",
+    "07"
+  ],
+  "consultas": [
+    "aee",
+    "atendimento educacional especializado",
+    "componente curricular",
+    "matriz curricular",
+    "fluxograma",
+    "ementário",
+    "histórico escolar",
+    "nota técnica 1/2025",
+    "sei 3881287"
+  ],
+  "referencias_normativas": [
+    "Nota Técnica PROENS/IFPR nº 1/2025 (SEI nº 3881287)",
+    "Resolução CONSUP/IFPR 159/2023",
+    "Resolução CONSUP/IFPR 148/2023"
+  ],
+  "pergunta": "Quando o PPC trata do AEE, ele evita incorporá-lo como componente curricular da matriz, do fluxograma, do ementário seriado ou do histórico escolar do estudante?",
+  "rubrica": "Verificar se o PPC trata o AEE como serviço/modalidade transversal e atendimento institucional, e não como disciplina, unidade curricular, componente da matriz, item de integralização, carga horária de certificação ou lançamento em histórico escolar. Aceitar menções descritivas sobre a organização do AEE, mas não sua inclusão em quadros de componentes, sínteses curriculares, representações gráficas, listas seriadas de disciplinas, regras de certificação ou registros acadêmicos do estudante.",
+  "boa_evidencia": "Texto descritivo sobre Educação Especial e AEE sem inclusão do AEE na matriz, no fluxograma, no ementário seriado, na carga horária total do curso, na certificação ou no histórico escolar.",
+  "ma_evidencia": "AEE listado como disciplina, componente curricular, unidade da matriz, item de ementário seriado, carga horária de integralização, requisito de aprovação/certificação ou lançamento no histórico escolar do estudante.",
+  "escalonar_quando": "Escalonar se o PPC mencionar AEE em organização curricular, ementário, quadros de carga horária, regras de registro acadêmico ou histórico sem deixar claro se a menção é apenas descritiva ou se implica componente curricular.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "CT-IDENT-13",
+  "titulo": "Eixo e área tecnológica compatíveis com o CNCT",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "01",
+    "04"
+  ],
+  "consultas": [
+    "eixo tecnológico",
+    "área tecnológica",
+    "cnct",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.eixo_tecnologico",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.area_tecnologica"
+  ],
+  "referencias_normativas": [
+    "CNCT"
+  ],
+  "pergunta": "O eixo tecnológico e a área tecnológica declarados ou inferidos no PPC são compatíveis com a correspondência do CNCT?",
+  "rubrica": "Comparar as menções do PPC a eixo tecnológico e área tecnológica com `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.eixo_tecnologico` e `area_tecnologica`, verificando se a identidade do curso não desloca a formação para outro eixo ou área.",
+  "boa_evidencia": "O PPC declara eixo tecnológico e, quando houver, área tecnológica compatíveis com os campos `Eixo Tecnológico` e `Área Tecnológica` do CNCT.",
+  "ma_evidencia": "Eixo tecnológico ausente, divergente do CNCT ou associado a área tecnológica incompatível com a habilitação.",
+  "escalonar_quando": "Escalonar se o PPC não declarar eixo ou área, se houver divergência parcial ou se a correspondência CNCT estiver incerta.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

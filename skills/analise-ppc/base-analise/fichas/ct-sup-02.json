@@ -1,0 +1,28 @@
+{
+  "id": "CT-SUP-02",
+  "titulo": "Frequência mínima e recuperação da aprendizagem",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "06"
+  ],
+  "consultas": [
+    "75%",
+    "frequência mínima",
+    "recuperação",
+    "estudos de recuperação"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC descreve adequadamente frequência mínima e mecanismos de recuperação da aprendizagem?",
+  "rubrica": "Avaliar se frequência e recuperação aparecem como parte do sistema de acompanhamento do estudante.",
+  "boa_evidencia": "Trechos que explicam frequência mínima, recuperação paralela ou final e seus critérios.",
+  "ma_evidencia": "Ausência de frequência mínima ou recuperação tratada de forma vaga.",
+  "escalonar_quando": "Escalonar se apenas um dos dispositivos estiver claramente descrito.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

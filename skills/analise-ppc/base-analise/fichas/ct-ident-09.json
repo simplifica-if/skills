@@ -1,0 +1,29 @@
+{
+  "id": "CT-IDENT-09",
+  "titulo": "Modalidade coerente com a narrativa do PPC",
+  "dominio": "identidade",
+  "criticidade": "REC",
+  "secoes_preferenciais": [
+    "01",
+    "05"
+  ],
+  "consultas": [
+    "integrado",
+    "subsequente",
+    "concomitante",
+    "ensino médio"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A modalidade declarada do curso é coerente com a narrativa pedagógica e curricular do PPC?",
+  "rubrica": "Verificar se a modalidade informada é confirmada pelos demais trechos estruturantes do documento.",
+  "boa_evidencia": "Modalidade explicitada e reforçada por carga horária, organização curricular e referências normativas compatíveis.",
+  "ma_evidencia": "Modalidade declarada em um ponto e sugerida de forma diversa em outros trechos relevantes.",
+  "escalonar_quando": "Escalonar se a modalidade depender de inferência indireta ou estiver apenas implicitamente indicada.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "CT-SUP-12",
+  "titulo": "Referências com vigência normativa atualizada",
+  "dominio": "suporte",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "11"
+  ],
+  "consultas": [
+    "referências",
+    "vigência normativa",
+    "lei revogada",
+    "resolução desatualizada"
+  ],
+  "referencias_normativas": [
+    "Lei 9.394/1996",
+    "Resolução CNE/CP 1/2021"
+  ],
+  "pergunta": "A base normativa citada pelo PPC está apresentada com sinais observáveis de vigência atual, sem depender de atos revogados ou superados?",
+  "rubrica": "Verificar se a lista de referências utiliza versões vigentes dos marcos centrais do curso e evita tratar atos revogados ou superados como fundamento atual sem contextualização.",
+  "boa_evidencia": "Referências normativas centrais reconhecíveis, em versões atuais, sem dependência visível de atos revogados.",
+  "ma_evidencia": "Uso de leis ou resoluções revogadas, superadas ou trocadas por versões posteriores ainda tratadas como vigentes.",
+  "escalonar_quando": "Escalonar se houver dúvida sobre a vigência de atos específicos ou sobre a substituição por versões mais recentes.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

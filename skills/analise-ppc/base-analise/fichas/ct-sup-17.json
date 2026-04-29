@@ -1,0 +1,28 @@
+{
+  "id": "CT-SUP-17",
+  "titulo": "Formação pedagógica e desenvolvimento docente previstos",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "08"
+  ],
+  "consultas": [
+    "formação pedagógica",
+    "complementação pedagógica",
+    "formação continuada",
+    "bacharéis"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC prevê formação pedagógica adequada para docentes bacharéis e ações de desenvolvimento docente compatíveis com a oferta?",
+  "rubrica": "Avaliar se há previsão de formação pedagógica ou complementação equivalente para docentes bacharéis e se o documento indica políticas ou oportunidades de formação continuada do corpo docente.",
+  "boa_evidencia": "Trechos que explicitam formação pedagógica para bacharéis e também ações ou políticas de desenvolvimento docente continuado.",
+  "ma_evidencia": "Ausência de menção à formação pedagógica necessária ou inexistência de qualquer estratégia de desenvolvimento docente.",
+  "escalonar_quando": "Escalonar se o PPC trouxer apenas uma das dimensões, mas deixar lacuna relevante na outra ou mantiver a previsão em nível muito genérico.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

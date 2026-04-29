@@ -1,0 +1,29 @@
+{
+  "id": "CT-CURR-04",
+  "titulo": "Componentes curriculares alinhados ao perfil profissional",
+  "dominio": "curriculo",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "04",
+    "05"
+  ],
+  "consultas": [
+    "perfil do egresso",
+    "componentes curriculares",
+    "competências",
+    "eixo tecnológico"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "Os componentes curriculares dialogam de modo perceptível com o perfil profissional e o eixo do curso?",
+  "rubrica": "Avaliar se há aderência entre o que o curso promete formar e o que efetivamente aparece na matriz.",
+  "boa_evidencia": "Componentes e eixos temáticos coerentes com as competências e o campo de atuação descritos.",
+  "ma_evidencia": "Matriz desconectada do perfil, com lacunas formativas relevantes ou componentes sem relação aparente com a proposta.",
+  "escalonar_quando": "Escalonar se houver aderência parcial, mas persistirem áreas críticas sem cobertura clara.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

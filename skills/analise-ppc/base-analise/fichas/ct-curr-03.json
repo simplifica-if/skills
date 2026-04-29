@@ -1,0 +1,31 @@
+{
+  "id": "CT-CURR-03",
+  "titulo": "Distribuição entre formação geral e formação técnica",
+  "dominio": "curriculo",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "núcleo básico",
+    "componentes técnicos",
+    "formação geral",
+    "formação técnica"
+  ],
+  "referencias_normativas": [
+    "Lei 14.945/2024",
+    "Resolução IFPR 64/2022"
+  ],
+  "pergunta": "A distribuição entre formação geral e formação técnica aparece de forma auditável e compatível com a modalidade ofertada?",
+  "rubrica": "Verificar se o PPC separa ou torna reconstituível a distribuição de cargas e componentes entre as dimensões formativas exigidas.",
+  "boa_evidencia": "Totais, subtotais ou quadros que permitam compreender a composição da carga horária.",
+  "ma_evidencia": "Distribuição opaca, não reconstituível ou contraditória com a oferta integrada.",
+  "escalonar_quando": "Escalonar se a estrutura permitir inferências, mas não oferecer discriminação suficiente.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "CT-IDENT-01",
+  "titulo": "Denominação do curso alinhada ao CNCT",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "01",
+    "04"
+  ],
+  "consultas": [
+    "técnico em",
+    "cnct",
+    "denominação do curso",
+    "perfil profissional",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia"
+  ],
+  "referencias_normativas": [
+    "CNCT"
+  ],
+  "pergunta": "A denominação do curso e sua apresentação institucional estão compatíveis com a denominação do curso correspondente no CNCT?",
+  "rubrica": "Comparar o nome do curso no PPC com `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.denominacao` e verificar se o nome aparece de forma estável, sem variações materiais entre capa, identificação, perfil e referências.",
+  "boa_evidencia": "Título do PPC, quadro de identificação e seção de perfil profissional usando denominação compatível com o campo `Denominação do Curso` do CNCT.",
+  "ma_evidencia": "Nomes divergentes entre capa, apresentação, perfil do egresso ou referências ao curso, ou denominação materialmente diferente da correspondência CNCT.",
+  "escalonar_quando": "Escalonar se houver divergência nominal relevante, ambiguidade entre habilitações, correspondência CNCT incerta ou ausência de âncora documental suficiente.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

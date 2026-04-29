@@ -1,0 +1,29 @@
+{
+  "id": "CT-CURR-14",
+  "titulo": "TFC disciplinado de modo suficiente, quando previsto",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "tfc",
+    "tcc",
+    "trabalho final",
+    "orientação",
+    "avaliação"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "Quando o PPC prevê TFC, TCC ou componente equivalente, ele descreve suas condições básicas de funcionamento e avaliação?",
+  "rubrica": "Avaliar se o PPC explicita previsão do TFC, carga horária ou lugar na matriz, orientação docente, modalidades admitidas e critérios de avaliação, quando esse componente existe.",
+  "boa_evidencia": "Trechos que mostram o TFC na organização do curso e detalham orientação, formato e avaliação do componente.",
+  "ma_evidencia": "Citação superficial ao TFC sem explicar sua inserção curricular, sua condução ou os critérios de avaliação.",
+  "escalonar_quando": "Escalonar se o PPC mencionar TFC, mas a descrição ficar incompleta em aspectos centrais como carga horária, orientação ou avaliação.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

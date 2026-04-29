@@ -1,0 +1,29 @@
+{
+  "id": "CT-CURR-07",
+  "titulo": "Progressão formativa e organização por períodos",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "anos",
+    "períodos",
+    "progressão",
+    "semestres",
+    "etapas"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC deixa clara a progressão formativa do estudante ao longo do curso?",
+  "rubrica": "Verificar se a distribuição por anos, períodos ou etapas formativas é compreensível e orienta o percurso do estudante.",
+  "boa_evidencia": "Organização temporal explícita, com progressão inteligível entre etapas.",
+  "ma_evidencia": "Percurso fragmentado, sem indicação clara de sequência ou lógica formativa.",
+  "escalonar_quando": "Escalonar se a sequência existir, mas sem explicitação suficiente das transições.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

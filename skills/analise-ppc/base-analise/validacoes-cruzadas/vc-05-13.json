@@ -1,0 +1,25 @@
+{
+  "id": "VC-05-13",
+  "titulo": "AEE previsto exige Docente de Educação Especial habilitado",
+  "dominio": "validacao_cruzada",
+  "criticidade": "OBRIG",
+  "tipo": "cobertura",
+  "secoes_relacionadas": [
+    "05",
+    "08"
+  ],
+  "condicionais_relacionadas": [
+    "tem_aee"
+  ],
+  "pergunta": "O PPC mantém coerência transversal suficiente entre as seções 05 e 08 quanto a: AEE previsto exige Docente de Educação Especial habilitado?",
+  "rubrica": "Avaliar a consistência entre os trechos relacionados do PPC, usando evidências textuais e o contexto estrutural apenas como apoio. Não decidir por regra automática; fechar por revisão argumentada.",
+  "boa_evidencia": "Trechos das seções relacionadas apresentam informação compatível, rastreável e suficiente para sustentar a coerência transversal.",
+  "ma_evidencia": "As seções relacionadas entram em contradição, omitem uma parte necessária da relação ou não fornecem evidência suficiente para fechar a coerência.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

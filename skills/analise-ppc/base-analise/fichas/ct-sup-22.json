@@ -1,0 +1,31 @@
+{
+  "id": "CT-SUP-22",
+  "titulo": "Infraestrutura mínima CNCT atendida ou justificada",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "09"
+  ],
+  "consultas": [
+    "infraestrutura mínima",
+    "laboratórios",
+    "laboratórios específicos",
+    "biblioteca",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.infraestrutura_minima"
+  ],
+  "referencias_normativas": [
+    "CNCT"
+  ],
+  "pergunta": "A infraestrutura mínima indicada no CNCT está atendida ou justificada no PPC, especialmente quanto a laboratórios e ambientes específicos?",
+  "rubrica": "Comparar item a item os ambientes, laboratórios, biblioteca e recursos descritos em `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.infraestrutura_minima` com a seção de infraestrutura do PPC, aceitando equivalências materiais justificadas.",
+  "boa_evidencia": "O PPC descreve laboratórios, biblioteca e ambientes específicos equivalentes aos requisitos de infraestrutura mínima do CNCT, com vínculo claro com a oferta.",
+  "ma_evidencia": "Ausência de laboratórios ou ambientes centrais indicados pelo CNCT, descrição genérica sem equivalência material ou justificativa insuficiente para lacunas.",
+  "escalonar_quando": "Escalonar se parte da infraestrutura mínima estiver presente, mas houver dúvida sobre equivalência, suficiência, disponibilidade efetiva ou compartilhamento de laboratórios.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

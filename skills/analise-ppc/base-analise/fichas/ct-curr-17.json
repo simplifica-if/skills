@@ -1,0 +1,31 @@
+{
+  "id": "CT-CURR-17",
+  "titulo": "Itinerários formativos coerentes com o CNCT",
+  "dominio": "curriculo",
+  "criticidade": "REC",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "itinerários formativos",
+    "itinerarios formativos",
+    "certificações intermediárias",
+    "verticalização",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.itinerarios_formativos"
+  ],
+  "referencias_normativas": [
+    "CNCT"
+  ],
+  "pergunta": "Os itinerários formativos, certificações intermediárias ou possibilidades de verticalização do PPC são coerentes com o CNCT?",
+  "rubrica": "Quando o PPC tratar de itinerários, certificações intermediárias, formação continuada ou verticalização, comparar essas previsões com `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.itinerarios_formativos`.",
+  "boa_evidencia": "Itinerários, certificações ou possibilidades de continuidade formativa compatíveis com as sugestões e trajetórias do CNCT.",
+  "ma_evidencia": "Itinerários ou certificações desconectados da habilitação, incompatíveis com o CNCT ou apresentados como obrigatórios sem sustentação no PPC.",
+  "escalonar_quando": "Escalonar se houver menção a itinerários ou verticalização, mas a relação com o campo CNCT permanecer vaga ou contraditória.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

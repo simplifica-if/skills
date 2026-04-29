@@ -1,0 +1,28 @@
+{
+  "id": "CT-IDENT-03",
+  "titulo": "Justificativa baseada em demanda territorial e formativa",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "02"
+  ],
+  "consultas": [
+    "justificativa",
+    "demanda",
+    "arranjo produtivo",
+    "mercado de trabalho"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A justificativa do PPC demonstra demanda territorial, social ou produtiva de forma suficientemente ancorada?",
+  "rubrica": "Verificar se a oferta do curso é contextualizada por dados, diagnósticos locais ou argumentos concretos sobre pertinência regional.",
+  "boa_evidencia": "Trechos sobre contexto regional, setores econômicos, demandas de formação e relevância social do curso.",
+  "ma_evidencia": "Justificativa genérica, abstrata ou baseada apenas em fórmulas amplas sem vínculo com o território.",
+  "escalonar_quando": "Escalonar se a justificativa existir, mas sem lastro territorial claro ou com dados frágeis.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

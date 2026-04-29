@@ -1,0 +1,27 @@
+{
+  "id": "CT-CURR-01",
+  "titulo": "Matriz curricular estruturada e legível",
+  "dominio": "curriculo",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "matriz curricular",
+    "organização curricular",
+    "componentes curriculares"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A matriz curricular está estruturada de forma legível, permitindo identificar componentes, períodos e cargas horárias?",
+  "rubrica": "Verificar se a organização curricular oferece uma estrutura passível de auditoria por período, ano ou etapa formativa.",
+  "boa_evidencia": "Tabela ou conjunto de quadros com componentes, períodos e carga horária claramente definidos.",
+  "ma_evidencia": "Matriz incompleta, ilegível, dispersa em texto solto ou sem possibilidade de reconstituir a oferta.",
+  "escalonar_quando": "Escalonar se a matriz existir, mas com lacunas relevantes de legibilidade ou completude.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

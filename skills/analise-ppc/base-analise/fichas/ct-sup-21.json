@@ -1,0 +1,32 @@
+{
+  "id": "CT-SUP-21",
+  "titulo": "Legislação profissional CNCT tratada quando aplicável",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "01",
+    "11"
+  ],
+  "consultas": [
+    "legislação profissional",
+    "legislacao profissional",
+    "profissão regulamentada",
+    "conselho profissional",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.legislacao_profissional"
+  ],
+  "referencias_normativas": [
+    "CNCT"
+  ],
+  "pergunta": "Quando o CNCT indicar legislação profissional específica, o PPC trata essa base legal de modo reconhecível e pertinente?",
+  "rubrica": "Verificar `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.legislacao_profissional`; se houver legislação específica ou restrição profissional, avaliar se o PPC a cita, interpreta ou incorpora corretamente. Se o CNCT indicar profissão não regulamentada, verificar se o PPC não cria exigências indevidas.",
+  "boa_evidencia": "Legislação profissional específica do CNCT citada ou tratada no PPC com pertinência, ou reconhecimento de profissão não regulamentada quando for o caso.",
+  "ma_evidencia": "Omissão de legislação profissional específica indicada pelo CNCT, uso de norma incompatível ou criação de exigência profissional que o catálogo não sustenta.",
+  "escalonar_quando": "Escalonar se a legislação profissional CNCT for extensa, ambígua, parcialmente citada ou se houver dúvida sobre sua vigência e impacto na oferta.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

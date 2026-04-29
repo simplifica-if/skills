@@ -1,0 +1,29 @@
+{
+  "id": "CT-CURR-08",
+  "titulo": "Metodologias e integração curricular compatíveis com a proposta",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "03",
+    "05"
+  ],
+  "consultas": [
+    "metodologias",
+    "projetos integradores",
+    "interdisciplinaridade",
+    "integração curricular"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "As metodologias previstas sustentam integração curricular e desenvolvimento do perfil do egresso?",
+  "rubrica": "Avaliar se as metodologias descritas vão além de uma lista genérica e se dialogam com a concepção do curso.",
+  "boa_evidencia": "Descrição metodológica conectada com projetos, integração entre componentes e experiências formativas.",
+  "ma_evidencia": "Metodologias genéricas sem vínculo visível com currículo, avaliação ou perfil profissional.",
+  "escalonar_quando": "Escalonar se houver intenção metodológica, mas sem materialização suficiente na organização curricular.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

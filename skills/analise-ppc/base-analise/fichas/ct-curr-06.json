@@ -1,0 +1,29 @@
+{
+  "id": "CT-CURR-06",
+  "titulo": "Bibliografia básica e complementar minimamente suficiente",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "bibliografia básica",
+    "bibliografia complementar",
+    "ABNT NBR 6023"
+  ],
+  "referencias_normativas": [
+    "ABNT NBR 6023"
+  ],
+  "pergunta": "As bibliografias vinculadas aos componentes curriculares são suficientes e formalmente adequadas no próprio ementário?",
+  "rubrica": "Avaliar se cada componente curricular apresenta, no ementário, bibliografia básica com no mínimo 3 títulos e bibliografia complementar com no mínimo 4 títulos, observando padrão formal compatível com a ABNT NBR 6023. Não exigir que essas bibliografias sejam repetidas na seção final de referências do PPC.",
+  "boa_evidencia": "Componentes com bibliografia básica e complementar identificadas, quantitativo mínimo atendido e referências com autoria, título, edição/local/editora/ano quando cabíveis, além de URL e data de acesso em documentos eletrônicos.",
+  "ma_evidencia": "Componentes sem bibliografia, com menos de 3 títulos básicos ou menos de 4 complementares, ou com referências incompletas/despadronizadas de forma recorrente.",
+  "escalonar_quando": "Escalonar se a contagem ou a conformidade formal depender de amostragem, se houver componentes parcialmente extraídos ou se a distinção entre bibliografia básica e complementar estiver ambígua.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

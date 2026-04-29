@@ -1,0 +1,31 @@
+{
+  "id": "CT-CURR-02",
+  "titulo": "Carga horária total apresentada com consistência",
+  "dominio": "curriculo",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "01",
+    "05"
+  ],
+  "consultas": [
+    "carga horária total",
+    "carga horária mínima",
+    "descrição carga horária mínima",
+    "hora-relógio",
+    "hora aula",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.carga_horaria_minima"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A carga horária total do curso está apresentada de modo consistente e atende à carga horária mínima prevista no CNCT?",
+  "rubrica": "Avaliar se o PPC informa claramente a carga horária total, se ela não varia materialmente entre os principais pontos do documento e se é igual ou superior a `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.carga_horaria_minima_horas`, considerando também a descrição de carga horária mínima do CNCT quando trouxer condições específicas.",
+  "boa_evidencia": "Carga horária total coincidente entre apresentação, matriz e sínteses curriculares, com valor igual ou superior ao campo `Carga Horária Mínima` do CNCT.",
+  "ma_evidencia": "Valores conflitantes, ausência de explicitação da unidade adotada ou carga horária total inferior ao mínimo CNCT.",
+  "escalonar_quando": "Escalonar se houver indício de inconsistência entre hora-aula e hora-relógio, dúvida sobre a conversão para hora-relógio ou condição específica da descrição CNCT não tratada.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

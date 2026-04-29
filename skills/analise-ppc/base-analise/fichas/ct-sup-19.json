@@ -1,0 +1,36 @@
+{
+  "id": "CT-SUP-19",
+  "titulo": "AEE tratado com procedimentos e público-alvo compatíveis, quando aplicável",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "07"
+  ],
+  "consultas": [
+    "aee",
+    "aice",
+    "público prioritário",
+    "resolução 159/2023",
+    "flexibilização curricular",
+    "nota técnica 1/2025",
+    "histórico escolar",
+    "sei 3881287"
+  ],
+  "referencias_normativas": [
+    "Resolução CONSUP/IFPR 159/2023",
+    "Resolução CONSUP/IFPR 148/2023",
+    "Nota Técnica PROENS/IFPR nº 1/2025 (SEI nº 3881287)"
+  ],
+  "pergunta": "Quando o PPC trata de AEE, ele descreve público-alvo, procedimentos e distinções conceituais de modo compatível com a normativa institucional?",
+  "rubrica": "Avaliar se o PPC distingue AEE de adaptação e flexibilização curricular, identifica o público prioritário, descreve procedimentos como a AICE quando esse serviço é aplicável e mantém o AEE como serviço/modalidade transversal, sem tratá-lo como componente curricular da matriz ou como item lançável no histórico escolar do estudante.",
+  "boa_evidencia": "Seção que explicita quem é atendido pelo AEE, como ocorre ingresso e permanência, como o serviço se distingue de outras medidas pedagógicas e que o trata de forma descritiva e institucional, sem integrá-lo à matriz ou ao histórico.",
+  "ma_evidencia": "Uso confuso do termo AEE, sem público-alvo, sem procedimento, tratando o serviço como equivalente a adaptação ou flexibilização curricular, ou descrevendo-o como disciplina, componente curricular ou item de histórico escolar.",
+  "escalonar_quando": "Escalonar se houver menções ao AEE, mas permanecerem dúvidas sobre público atendido, procedimento, adequação conceitual à normativa ou natureza apenas descritiva versus componente curricular.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "CT-CURR-10",
+  "titulo": "Representação gráfica coerente com a organização curricular",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "representação gráfica",
+    "fluxograma",
+    "processo formativo"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A representação gráfica do processo formativo, quando presente, é coerente com a organização curricular documentada?",
+  "rubrica": "Avaliar se o fluxograma ou diagrama curricular reforça, e não contradiz, a estrutura da matriz e da progressão do curso.",
+  "boa_evidencia": "Ativo multimodal ou descrição ancorada em seção de representação gráfica coerente com a matriz.",
+  "ma_evidencia": "Fluxograma ausente, ilegível ou incompatível com períodos, componentes ou lógica formativa descritos.",
+  "escalonar_quando": "Escalonar se a representação existir, mas a evidência visual não bastar para fechamento seguro.",
+  "evidencia_minima": 1,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

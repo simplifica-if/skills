@@ -1,0 +1,48 @@
+{
+  "id": "CT-CURR-19",
+  "titulo": "Integração curricular e práticas profissionais articuladas",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "integração curricular",
+    "teoria e prática",
+    "formação geral",
+    "formação específica",
+    "projetos integradores",
+    "práticas profissionais articuladas",
+    "prática social",
+    "formação humana integral",
+    "trabalho como princípio educativo",
+    "empreendedorismo crítico",
+    "cooperativismo",
+    "trabalho em equipe",
+    "tecnologia da informação",
+    "gestão de pessoas",
+    "legislação trabalhista",
+    "ética profissional",
+    "meio ambiente",
+    "segurança do trabalho",
+    "inovação",
+    "iniciação científica"
+  ],
+  "referencias_normativas": [
+    "Resolução Consup/IFPR nº 64/2022",
+    "Resolução CNE/CP nº 1/2021",
+    "Resolução CNE/CEB nº 2/2024"
+  ],
+  "pergunta": "A organização curricular explicita integração entre teoria e prática, formação geral e formação técnica, projetos integradores ou práticas profissionais articuladas?",
+  "rubrica": "Avaliar se a seção de organização curricular mostra como a proposta supera a justaposição de componentes e articula formação geral, formação específica, prática social, projetos integradores, práticas profissionais e fundamentos aplicados ao curso, como empreendedorismo em perspectiva crítica, cooperativismo, trabalho em equipe, tecnologia da informação, gestão de pessoas, legislação trabalhista, ética profissional, meio ambiente, segurança do trabalho, inovação e iniciação científica, quando pertinentes à formação.",
+  "boa_evidencia": "Trechos que descrevem mecanismos concretos de integração curricular, como projetos integradores, práticas profissionais, componentes articuladores, atividades interdisciplinares, estratégias de articulação entre FGB e formação técnica ou incorporação curricular dos fundamentos aplicados ao curso.",
+  "ma_evidencia": "Organização curricular apresentada apenas como grade de disciplinas, sem explicar integração, práticas profissionais, relação teoria-prática ou vínculo com a prática social.",
+  "escalonar_quando": "Escalonar se houver discurso de integração sem demonstrar mecanismos curriculares concretos ou se os projetos e práticas aparecerem sem vínculo claro com componentes, perfil ou ementas.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

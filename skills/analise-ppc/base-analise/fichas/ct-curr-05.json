@@ -1,0 +1,27 @@
+{
+  "id": "CT-CURR-05",
+  "titulo": "Ementas completas e auditáveis",
+  "dominio": "curriculo",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "ementa",
+    "ementário",
+    "bibliografia básica"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O ementário apresenta ementas legíveis e suficientes para sustentar a proposta curricular?",
+  "rubrica": "Verificar se os componentes dispõem de ementas individualizadas, compreensíveis e utilizáveis para auditoria curricular.",
+  "boa_evidencia": "Listagem de componentes com ementas explícitas e identificáveis.",
+  "ma_evidencia": "Componentes sem ementa, ementas vazias ou texto genérico replicado sem diferenciação.",
+  "escalonar_quando": "Escalonar se apenas parte do ementário estiver rastreável ou se a completude for duvidosa.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

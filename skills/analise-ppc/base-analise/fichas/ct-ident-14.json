@@ -1,0 +1,31 @@
+{
+  "id": "CT-IDENT-14",
+  "titulo": "Ocupações CBO compatíveis com a identidade profissional",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "04"
+  ],
+  "consultas": [
+    "ocupações cbo",
+    "cbo",
+    "identidade profissional",
+    "perfil do egresso",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.ocupacoes_cbo"
+  ],
+  "referencias_normativas": [
+    "CNCT"
+  ],
+  "pergunta": "As ocupações CBO associadas ao curso no CNCT são consideradas de modo coerente na identidade profissional e no perfil do egresso?",
+  "rubrica": "Comparar a identidade profissional, funções e ocupações mencionadas no PPC com `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.ocupacoes_cbo`, sem exigir transcrição literal, mas verificando compatibilidade material.",
+  "boa_evidencia": "Perfil, atuação ou justificativa do curso dialogam com as ocupações CBO associadas no CNCT ou com funções profissionais equivalentes.",
+  "ma_evidencia": "O PPC associa o egresso a ocupações incompatíveis com o CNCT ou omite totalmente a identidade ocupacional quando ela é necessária para delimitar a habilitação.",
+  "escalonar_quando": "Escalonar se houver menções profissionais genéricas, mas não for possível concluir aderência às ocupações CBO do catálogo.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

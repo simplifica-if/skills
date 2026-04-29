@@ -1,0 +1,29 @@
+{
+  "id": "CT-SUP-08",
+  "titulo": "Avaliação do curso e acompanhamento de egressos",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "10"
+  ],
+  "consultas": [
+    "avaliação do curso",
+    "egressos",
+    "cpa",
+    "autoavaliação",
+    "indicadores"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC prevê mecanismos de avaliação do curso e acompanhamento de egressos com finalidade de melhoria contínua?",
+  "rubrica": "Verificar se há dispositivos de autoavaliação institucional, revisão do curso e acompanhamento pós-formação.",
+  "boa_evidencia": "Trechos sobre indicadores, CPA, colegiado, revisão periódica ou acompanhamento de egressos.",
+  "ma_evidencia": "Avaliação do curso ausente ou reduzida a uma declaração sem método.",
+  "escalonar_quando": "Escalonar se houver menções esparsas sem processo claro de acompanhamento.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

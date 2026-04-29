@@ -1,0 +1,31 @@
+{
+  "id": "CT-SUP-09",
+  "titulo": "Referências com vigência normativa observável",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "11"
+  ],
+  "consultas": [
+    "referências",
+    "lei",
+    "resolução",
+    "parecer"
+  ],
+  "referencias_normativas": [
+    "Lei 9.394/1996",
+    "Resolução CNE/CP 1/2021"
+  ],
+  "pergunta": "A seção de referências apresenta base normativa suficiente e sem sinais evidentes de defasagem crítica?",
+  "rubrica": "Checar se as referências normativas centrais aparecem e se a lista não depende apenas de atos revogados ou laterais.",
+  "boa_evidencia": "Seção de referências com leis e resoluções centrais para a oferta do curso.",
+  "ma_evidencia": "Referências normativas escassas, desatualizadas ou ausentes.",
+  "escalonar_quando": "Escalonar se as referências existirem, mas a suficiência normativa permanecer duvidosa.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

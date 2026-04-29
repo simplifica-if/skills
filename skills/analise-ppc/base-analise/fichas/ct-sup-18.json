@@ -1,0 +1,30 @@
+{
+  "id": "CT-SUP-18",
+  "titulo": "Política institucional de inclusão com papéis e normativas definidos",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "07"
+  ],
+  "consultas": [
+    "napne",
+    "inclusão",
+    "necessidades específicas",
+    "resolução 148/2023"
+  ],
+  "referencias_normativas": [
+    "Resolução CONSUP/IFPR 148/2023"
+  ],
+  "pergunta": "A política de inclusão do PPC explicita instâncias institucionais, responsabilidades e base normativa de modo suficiente?",
+  "rubrica": "Verificar se o PPC identifica o papel de instâncias como NAPNE/CNAPNE, define responsabilidades institucionais e referencia a normativa principal de adaptação e flexibilização curricular.",
+  "boa_evidencia": "Trechos que indicam setores, responsabilidades e referência normativa clara para a política institucional de inclusão.",
+  "ma_evidencia": "Menções vagas à inclusão sem instâncias responsáveis, sem fluxo institucional ou sem referência normativa pertinente.",
+  "escalonar_quando": "Escalonar se houver política de inclusão indicada, mas os papéis institucionais ou a base normativa ficarem insuficientemente delimitados.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

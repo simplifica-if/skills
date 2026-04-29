@@ -1,0 +1,17 @@
+{
+  "batch_id": "batch-001",
+  "resultados": [
+    {
+      "ficha_id": "CT-IDENT-01",
+      "estado": "ATENDE",
+      "confianca": 0.88,
+      "justificativa": "O PPC apresenta a denominação do curso, modalidade e aderência ao eixo tecnológico correspondente.",
+      "evidencias": [
+        "Seção 1, apresentação do curso",
+        "Trecho da identificação institucional do curso"
+      ],
+      "lacunas": [],
+      "revisao_humana_obrigatoria": false
+    }
+  ]
+}

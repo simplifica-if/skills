@@ -1,0 +1,30 @@
+{
+  "id": "CT-TRANS-02",
+  "titulo": "Coerência entre concepção, metodologias e avaliação",
+  "dominio": "transversal",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "03",
+    "05",
+    "06"
+  ],
+  "consultas": [
+    "concepção",
+    "metodologias",
+    "avaliação",
+    "aprendizagem"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A concepção do curso, as metodologias e a avaliação da aprendizagem operam de forma coerente entre si?",
+  "rubrica": "Verificar se o discurso pedagógico do PPC se materializa nas estratégias de ensino e avaliação.",
+  "boa_evidencia": "Concepção pedagógica refletida em metodologias e critérios avaliativos compatíveis.",
+  "ma_evidencia": "Concepção progressista com avaliação puramente classificatória ou metodologias desconectadas.",
+  "escalonar_quando": "Escalonar se o alinhamento for apenas parcial ou depender de inferência frágil.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

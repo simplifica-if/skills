@@ -1,0 +1,46 @@
+{
+  "batch_id": "batch-001",
+  "ordem": 1,
+  "total_fichas": 2,
+  "fichas": [
+    {
+      "id": "CT-IDENT-01",
+      "titulo": "Alinhamento com CNCT",
+      "criticidade": "OBRIG",
+      "secoes_preferenciais": [
+        "01",
+        "02"
+      ],
+      "pergunta": "O PPC explicita aderência ao CNCT?",
+      "rubrica": "Verificar coerência entre curso, eixo tecnológico e denominação.",
+      "boa_evidencia": "Seção introdutória com referência explícita ao CNCT.",
+      "ma_evidencia": "Ausência de vínculo com o CNCT.",
+      "evidencia_minima": 2,
+      "estados_permitidos": [
+        "ATENDE",
+        "NAO_ATENDE",
+        "INCONCLUSIVO",
+        "NAO_APLICAVEL"
+      ]
+    },
+    {
+      "id": "CT-IDENT-07",
+      "titulo": "Perfil do egresso",
+      "criticidade": "OBRIG",
+      "secoes_preferenciais": [
+        "04"
+      ],
+      "pergunta": "O perfil do egresso é suficiente?",
+      "rubrica": "Verificar competências e atuação profissional.",
+      "boa_evidencia": "Competências descritas com atuação.",
+      "ma_evidencia": "Texto genérico.",
+      "evidencia_minima": 2,
+      "estados_permitidos": [
+        "ATENDE",
+        "NAO_ATENDE",
+        "INCONCLUSIVO",
+        "NAO_APLICAVEL"
+      ]
+    }
+  ]
+}

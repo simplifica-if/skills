@@ -1,0 +1,36 @@
+{
+  "id": "CT-IDENT-15",
+  "titulo": "Diploma técnico explicita habilitação profissional e eixo tecnológico",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "04"
+  ],
+  "consultas": [
+    "expedição de diplomas",
+    "expedição de certificados",
+    "diploma",
+    "certificado",
+    "título de técnico",
+    "habilitação profissional",
+    "eixo tecnológico",
+    "Catálogo Nacional de Cursos Técnicos",
+    "Resolução CNE/CP nº 1/2021"
+  ],
+  "referencias_normativas": [
+    "Resolução CNE/CP nº 1/2021",
+    "CNCT"
+  ],
+  "pergunta": "A seção de expedição de diplomas e certificados explicita o título técnico na habilitação profissional e o eixo tecnológico conforme o CNCT vigente?",
+  "rubrica": "Verificar se o PPC informa que, após a integralização do curso e o cumprimento dos requisitos de conclusão, será expedido diploma com o correspondente título de técnico na respectiva habilitação profissional, indicando o eixo tecnológico vinculado ao curso conforme o CNCT. Quando houver certificações intermediárias ou certificados com terminalidade, verificar se o texto não confunde certificado, diploma e certificação de conhecimentos anteriores.",
+  "boa_evidencia": "Trecho da seção 4.1 ou equivalente que declara o diploma de Técnico em determinada habilitação profissional, identifica o eixo tecnológico e vincula a expedição à conclusão/integralização do curso e ao CNCT vigente.",
+  "ma_evidencia": "Seção ausente, título do diploma genérico, omissão do eixo tecnológico, divergência entre habilitação do diploma e denominação CNCT, ou confusão entre diploma de conclusão e certificação de conhecimentos anteriores.",
+  "escalonar_quando": "Escalonar se o PPC menciona diploma ou certificado, mas não permite confirmar o título técnico, o eixo tecnológico ou a coerência com a denominação e a habilitação profissional do CNCT.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

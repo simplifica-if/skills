@@ -1,0 +1,30 @@
+{
+  "id": "CT-TRANS-01",
+  "titulo": "Coerência entre objetivos, perfil do egresso e matriz",
+  "dominio": "transversal",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "02",
+    "04",
+    "05"
+  ],
+  "consultas": [
+    "objetivos",
+    "perfil do egresso",
+    "matriz curricular",
+    "competências"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "Há coerência suficiente entre o que o curso promete formar, o perfil do egresso e o que efetivamente aparece na matriz curricular?",
+  "rubrica": "Trata-se de um cartão transversal de coerência global. Exige leitura articulada dos objetivos, perfil e organização curricular.",
+  "boa_evidencia": "Objetivos, competências e componentes convergentes, sem lacunas formativas evidentes.",
+  "ma_evidencia": "Perfil profissional amplo sem cobertura curricular percebida ou matriz desalinhada com os objetivos.",
+  "escalonar_quando": "Escalonar se houver coerência parcial, mas persistirem vazios relevantes entre intenção formativa e currículo.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

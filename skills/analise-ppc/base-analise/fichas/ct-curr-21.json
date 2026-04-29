@@ -1,0 +1,38 @@
+{
+  "id": "CT-CURR-21",
+  "titulo": "Convênios e trâmites de estágio descritos quando houver estágio",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "convênio de estágio",
+    "Termo de Compromisso",
+    "Plano de Estágio",
+    "TCE",
+    "UCE",
+    "agente de integração",
+    "Seção de Estágios",
+    "SAEE",
+    "Proens",
+    "campo de estágio",
+    "equivalência"
+  ],
+  "referencias_normativas": [
+    "Lei nº 11.788/2008",
+    "Resolução Consup/IFPR nº 82/2022"
+  ],
+  "pergunta": "Quando o curso admite estágio, o PPC descreve os trâmites de formalização, convênios e responsabilidades institucionais de modo suficiente?",
+  "rubrica": "Verificar se o PPC informa que o estágio é formalizado por Termo de Compromisso e Plano de Estágio, quando convênio é necessário, quais setores ou instâncias do campus conduzem os trâmites, como serão buscadas ou indicadas instituições concedentes, e se remete às orientações/modelos da SAEE/Proens e ao Regulamento Geral de Estágio quando aplicável.",
+  "boa_evidencia": "Trechos que descrevem TCE/Plano de Estágio, hipóteses de convênio, agente de integração ou UCE, setor responsável no campus, instituições/campos pretendidos e referência às orientações institucionais da SAEE/Proens.",
+  "ma_evidencia": "Convênios e trâmites ausentes, ou menção genérica a estágio sem explicar formalização, responsabilidades, campos, modelos institucionais ou condições para convênio.",
+  "escalonar_quando": "Escalonar se o PPC indica que haverá estágio, mas os trâmites estiverem dispersos, incompletos ou dependentes de regulamento externo não resumido no próprio PPC.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

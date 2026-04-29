@@ -1,0 +1,39 @@
+{
+  "id": "CT-IDENT-16",
+  "titulo": "Forma de ingresso e política institucional de acesso explicitadas",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "01"
+  ],
+  "consultas": [
+    "requisitos e formas de acesso",
+    "forma de ingresso",
+    "processo seletivo",
+    "acesso",
+    "acesso unificado",
+    "acesso simplificado",
+    "reserva de vagas",
+    "cotas",
+    "ações afirmativas",
+    "Política de Inclusão",
+    "Resolução IFPR nº 190/2024",
+    "Lei nº 12.711/2012"
+  ],
+  "referencias_normativas": [
+    "Resolução IFPR nº 190/2024",
+    "Lei nº 12.711/2012"
+  ],
+  "pergunta": "O PPC explicita a forma de ingresso e registra, de modo reconhecível, a política institucional de acesso e reserva de vagas aplicável ao curso?",
+  "rubrica": "Verificar se a seção 1.1.2 ou equivalente informa como ocorre o ingresso no curso, com menção reconhecível ao processo seletivo, edital institucional ou outro mecanismo aplicável. Para as formas de acesso, considerar a Resolução IFPR nº 190/2024, especialmente a distinção entre acesso unificado e acesso simplificado. Separadamente, verificar se o texto registra a observância da política institucional de inclusão, reserva de vagas, cotas ou ações afirmativas segundo a regulamentação vigente e a legislação aplicável. Não basta remeter apenas a um edital futuro sem descrever minimamente a forma de acesso e a existência da política de reserva de vagas.",
+  "boa_evidencia": "Trecho que informa a forma de ingresso do curso, como processo seletivo institucional com acesso unificado ou simplificado, e explicita a observância da política institucional de inclusão, reserva de vagas, cotas ou ações afirmativas conforme a regulamentação vigente.",
+  "ma_evidencia": "Texto omisso sobre a forma de ingresso, que delega integralmente o tema a edital sem resumo mínimo, ou que nada menciona sobre a política institucional de reserva de vagas aplicável.",
+  "escalonar_quando": "Escalonar se o PPC mencionar processo seletivo ou edital, mas não deixar claro se se trata de acesso unificado, simplificado ou outra hipótese admitida; se a referência à política de reserva de vagas estiver vaga; ou se o texto atribuir indevidamente à Resolução IFPR nº 190/2024 regras que dependem de outra norma específica.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

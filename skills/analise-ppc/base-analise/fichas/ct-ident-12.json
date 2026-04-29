@@ -1,0 +1,28 @@
+{
+  "id": "CT-IDENT-12",
+  "titulo": "Perfil do egresso redigido com clareza e especificidade",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "04"
+  ],
+  "consultas": [
+    "perfil do egresso",
+    "clareza",
+    "objetividade",
+    "especificidade"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O perfil do egresso está redigido com clareza, objetividade e especificidade suficientes para orientar a formação pretendida?",
+  "rubrica": "Avaliar se o texto do perfil evita generalidades excessivas e descreve, de forma utilizável, o profissional que o curso pretende formar.",
+  "boa_evidencia": "Perfil claro, direto e específico, com competências e identidade profissional inteligíveis para leitura institucional e pedagógica.",
+  "ma_evidencia": "Texto abstrato, redundante ou genérico, sem caracterização suficiente do egresso esperado.",
+  "escalonar_quando": "Escalonar se o perfil parecer pertinente, mas ainda ambíguo ou pouco operacional para caracterizar a formação esperada.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

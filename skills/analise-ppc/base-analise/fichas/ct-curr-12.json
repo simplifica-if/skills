@@ -1,0 +1,28 @@
+{
+  "id": "CT-CURR-12",
+  "titulo": "Progressão formativa explicitada na organização curricular",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "progressão formativa",
+    "sequência de períodos",
+    "organização curricular",
+    "fluxograma"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A organização curricular deixa clara a progressão formativa do estudante ao longo do curso?",
+  "rubrica": "Avaliar se o PPC mostra a sequência de períodos, etapas ou anos e se a trajetória formativa é inteligível e coerente com a matriz curricular.",
+  "boa_evidencia": "Fluxograma, quadro ou descrição textual que explicita etapas, progressão e articulação do percurso formativo.",
+  "ma_evidencia": "Organização curricular fragmentada, sem sequência visível ou com relação confusa entre etapas, períodos ou componentes.",
+  "escalonar_quando": "Escalonar se houver indícios de progressão, mas a visualização do percurso ou sua coerência com a matriz permanecerem duvidosas.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

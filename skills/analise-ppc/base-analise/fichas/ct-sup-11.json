@@ -1,0 +1,29 @@
+{
+  "id": "CT-SUP-11",
+  "titulo": "Acessibilidade física e arquitetônica",
+  "dominio": "suporte",
+  "criticidade": "REC",
+  "secoes_preferenciais": [
+    "09"
+  ],
+  "consultas": [
+    "acessibilidade",
+    "rampa",
+    "elevador",
+    "sinalização",
+    "banheiro adaptado"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "A infraestrutura do PPC reconhece condições mínimas de acessibilidade física e arquitetônica?",
+  "rubrica": "Identificar se a seção de infraestrutura registra condições de acesso e permanência para estudantes com deficiência.",
+  "boa_evidencia": "Menções a rampas, elevadores, sinalização, banheiros adaptados ou política institucional equivalente.",
+  "ma_evidencia": "Infraestrutura totalmente silenciosa sobre acessibilidade física.",
+  "escalonar_quando": "Escalonar se a acessibilidade aparecer apenas em termos genéricos, sem apoio material.",
+  "evidencia_minima": 1,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

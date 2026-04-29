@@ -1,0 +1,28 @@
+{
+  "id": "CT-TRANS-03",
+  "titulo": "Coerência interna entre ementas e bibliografias do currículo",
+  "dominio": "transversal",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "bibliografia",
+    "ementário",
+    "bibliografia básica",
+    "bibliografia complementar"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "Existe coerência mínima entre as ementas, os objetivos dos componentes e as bibliografias indicadas no próprio ementário?",
+  "rubrica": "Avaliar se as bibliografias básicas e complementares indicadas para os componentes dialogam com os temas, objetivos e conteúdos descritos nas ementas. Não comparar as bibliografias dos componentes com a seção final de referências do PPC, pois possuem finalidades distintas.",
+  "boa_evidencia": "Bibliografias por componente relacionadas aos conteúdos e objetivos das ementas, com repertório técnico e formativo compatível com a matriz curricular.",
+  "ma_evidencia": "Bibliografias genéricas, desconectadas dos conteúdos do componente, repetidas de forma acrítica ou insuficientes para sustentar os temas e objetivos previstos.",
+  "escalonar_quando": "Escalonar se a coerência depender de amostragem insuficiente, se o ementário estiver parcialmente extraído ou se houver indícios relevantes de bibliografias incompatíveis com os componentes.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

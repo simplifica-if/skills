@@ -1,0 +1,30 @@
+{
+  "id": "CT-SUP-06",
+  "titulo": "Governança acadêmica do curso",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "08",
+    "10"
+  ],
+  "consultas": [
+    "coordenação",
+    "colegiado",
+    "nde",
+    "governança",
+    "gestão do curso"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC descreve coordenação, colegiado e instâncias acadêmicas suficientes para governança do curso?",
+  "rubrica": "Verificar se há instâncias e responsabilidades acadêmicas identificáveis para acompanhamento e tomada de decisão.",
+  "boa_evidencia": "Trechos sobre coordenação, colegiado, NDE ou instâncias equivalentes de gestão e avaliação do curso.",
+  "ma_evidencia": "Ausência de governança acadêmica explícita ou descrição muito genérica das responsabilidades.",
+  "escalonar_quando": "Escalonar se a governança existir, mas as atribuições estiverem pouco delimitadas.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

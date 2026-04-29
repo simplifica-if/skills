@@ -1,0 +1,39 @@
+{
+  "id": "CT-CURR-11",
+  "titulo": "Temas transversais e formação cidadã no currículo",
+  "dominio": "curriculo",
+  "criticidade": "REC",
+  "secoes_preferenciais": [
+    "05"
+  ],
+  "consultas": [
+    "temas transversais",
+    "direitos humanos",
+    "sustentabilidade",
+    "diversidade",
+    "história e cultura afro-brasileira e indígena",
+    "educação digital",
+    "perspectivas femininas",
+    "filmes de produção nacional",
+    "educação ambiental",
+    "educação alimentar e nutricional",
+    "educação para o trânsito"
+  ],
+  "referencias_normativas": [
+    "Lei nº 9.394/1996",
+    "Lei nº 14.945/2024",
+    "Resolução CNE/CEB nº 2/2024"
+  ],
+  "pergunta": "O currículo contempla temas transversais e dimensões de formação cidadã de modo perceptível?",
+  "rubrica": "Avaliar se a proposta curricular reconhece temas transversais relevantes para a formação integral e se trata, de modo verificável no currículo, conteúdos como direitos humanos, prevenção de violências, pessoa idosa, educação alimentar e nutricional, trânsito, educação ambiental, educação digital, multiculturalismo, história e cultura afro-brasileira e indígena, perspectivas femininas e exibição de filmes de produção nacional quando aplicável ao ensino médio.",
+  "boa_evidencia": "Trechos que vinculam temas transversais e conteúdos legais a componentes, projetos, práticas profissionais, atividades integradoras ou experiências formativas.",
+  "ma_evidencia": "Temas transversais ausentes, citados apenas de forma decorativa ou sem vínculo com componentes, projetos ou práticas curriculares.",
+  "escalonar_quando": "Escalonar se o tratamento existir, mas estiver concentrado em afirmações genéricas, sem permitir verificar onde os temas aparecem na matriz, ementas, projetos ou práticas formativas.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

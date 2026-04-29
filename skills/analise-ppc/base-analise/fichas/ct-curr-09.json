@@ -1,0 +1,35 @@
+{
+  "id": "CT-CURR-09",
+  "titulo": "Inclusão, AEE e flexibilização curricular articulados ao currículo",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "05",
+    "07"
+  ],
+  "consultas": [
+    "aee",
+    "inclusão",
+    "adaptação curricular",
+    "flexibilização curricular",
+    "nota técnica 1/2025",
+    "sei 3881287"
+  ],
+  "referencias_normativas": [
+    "Resolução CONSUP/IFPR 148/2023",
+    "Resolução CONSUP/IFPR 159/2023",
+    "Nota Técnica PROENS/IFPR nº 1/2025 (SEI nº 3881287)"
+  ],
+  "pergunta": "O currículo incorpora de forma explícita dispositivos de inclusão, AEE ou flexibilização quando o PPC aciona esse tema?",
+  "rubrica": "Verificar se inclusão, Educação Especial, AEE e flexibilização curricular aparecem com tratamento institucionalmente coerente, não apenas como menção decorativa. Quando o PPC acionar o AEE, exigir tratamento descritivo e institucional compatível com a orientação vigente da PROENS, sem converter o AEE em componente curricular da matriz, do fluxograma, do ementário seriado ou do histórico escolar.",
+  "boa_evidencia": "Trechos curriculares articulados com políticas de atendimento e referências normativas adequadas, tratando o AEE como serviço/modalidade transversal e não como componente curricular.",
+  "ma_evidencia": "Uso genérico da linguagem de inclusão sem dispositivos concretos, confusão entre AEE, adaptação e flexibilização, ou apresentação do AEE como disciplina, componente curricular ou item de histórico escolar.",
+  "escalonar_quando": "Escalonar se o tema aparecer de forma indireta, insuficientemente desenvolvida ou com dúvida sobre se a menção ao AEE é apenas descritiva ou implica sua inclusão na matriz ou no registro acadêmico do estudante.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

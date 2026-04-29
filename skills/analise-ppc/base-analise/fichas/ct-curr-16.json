@@ -1,0 +1,37 @@
+{
+  "id": "CT-CURR-16",
+  "titulo": "Pré-requisitos de ingresso compatíveis com o CNCT",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "01",
+    "05"
+  ],
+  "consultas": [
+    "pré-requisitos para ingresso",
+    "pre requisitos para ingresso",
+    "requisitos de ingresso",
+    "escolaridade mínima",
+    "escolaridade exigida",
+    "matrícula no ensino médio",
+    "conclusão do ensino fundamental",
+    "forma de oferta",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia.pre_requisitos_ingresso"
+  ],
+  "referencias_normativas": [
+    "CNCT",
+    "Resolução IFPR nº 190/2024"
+  ],
+  "pergunta": "Os pré-requisitos de ingresso previstos no PPC são compatíveis com o CNCT e com a forma de oferta do curso?",
+  "rubrica": "Comparar as regras de ingresso do PPC com `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.pre_requisitos_ingresso`, considerando se a forma de oferta declarada é integrada, concomitante, subsequente ou EJA. Exigir que o texto registre de modo explícito a escolaridade mínima ou a condição de matrícula do candidato, e não apenas remeta genericamente ao processo seletivo.",
+  "boa_evidencia": "O PPC informa escolaridade mínima ou condição de matrícula compatíveis com o campo `Pré-Requisitos para Ingresso` do CNCT e com a forma de oferta adotada, como conclusão do ensino fundamental, matrícula concomitante ou conclusão do ensino médio, conforme o caso.",
+  "ma_evidencia": "Requisitos de ingresso ausentes, contraditórios ou incompatíveis com a forma de oferta e com o CNCT, ou texto que menciona apenas processo seletivo sem dizer quem está habilitado a ingressar.",
+  "escalonar_quando": "Escalonar se o PPC mencionar ingresso de modo genérico, se houver dúvida entre forma de oferta e requisito escolar correspondente, ou se a elegibilidade do candidato depender de inferência indireta.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

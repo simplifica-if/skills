@@ -1,0 +1,32 @@
+{
+  "id": "CT-SUP-04",
+  "titulo": "Inclusão, acessibilidade e AEE na política de atendimento",
+  "dominio": "suporte",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "07"
+  ],
+  "consultas": [
+    "napne",
+    "aee",
+    "necessidades específicas",
+    "acessibilidade",
+    "inclusão"
+  ],
+  "referencias_normativas": [
+    "Resolução CONSUP/IFPR 148/2023",
+    "Resolução CONSUP/IFPR 159/2023"
+  ],
+  "pergunta": "A política de atendimento aos estudantes contempla inclusão, acessibilidade e AEE com coerência institucional?",
+  "rubrica": "Verificar se o PPC explicita apoio à inclusão com distinção adequada entre atendimento, adaptação e trabalho especializado.",
+  "boa_evidencia": "Trechos sobre NAPNE, acessibilidade, atendimento especializado e referências normativas pertinentes.",
+  "ma_evidencia": "Uso difuso de termos de inclusão sem políticas, setores ou responsabilidades claras.",
+  "escalonar_quando": "Escalonar se houver menções pontuais, mas sem definição institucional suficiente.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

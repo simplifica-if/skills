@@ -1,0 +1,25 @@
+{
+  "id": "VC-05-07",
+  "titulo": "AEE descrito na organização curricular permanece descritivo e coerente com AICE, adaptação e flexibilização",
+  "dominio": "validacao_cruzada",
+  "criticidade": "OBRIG",
+  "tipo": "coerencia",
+  "secoes_relacionadas": [
+    "05",
+    "07"
+  ],
+  "condicionais_relacionadas": [
+    "tem_aee"
+  ],
+  "pergunta": "O PPC mantém coerência transversal suficiente entre as seções 05 e 07 quanto a: o AEE ser tratado apenas de forma descritiva, coerente com AICE, adaptação e flexibilização, sem virar componente curricular ou item de histórico escolar?",
+  "rubrica": "Avaliar a consistência entre os trechos relacionados do PPC, usando evidências textuais e o contexto estrutural apenas como apoio. Exigir que a organização curricular e a política de atendimento tratem o AEE como serviço/modalidade transversal, compatível com AICE, adaptação e flexibilização, sem incorporá-lo à matriz, ao ementário seriado, à integralização ou ao histórico escolar.",
+  "boa_evidencia": "Trechos das seções relacionadas apresentam informação compatível, rastreável e suficiente para sustentar que o AEE tem tratamento descritivo e institucional, sem se converter em componente curricular.",
+  "ma_evidencia": "As seções relacionadas entram em contradição, omitem parte necessária da relação ou apresentam o AEE como disciplina, componente curricular, item de integralização ou lançamento em histórico escolar.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

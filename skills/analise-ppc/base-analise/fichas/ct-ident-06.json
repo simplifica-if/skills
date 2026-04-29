@@ -1,0 +1,28 @@
+{
+  "id": "CT-IDENT-06",
+  "titulo": "Formação integral e princípios norteadores",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "03"
+  ],
+  "consultas": [
+    "formação integral",
+    "interdisciplinaridade",
+    "indissociabilidade",
+    "contextualização"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "Os princípios norteadores do curso sustentam uma proposta de formação integral com coerência pedagógica?",
+  "rubrica": "Verificar se a seção conceitual explicita princípios orientadores e se eles têm relação com a organização da formação.",
+  "boa_evidencia": "Lista ou desenvolvimento de princípios acompanhados de consequências formativas ou metodológicas.",
+  "ma_evidencia": "Enumeração sem explicação ou ausência de vínculo entre princípios e proposta curricular.",
+  "escalonar_quando": "Escalonar se os princípios forem citados, mas sem concretização suficiente.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

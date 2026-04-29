@@ -1,0 +1,22 @@
+{
+  "id": "VC-05-11",
+  "titulo": "Bibliografias do ementário completas e normalizadas",
+  "dominio": "validacao_cruzada",
+  "criticidade": "OBRIG",
+  "tipo": "lista",
+  "secoes_relacionadas": [
+    "05"
+  ],
+  "condicionais_relacionadas": [],
+  "pergunta": "As bibliografias do ementário, consideradas dentro da própria seção 05, apresentam pelo menos 3 títulos de bibliografia básica e 4 títulos de bibliografia complementar por componente curricular, com padrão formal compatível com a ABNT NBR 6023?",
+  "rubrica": "Avaliar a completude e a normalização formal das bibliografias vinculadas aos componentes curriculares no próprio ementário. Não exigir que as bibliografias das ementas sejam reproduzidas na seção final de referências do PPC, pois essa seção final registra as fontes usadas na construção do documento, não o acervo bibliográfico de cada componente.",
+  "boa_evidencia": "Cada componente curricular apresenta bibliografia básica com pelo menos 3 títulos e bibliografia complementar com pelo menos 4 títulos, com elementos bibliográficos suficientes e formatação reconhecível segundo a ABNT NBR 6023.",
+  "ma_evidencia": "Componentes sem bibliografia básica ou complementar, quantitativo inferior ao mínimo esperado, referências incompletas ou formatação incompatível de modo recorrente com a ABNT NBR 6023.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

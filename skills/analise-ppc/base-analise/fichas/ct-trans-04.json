@@ -1,0 +1,30 @@
+{
+  "id": "CT-TRANS-04",
+  "titulo": "Coerência entre currículo, corpo docente e infraestrutura",
+  "dominio": "transversal",
+  "criticidade": "BLOQ",
+  "secoes_preferenciais": [
+    "05",
+    "08",
+    "09"
+  ],
+  "consultas": [
+    "componentes curriculares",
+    "corpo docente",
+    "infraestrutura",
+    "laboratório"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O conjunto currículo-docentes-infraestrutura forma uma base institucional coerente para a oferta do curso?",
+  "rubrica": "Este cartão observa a compatibilidade entre o que será ofertado, quem sustentará a oferta e com quais meios.",
+  "boa_evidencia": "Correspondência plausível entre componentes formativos, equipe e ambientes institucionais.",
+  "ma_evidencia": "Oferta curricular exigente sem recursos humanos ou físicos visíveis para sustentá-la.",
+  "escalonar_quando": "Escalonar se a aderência parecer provável, mas não suficientemente demonstrada.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

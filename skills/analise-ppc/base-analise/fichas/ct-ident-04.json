@@ -1,0 +1,27 @@
+{
+  "id": "CT-IDENT-04",
+  "titulo": "Objetivos formativos claros e operacionais",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "02"
+  ],
+  "consultas": [
+    "objetivo geral",
+    "objetivos específicos",
+    "perfil do egresso"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "Os objetivos geral e específicos do curso são claros, operacionais e compatíveis com a formação prometida?",
+  "rubrica": "Avaliar se os objetivos expressam intencionalidade formativa concreta e se dialogam com o perfil profissional esperado.",
+  "boa_evidencia": "Objetivo geral claro e objetivos específicos distintos, acionáveis e alinhados ao curso.",
+  "ma_evidencia": "Objetivos vagos, repetitivos, excessivamente genéricos ou desconectados do perfil do egresso.",
+  "escalonar_quando": "Escalonar se houver objetivo geral, mas os específicos estiverem incompletos ou redundantes.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

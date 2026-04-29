@@ -1,0 +1,30 @@
+{
+  "id": "CT-IDENT-10",
+  "titulo": "Competências do egresso alinhadas à habilitação profissional",
+  "dominio": "identidade",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "04"
+  ],
+  "consultas": [
+    "perfil do egresso",
+    "perfil profissional de conclusão",
+    "competências",
+    "habilitação profissional",
+    "eixo tecnológico",
+    "contexto_estrutural.cnct.comparacao_catalogo.correspondencia"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O perfil do egresso descreve competências específicas coerentes com a habilitação profissional, o eixo tecnológico e o perfil profissional de conclusão do CNCT?",
+  "rubrica": "Comparar o perfil do egresso do PPC com `contexto_estrutural.cnct.comparacao_catalogo.correspondencia.perfil_profissional`, avaliando se as competências, responsabilidades e entregas profissionais centrais do CNCT foram incorporadas sem contradições materiais.",
+  "boa_evidencia": "Perfil que explicita capacidades técnicas, responsabilidades e entregas profissionais compatíveis com o campo `Perfil Profissional de Conclusão` do CNCT e com a área do curso.",
+  "ma_evidencia": "Perfil genérico, com competências amplas demais, omissão de competências centrais do CNCT ou pouca vinculação à habilitação e ao eixo tecnológico.",
+  "escalonar_quando": "Escalonar se houver competências relevantes, mas permanecer dúvida sobre sua aderência efetiva à habilitação técnica ou ao perfil profissional CNCT.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

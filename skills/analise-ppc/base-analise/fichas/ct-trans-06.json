@@ -1,0 +1,31 @@
+{
+  "id": "CT-TRANS-06",
+  "titulo": "Síntese argumentativa para o parecer final",
+  "dominio": "transversal",
+  "criticidade": "REC",
+  "secoes_preferenciais": [
+    "01",
+    "05",
+    "11"
+  ],
+  "consultas": [
+    "apresentação",
+    "organização curricular",
+    "referências",
+    "risco",
+    "diligência"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "Há base argumentativa suficiente para redigir um parecer final claro, auditável e útil para decisão humana?",
+  "rubrica": "Cartão final de prontidão argumentativa. Verifica se o conjunto de evidências permite redigir um parecer sem depender de inferências arbitrárias.",
+  "boa_evidencia": "Conjunto de achados com evidências suficientes, riscos delimitados e encaminhamento inteligível.",
+  "ma_evidencia": "Achados fragmentados, sem articulação suficiente para justificar o parecer.",
+  "escalonar_quando": "Escalonar se o parecer depender demais de premissas não documentadas.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

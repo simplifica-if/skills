@@ -1,0 +1,33 @@
+{
+  "versao": "1.0.0",
+  "situacoes": ["APROVADO", "COM_RESSALVAS", "DILIGENCIA", "NAO_APROVADO"],
+  "regras": {
+    "nao_aprovado": {
+      "bloq_nao_atende_min": 4
+    },
+    "diligencia": {
+      "bloq_nao_atende_min": 1,
+      "bloq_inconclusivo_min": 1,
+      "bloq_falha_insumo_min": 1,
+      "obrig_nao_atende_min": 6,
+      "obrig_inconclusivo_min": 1,
+      "obrig_falha_insumo_min": 1
+    },
+    "com_ressalvas": {
+      "bloq_nao_atende_max": 0,
+      "bloq_inconclusivo_max": 0,
+      "bloq_falha_insumo_max": 0,
+      "obrig_nao_atende_max": 5,
+      "obrig_inconclusivo_max": 0,
+      "obrig_falha_insumo_max": 0
+    },
+    "aprovado": {
+      "bloq_nao_atende_max": 0,
+      "bloq_inconclusivo_max": 0,
+      "bloq_falha_insumo_max": 0,
+      "obrig_nao_atende_max": 0,
+      "obrig_inconclusivo_max": 0,
+      "obrig_falha_insumo_max": 0
+    }
+  }
+}
