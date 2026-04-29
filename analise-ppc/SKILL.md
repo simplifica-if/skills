@@ -1,15 +1,21 @@
 ---
 name: analise-ppc
-description: Analisar Projetos Pedagógicos de Curso técnico do IFPR em DOCX ou Markdown, preparando rodadas, gerando lotes de fichas, executando avaliações por IA, validações cruzadas, consolidação, uso de tokens e relatório HTML final. Use quando o usuário solicitar análise de PPC, revisão de PPC, conformidade de Projeto Pedagógico de Curso, matriz curricular, ementário, CNCT ou parecer técnico-pedagógico sobre PPC.
+description: Analisar Projetos Pedagógicos de Curso técnico do IFPR em Word DOCX, preparando rodadas, gerando lotes de fichas, executando avaliações por IA, validações cruzadas, consolidação, uso de tokens e relatório HTML final. Use quando o usuário solicitar análise de PPC, revisão de PPC, conformidade de Projeto Pedagógico de Curso, matriz curricular, ementário, CNCT ou parecer técnico-pedagógico sobre PPC.
 allowed-tools: Read, Write, Glob, Grep, Bash
-argument-hint: [caminho-do-PPC.docx|caminho-do-PPC.md|ajuda]
+argument-hint: [caminho-do-PPC.docx|ajuda]
 ---
 
 # Análise de PPC
 
-Skill autocontida para analisar PPCs de cursos técnicos do IFPR. A skill contém scripts Python, fichas de análise, validações cruzadas, política de parecer, templates de relatório e o catálogo CNCT em `base-analise/dados/cnct/catalogo_cnct.csv`.
+Skill autocontida para analisar PPCs de cursos técnicos do IFPR em Word (`.docx`). A skill contém scripts Python, fichas de análise, validações cruzadas, política de parecer, templates de relatório e o catálogo CNCT em `base-analise/dados/cnct/catalogo_cnct.csv`.
 
 ## Uso rápido
+
+Para orientação de uso por uma pessoa, leia também:
+
+```text
+Read .agents/skills/analise-ppc/README.md
+```
 
 Antes de executar uma análise, leia as instruções completas:
 

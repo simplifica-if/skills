@@ -2,7 +2,7 @@
 
 ## Resumo
 
-Esta skill executa análise IA-first de PPCs de cursos técnicos do IFPR. Ela trabalha com `PPC.md` completo em cada lote, fichas JSON, validações cruzadas, consolidação determinística e relatório HTML estático em página única.
+Esta skill executa análise IA-first de PPCs de cursos técnicos do IFPR a partir de PPC em Word (`.docx`). Internamente, ela converte o documento para `PPC.md` e trabalha com esse Markdown completo em cada lote, fichas JSON, validações cruzadas, consolidação determinística e relatório HTML estático em página única.
 
 O output padrão fica em `analise-ppc/output/<rodada>/`. Em novas rodadas, o arquivo que deve ser aberto pelo usuário fica sozinho na raiz da rodada como `relatorio-analise.html`; todos os insumos e artefatos de suporte ficam em `arquivos-suporte/`.
 
@@ -34,7 +34,7 @@ python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py gerar-relatorio-htm
 
 ## Subcomandos
 
-- `preparar-documento`: cria a rodada, converte DOCX quando necessário e gera `PPC.md`, `PPC-bruto.md` e artefatos estruturais.
+- `preparar-documento`: cria a rodada a partir de um arquivo `.docx` e gera `PPC.md`, `PPC-bruto.md` e artefatos estruturais.
 - `gerar-batches`: gera lotes estáveis a partir de `base-analise/fichas/`.
 - `pre-validar`: gera pré-validações determinísticas e contexto estrutural.
 - `avaliar-lote`: avalia um lote específico.

@@ -6,7 +6,7 @@ Repositório de skills reutilizáveis do Simplifica IF.
 
 ## Skills
 
-- `analise-ppc/` — análise IA-first de Projetos Pedagógicos de Curso técnico do IFPR, com scripts Python, fichas, validações cruzadas, catálogo CNCT empacotado e relatório HTML.
+- `analise-ppc/` — análise IA-first de Projetos Pedagógicos de Curso técnico do IFPR em Word (`.docx`), com scripts Python, fichas, validações cruzadas, catálogo CNCT empacotado e relatório HTML.
 - `ifpr-design/` — identidade visual do IFPR para apresentações, documentos, páginas, materiais visuais e interfaces.
 - `verificar-calendario/` — verificação de calendários acadêmicos do IFPR em XLSX ou PDF, com relatório em Markdown e PDF.
 
