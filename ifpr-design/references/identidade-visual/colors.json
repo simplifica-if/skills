@@ -1,0 +1,233 @@
+{
+  "metadata": {
+    "name": "IFPR Color Palette",
+    "description": "Paleta de cores oficial do Instituto Federal do Paraná",
+    "version": "1.0.0",
+    "updated": "2025-10-28",
+    "official_source": "https://ifpr.edu.br/institucional/sala-de-imprensa/identidade-visual/"
+  },
+  "primary": {
+    "green": {
+      "name": "Verde IFPR",
+      "hex": "#1F8A42",
+      "rgb": "rgb(31, 138, 66)",
+      "hsl": "hsl(135, 47%, 38%)",
+      "pantone": "7738 C",
+      "usage": "Cor corporativa principal, fundos, headers"
+    },
+    "red": {
+      "name": "Vermelho IFPR",
+      "hex": "#C72E2E",
+      "rgb": "rgb(199, 46, 46)",
+      "hsl": "hsl(0, 62%, 48%)",
+      "pantone": "200 C",
+      "usage": "Alertas, destaques, chamadas à ação"
+    },
+    "darkGray": {
+      "name": "Cinza Escuro",
+      "hex": "#2D2D2D",
+      "rgb": "rgb(45, 45, 45)",
+      "hsl": "hsl(0, 0%, 18%)",
+      "usage": "Texto principal, conteúdo"
+    },
+    "white": {
+      "name": "Branco",
+      "hex": "#FFFFFF",
+      "rgb": "rgb(255, 255, 255)",
+      "usage": "Fundo padrão, texto sobre verde"
+    }
+  },
+  "secondary": {
+    "greens": {
+      "darkGreen": {
+        "name": "Verde Escuro",
+        "hex": "#1B5E20",
+        "rgb": "rgb(27, 94, 32)",
+        "usage": "Gradientes, hover states"
+      },
+      "mediumGreen": {
+        "name": "Verde Médio",
+        "hex": "#4CAF50",
+        "rgb": "rgb(76, 175, 80)",
+        "usage": "Elementos secundários, decorações"
+      },
+      "lightGreen": {
+        "name": "Verde Claro",
+        "hex": "#81C784",
+        "rgb": "rgb(129, 199, 132)",
+        "usage": "Fundos leves, highlights"
+      },
+      "veryLightGreen": {
+        "name": "Verde Muito Claro",
+        "hex": "#E8F5E9",
+        "rgb": "rgb(232, 245, 233)",
+        "usage": "Fundos de cards, destaques"
+      }
+    },
+    "reds": {
+      "lightRed": {
+        "name": "Vermelho Claro",
+        "hex": "#EF5350",
+        "rgb": "rgb(239, 83, 80)",
+        "usage": "Alertas menos críticos"
+      },
+      "veryLightRed": {
+        "name": "Vermelho Muito Claro",
+        "hex": "#FFEBEE",
+        "rgb": "rgb(255, 235, 238)",
+        "usage": "Fundos de alertas suaves"
+      }
+    },
+    "grays": {
+      "mediumGray": {
+        "name": "Cinza Médio",
+        "hex": "#757575",
+        "rgb": "rgb(117, 117, 117)",
+        "usage": "Texto secundário, labels"
+      },
+      "lightGray": {
+        "name": "Cinza Claro",
+        "hex": "#BDBDBD",
+        "rgb": "rgb(189, 189, 189)",
+        "usage": "Borders, divisores"
+      },
+      "veryLightGray": {
+        "name": "Cinza Muito Claro",
+        "hex": "#F5F5F5",
+        "rgb": "rgb(245, 245, 245)",
+        "usage": "Fundos secundários, rodapés"
+      }
+    }
+  },
+  "semantic": {
+    "success": {
+      "color": "#1F8A42",
+      "background": "#E8F5E9",
+      "name": "Sucesso/Positivo",
+      "usage": "Mensagens de sucesso, checkmarks"
+    },
+    "warning": {
+      "color": "#FFA726",
+      "background": "#FFF3E0",
+      "name": "Alerta/Atenção",
+      "usage": "Avisos, informações importantes"
+    },
+    "error": {
+      "color": "#C72E2E",
+      "background": "#FFEBEE",
+      "name": "Erro/Crítico",
+      "usage": "Erros, status críticos"
+    },
+    "info": {
+      "color": "#0288D1",
+      "background": "#E1F5FE",
+      "name": "Informação",
+      "usage": "Informações gerais, dicas"
+    }
+  },
+  "gradients": {
+    "primary": {
+      "name": "Gradiente Principal",
+      "css": "linear-gradient(135deg, #1F8A42 0%, #1B5E20 100%)",
+      "usage": "Slides de título, fundos principais"
+    },
+    "light": {
+      "name": "Gradiente Suave",
+      "css": "linear-gradient(135deg, #E8F5E9 0%, #FFFFFF 100%)",
+      "usage": "Fundos leves, seções"
+    },
+    "deep": {
+      "name": "Gradiente Profundo",
+      "css": "linear-gradient(to right, #1B5E20 0%, #1F8A42 50%, #4CAF50 100%)",
+      "usage": "Fundos especiais, banners"
+    }
+  },
+  "charts": {
+    "sequence": [
+      {
+        "order": 1,
+        "color": "#1F8A42",
+        "name": "Verde IFPR"
+      },
+      {
+        "order": 2,
+        "color": "#1B5E20",
+        "name": "Verde Escuro"
+      },
+      {
+        "order": 3,
+        "color": "#4CAF50",
+        "name": "Verde Médio"
+      },
+      {
+        "order": 4,
+        "color": "#81C784",
+        "name": "Verde Claro"
+      },
+      {
+        "order": 5,
+        "color": "#C72E2E",
+        "name": "Vermelho IFPR"
+      },
+      {
+        "order": 6,
+        "color": "#2D2D2D",
+        "name": "Cinza Escuro"
+      }
+    ]
+  },
+  "contrast": {
+    "wcag": [
+      {
+        "foreground": "#1F8A42",
+        "background": "#FFFFFF",
+        "ratio": 4.4,
+        "level": "AA-large-only",
+        "note": "Apenas para texto grande (18pt+ ou 14pt bold). NÃO usar para texto normal."
+      },
+      {
+        "foreground": "#FFFFFF",
+        "background": "#1F8A42",
+        "ratio": 4.4,
+        "level": "AA-large-only",
+        "note": "Apenas para texto grande (18pt+ ou 14pt bold). NÃO usar para texto normal."
+      },
+      {
+        "foreground": "#2D2D2D",
+        "background": "#FFFFFF",
+        "ratio": 13.8,
+        "level": "AAA",
+        "note": "Excelente contraste para qualquer tamanho de texto."
+      },
+      {
+        "foreground": "#C72E2E",
+        "background": "#FFFFFF",
+        "ratio": 5.4,
+        "level": "AA",
+        "note": "Atende WCAG AA para texto normal."
+      },
+      {
+        "foreground": "#757575",
+        "background": "#FFFFFF",
+        "ratio": 4.6,
+        "level": "AA",
+        "note": "Atende WCAG AA para texto normal, margem estreita."
+      }
+    ]
+  },
+  "guidelines": {
+    "do": [
+      "Use as cores institucionais do IFPR",
+      "Mantenha contraste adequado (mínimo 4.5:1)",
+      "Use verde como cor primária",
+      "Use vermelho para destaques apenas",
+      "Garanta coerência visual"
+    ],
+    "dont": [
+      "Não altere as cores do logo",
+      "Não use cores que conflitem com identidade",
+      "Não inverta a paleta sem motivo",
+      "Não deixe contraste insuficiente"
+    ]
+  }
+}

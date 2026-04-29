@@ -1,0 +1,187 @@
+/* Paleta de Cores IFPR - CSS */
+/* Instituto Federal do Paraná */
+/* Atualizado: Outubro 2025 */
+
+:root {
+  /* ========== CORES PRIMÁRIAS ========== */
+  
+  /* Verde Principal - Cor corporativa */
+  --ifpr-verde: #1F8A42;
+  --ifpr-verde-rgb: rgb(31, 138, 66);
+  --ifpr-verde-hsl: hsl(135, 47%, 38%);
+  
+  /* Vermelho Destaque - Alertas e chamadas à ação */
+  --ifpr-vermelho: #C72E2E;
+  --ifpr-vermelho-rgb: rgb(199, 46, 46);
+  --ifpr-vermelho-hsl: hsl(0, 62%, 48%);
+  
+  /* Cinza Escuro - Texto principal */
+  --ifpr-cinza-escuro: #2D2D2D;
+  --ifpr-cinza-escuro-rgb: rgb(45, 45, 45);
+  
+  /* Branco */
+  --ifpr-branco: #FFFFFF;
+  
+  /* ========== TONS VERDES COMPLEMENTARES ========== */
+  
+  /* Verde Escuro - Para ênfase e gradientes */
+  --ifpr-verde-escuro: #1B5E20;
+  --ifpr-verde-escuro-rgb: rgb(27, 94, 32);
+  
+  /* Verde Médio */
+  --ifpr-verde-medio: #4CAF50;
+  --ifpr-verde-medio-rgb: rgb(76, 175, 80);
+  
+  /* Verde Claro */
+  --ifpr-verde-claro: #81C784;
+  --ifpr-verde-claro-rgb: rgb(129, 199, 132);
+  
+  /* Verde Muito Claro - Fundos e destaques */
+  --ifpr-verde-muito-claro: #E8F5E9;
+  --ifpr-verde-muito-claro-rgb: rgb(232, 245, 233);
+  
+  /* ========== TONS VERMELHOS COMPLEMENTARES ========== */
+  
+  /* Vermelho Claro */
+  --ifpr-vermelho-claro: #EF5350;
+  --ifpr-vermelho-claro-rgb: rgb(239, 83, 80);
+  
+  /* Vermelho Muito Claro - Fundos de alertas */
+  --ifpr-vermelho-muito-claro: #FFEBEE;
+  --ifpr-vermelho-muito-claro-rgb: rgb(255, 235, 238);
+  
+  /* ========== CINZAS ========== */
+  
+  /* Cinza Médio - Texto secundário */
+  --ifpr-cinza: #757575;
+  --ifpr-cinza-rgb: rgb(117, 117, 117);
+  
+  /* Cinza Claro - Borders e divisores */
+  --ifpr-cinza-claro: #BDBDBD;
+  --ifpr-cinza-claro-rgb: rgb(189, 189, 189);
+  
+  /* Cinza Muito Claro - Fundos secundários */
+  --ifpr-cinza-muito-claro: #F5F5F5;
+  --ifpr-cinza-muito-claro-rgb: rgb(245, 245, 245);
+  
+  /* ========== CORES SEMÂNTICAS ========== */
+  
+  /* Sucesso / Positivo */
+  --cor-sucesso: #1F8A42;
+  --cor-sucesso-fundo: #E8F5E9;
+  
+  /* Alerta / Atenção */
+  --cor-alerta: #FFA726;
+  --cor-alerta-fundo: #FFF3E0;
+  
+  /* Erro / Crítico */
+  --cor-erro: #C72E2E;
+  --cor-erro-fundo: #FFEBEE;
+  
+  /* Informação */
+  --cor-info: #0288D1;
+  --cor-info-fundo: #E1F5FE;
+  
+  /* ========== ALIASES (Atalhos) ========== */
+  
+  /* Cor primária */
+  --color-primary: var(--ifpr-verde);
+  --color-primary-dark: var(--ifpr-verde-escuro);
+  --color-primary-light: var(--ifpr-verde-claro);
+  
+  /* Cor de destaque */
+  --color-accent: var(--ifpr-vermelho);
+  --color-accent-light: var(--ifpr-vermelho-claro);
+  
+  /* Texto */
+  --color-text: var(--ifpr-cinza-escuro);
+  --color-text-light: var(--ifpr-cinza);
+  --color-text-lighter: var(--ifpr-cinza-claro);
+  
+  /* Superfícies */
+  --color-surface: var(--ifpr-branco);
+  --color-surface-secondary: var(--ifpr-cinza-muito-claro);
+  --color-surface-accent: var(--ifpr-verde-muito-claro);
+  
+  /* ========== GRADIENTES ========== */
+  --gradient-primary: linear-gradient(135deg, #1F8A42 0%, #1B5E20 100%);
+  --gradient-light: linear-gradient(135deg, #E8F5E9 0%, #FFFFFF 100%);
+  --gradient-deep: linear-gradient(to right, #1B5E20 0%, #1F8A42 50%, #4CAF50 100%);
+}
+
+/* ========== CORE TYPOGRAPHY ========== */
+
+:root {
+  --font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/* ========== USAGE EXAMPLES ========== */
+
+/* Elemento com cor primária verde */
+.button-primary {
+  background-color: var(--ifpr-verde);
+  color: var(--ifpr-branco);
+}
+
+/* Card com fundo verde claro */
+.card-highlight {
+  background-color: var(--ifpr-verde-muito-claro);
+  border-left: 4px solid var(--ifpr-verde);
+  color: var(--ifpr-cinza-escuro);
+}
+
+/* Alerta com vermelho */
+.alert-error {
+  background-color: var(--ifpr-vermelho-muito-claro);
+  border-left: 4px solid var(--ifpr-vermelho);
+  color: var(--ifpr-vermelho);
+}
+
+/* Sucesso com verde */
+.alert-success {
+  background-color: var(--ifpr-verde-muito-claro);
+  border-left: 4px solid var(--ifpr-verde);
+  color: var(--ifpr-verde);
+}
+
+/* Texto secundário */
+.text-secondary {
+  color: var(--ifpr-cinza);
+}
+
+/* Divider / Separador */
+.divider {
+  background-color: var(--ifpr-cinza-claro);
+  height: 1px;
+  opacity: 0.5;
+}
+
+/* ========== CONTRASTE (WCAG) ========== */
+
+/* ⚠ Verde sobre branco: 4.4:1 (AA apenas para texto grande 18pt+/14pt bold) */
+.text-green-on-white {
+  color: var(--ifpr-verde);
+  background-color: var(--ifpr-branco);
+}
+
+/* ⚠ Branco sobre verde: 4.4:1 (AA apenas para texto grande 18pt+/14pt bold) */
+.text-white-on-green {
+  color: var(--ifpr-branco);
+  background-color: var(--ifpr-verde);
+}
+
+/* ✓ Cinza escuro sobre branco: 13.8:1 (AAA) */
+.text-dark-on-white {
+  color: var(--ifpr-cinza-escuro);
+  background-color: var(--ifpr-branco);
+}
+
+/* ✓ Vermelho sobre branco: 5.4:1 (AA) */
+.text-red-on-white {
+  color: var(--ifpr-vermelho);
+  background-color: var(--ifpr-branco);
+}
