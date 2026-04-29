@@ -11,6 +11,12 @@ Analisa calendários acadêmicos do IFPR em formato `xlsx` ou `pdf` e gera relat
 
 ## Uso
 
+Para orientação de uso por uma pessoa, leia também:
+
+```text
+Read .agents/skills/verificar-calendario/README.md
+```
+
 ```text
 /verificar-calendario caminho/para/calendario.xlsx
 /verificar-calendario caminho/para/calendario.pdf
