@@ -9,9 +9,11 @@
   "consultas": [
     "formação geral básica",
     "componentes obrigatórios",
+    "língua portuguesa e suas literaturas",
     "língua portuguesa",
-    "literatura",
+    "literaturas",
     "língua inglesa",
+    "artes",
     "arte",
     "educação física",
     "matemática",
@@ -33,10 +35,10 @@
     "Resolução CNE/CEB nº 2/2024"
   ],
   "pergunta": "A estrutura curricular contempla os componentes obrigatórios da Formação Geral Básica e os conteúdos legais específicos aplicáveis ao ensino médio integrado?",
-  "rubrica": "Verificar se a matriz e as ementas tornam observável a presença dos componentes obrigatórios da Formação Geral Básica e de conteúdos legais específicos, incluindo história e cultura afro-brasileira e indígena, educação digital, abordagens com experiências e perspectivas femininas, temas transversais e exibição de filmes de produção nacional quando aplicável. Não exigir distribuição fixa por ano quando a norma ou o PPC não a estabelecer, mas exigir rastreabilidade curricular suficiente.",
-  "boa_evidencia": "Matriz e ementas indicam os componentes da FGB e mostram onde os conteúdos legais aparecem, seja em componentes próprios, projetos integradores, práticas interdisciplinares ou ementas explicitamente relacionadas.",
-  "ma_evidencia": "Ausência de componentes obrigatórios, omissão de conteúdos legais centrais ou menções genéricas sem possibilidade de localizar sua oferta curricular.",
-  "escalonar_quando": "Escalonar se a presença de componentes ou conteúdos depender de inferência frágil, se houver nomenclaturas ambíguas ou se as ementas não permitirem confirmar a cobertura material.",
+  "rubrica": "Verificar se a matriz curricular e/ou o ementário tornam observável a presença dos componentes curriculares obrigatórios da Formação Geral Básica do ensino médio: língua portuguesa e suas literaturas, língua inglesa, artes, educação física, matemática, biologia, física, química, filosofia, geografia, história e sociologia, conforme art. 35-D da LDB e art. 17 da Resolução CNE/CEB nº 2/2024. A ausência ou impossibilidade de localizar qualquer componente deve ser apontada explicitamente. Conteúdos legais específicos podem ser considerados como verificação complementar, sem substituir a exigência dos componentes obrigatórios.",
+  "boa_evidencia": "Matriz e/ou ementas indicam de forma rastreável todos os componentes obrigatórios da FGB e, complementarmente, mostram onde conteúdos legais específicos aparecem, seja em componentes próprios, projetos integradores, práticas interdisciplinares ou ementas explicitamente relacionadas.",
+  "ma_evidencia": "Ausência ou impossibilidade de localizar um ou mais componentes obrigatórios da FGB, omissão de conteúdos legais centrais ou menções genéricas sem possibilidade de localizar sua oferta curricular.",
+  "escalonar_quando": "Escalonar se a presença de qualquer componente obrigatório depender de inferência frágil, se houver nomenclaturas ambíguas ou se matriz e ementas não permitirem confirmar a cobertura material.",
   "evidencia_minima": 3,
   "estados_permitidos": [
     "ATENDE",
