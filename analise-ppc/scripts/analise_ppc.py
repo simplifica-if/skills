@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -8,20 +9,12 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
-from avaliar_cruzadas import avaliar_validacoes_cruzadas
-from avaliar_lote import avaliar_lote, avaliar_todos
-from consolidar_resultados import consolidar_rodada
-from gerar_batches import gerar_batches_rodada
 from gerar_relatorio_html import gerar_relatorio_html
-from pre_validacoes import gerar_pre_validacoes_rodada
 from preparar_documento import preparar_documento
-from reavaliar import ErroReavaliacao, reavaliar_rodada
-from uso_tokens import atualizar_uso_tokens_rodada
+from subagents import mesclar_resultados_avulsos, montar_grupo_avulso, montar_grupos_subagents
 
 
 def _print_payload(payload: object) -> None:
-    import json
-
     print(json.dumps(payload, ensure_ascii=False, indent=2))
 
 
@@ -38,220 +31,107 @@ def cmd_preparar_documento(args: argparse.Namespace) -> int:
     payload = preparar_documento(
         arquivo_entrada=Path(args.arquivo),
         output_base=Path(args.saida_base) if args.saida_base else None,
-        provider=args.provider,
-        model=args.model,
-        batch_size=args.batch_size,
     )
     _print_payload(payload["resumo"])
     return 0
 
 
-def cmd_gerar_batches(args: argparse.Namespace) -> int:
-    payload = gerar_batches_rodada(
+def cmd_montar_grupos_subagents(args: argparse.Namespace) -> int:
+    payload = montar_grupos_subagents(
         rodada_dir=Path(args.rodada_dir),
-        batch_size=args.batch_size,
-        fichas_dir=Path(args.fichas_dir) if args.fichas_dir else None,
-    )
-    _print_payload(
-        {
-            "rodada_dir": str(payload["rodada_dir"]),
-            "total_batches": payload["total_batches"],
-            "total_fichas": payload["total_fichas"],
-            "batch_size": payload["batch_size"],
-        }
-    )
-    return 0
-
-
-def cmd_pre_validar(args: argparse.Namespace) -> int:
-    payload = gerar_pre_validacoes_rodada(Path(args.rodada_dir))
-    _print_payload(
-        {
-            "pre_validacoes_path": str(payload["pre_validacoes_path"]),
-            "condicionais_path": str(payload["condicionais_path"]),
-            "contexto_estrutural_path": str(payload["contexto_estrutural_path"]),
-            "tem_bloqueios": payload["pre_validacoes"]["tem_bloqueios"],
-            "bloqueios": payload["pre_validacoes"]["bloqueios"],
-        }
-    )
-    return 0 if not payload["pre_validacoes"]["tem_bloqueios"] else 1
-
-
-def cmd_avaliar_lote(args: argparse.Namespace) -> int:
-    payload = avaliar_lote(
-        rodada_dir=Path(args.rodada_dir),
-        batch_id=args.batch_id,
-        provider=args.provider,
-        model=args.model,
-        forcar=args.forcar,
+        tamanho_grupo=args.tamanho_grupo,
     )
     _print_payload(payload)
-    return 0 if payload.get("status") == "ok" else 1
-
-
-def cmd_avaliar_todos(args: argparse.Namespace) -> int:
-    payload = avaliar_todos(
-        rodada_dir=Path(args.rodada_dir),
-        provider=args.provider,
-        model=args.model,
-        forcar=args.forcar,
-        batch_ids=list(args.batch_id or []),
-    )
-    _print_payload(payload)
-    return 0 if all(item.get("status") == "ok" for item in payload["status"]) else 1
-
-
-def cmd_avaliar_cruzadas(args: argparse.Namespace) -> int:
-    payload = avaliar_validacoes_cruzadas(
-        rodada_dir=Path(args.rodada_dir),
-        provider=args.provider,
-        model=args.model,
-        forcar=args.forcar,
-        validacoes_dir=Path(args.validacoes_dir) if args.validacoes_dir else None,
-    )
-    _print_payload(payload)
-    return 0 if payload.get("status") == "ok" else 1
-
-
-def cmd_consolidar(args: argparse.Namespace) -> int:
-    payload = consolidar_rodada(
-        rodada_dir=Path(args.rodada_dir),
-        modo_situacao=args.modo_situacao,
-    )
-    _print_payload(
-        {
-            "resultados_fichas": str(payload["resultados_fichas"]),
-            "achados": str(payload["achados"]),
-            "parecer_final": str(payload["parecer_final"]),
-            "situacao": payload["parecer"]["situacao"],
-        }
-    )
     return 0
 
 
 def cmd_gerar_relatorio_html(args: argparse.Namespace) -> int:
-    payload = gerar_relatorio_html(Path(args.rodada_dir))
+    payload = gerar_relatorio_html(
+        rodada_dir=Path(args.rodada_dir),
+        resultados_path=Path(args.resultados),
+    )
     _print_payload(_relatorio_payload(payload["relatorio_html"]))
     return 0
 
 
-def cmd_contabilizar_tokens(args: argparse.Namespace) -> int:
-    payload = atualizar_uso_tokens_rodada(Path(args.rodada_dir))
-    _print_payload(
-        {
-            "uso_tokens": str(Path(args.rodada_dir).resolve() / "uso-tokens.json"),
-            "total_execucoes_com_uso": payload["total_execucoes_com_uso"],
-            "totais": payload["totais"],
-        }
+def cmd_montar_grupo_avulso(args: argparse.Namespace) -> int:
+    payload = montar_grupo_avulso(
+        rodada_dir=Path(args.rodada_dir),
+        ficha_ids=list(args.ficha_id or []),
     )
+    _print_payload(payload)
     return 0
 
 
-def cmd_reavaliar(args: argparse.Namespace) -> int:
-    try:
-        payload = reavaliar_rodada(
-            rodada_dir=Path(args.rodada_dir),
-            ficha_ids=list(args.ficha_id or []),
-            validacao_ids=list(args.validacao_id or []),
-            provider=args.provider,
-            model=args.model,
-            forcar=args.forcar,
-            gerar_relatorio=not args.sem_relatorio,
-        )
-    except ErroReavaliacao as exc:
-        _print_payload({"status": "erro", "erro": str(exc)})
-        return 1
+def cmd_mesclar_resultados_avulsos(args: argparse.Namespace) -> int:
+    payload = mesclar_resultados_avulsos(
+        rodada_dir=Path(args.rodada_dir),
+        resultados_base_path=Path(args.resultados_base),
+        resultados_avulsos_path=Path(args.resultados_avulsos),
+        saida_path=Path(args.saida) if args.saida else None,
+    )
     _print_payload(payload)
-    return 0 if all(item.get("status") == "ok" for item in payload["status"]) else 1
+    return 0
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Análise de PPC IA-first")
+    parser = argparse.ArgumentParser(description="Análise de PPC por sub-agentes na conversa")
     subparsers = parser.add_subparsers(dest="subcomando", required=True)
 
     parser_preparar = subparsers.add_parser("preparar-documento", help="Criar a rodada e o PPC.md canônico")
     parser_preparar.add_argument("arquivo", type=str, help="Arquivo .md ou .docx de entrada")
     parser_preparar.add_argument("--saida-base", type=str, help="Diretório base opcional para a rodada")
-    parser_preparar.add_argument("--provider", type=str, default="codex", help="Provider padrão da rodada")
-    parser_preparar.add_argument("--model", type=str, default="codex-default", help="Modelo padrão da rodada")
-    parser_preparar.add_argument("--batch-size", type=int, default=20, help="Tamanho padrão dos lotes")
     parser_preparar.set_defaults(func=cmd_preparar_documento)
 
-    parser_batches = subparsers.add_parser("gerar-batches", help="Gerar lotes estáveis de fichas")
-    parser_batches.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_batches.add_argument("--batch-size", type=int, default=20, help="Tamanho dos lotes")
-    parser_batches.add_argument("--fichas-dir", type=str, help="Catálogo alternativo de fichas")
-    parser_batches.set_defaults(func=cmd_gerar_batches)
-
-    parser_pre_validar = subparsers.add_parser("pre-validar", help="Gerar pré-validações e condicionais da rodada")
-    parser_pre_validar.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_pre_validar.set_defaults(func=cmd_pre_validar)
-
-    parser_avaliar_lote = subparsers.add_parser("avaliar-lote", help="Avaliar um lote específico")
-    parser_avaliar_lote.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_avaliar_lote.add_argument("--batch-id", type=str, required=True, help="Identificador do lote")
-    parser_avaliar_lote.add_argument("--provider", type=str, default="codex", help="Provider a usar")
-    parser_avaliar_lote.add_argument("--model", type=str, default="codex-default", help="Modelo do provider")
-    parser_avaliar_lote.add_argument("--forcar", action="store_true", help="Reexecutar mesmo com cache válido")
-    parser_avaliar_lote.set_defaults(func=cmd_avaliar_lote)
-
-    parser_avaliar_todos = subparsers.add_parser("avaliar-todos", help="Avaliar todos os lotes pendentes")
-    parser_avaliar_todos.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_avaliar_todos.add_argument("--provider", type=str, default="codex", help="Provider a usar")
-    parser_avaliar_todos.add_argument("--model", type=str, default="codex-default", help="Modelo do provider")
-    parser_avaliar_todos.add_argument("--batch-id", action="append", help="Lote específico a incluir")
-    parser_avaliar_todos.add_argument("--forcar", action="store_true", help="Reexecutar todos os lotes")
-    parser_avaliar_todos.set_defaults(func=cmd_avaliar_todos)
-
-    parser_avaliar_cruzadas = subparsers.add_parser(
-        "avaliar-cruzadas",
-        help="Avaliar validações cruzadas por agente",
+    parser_grupos = subparsers.add_parser(
+        "montar-grupos-subagents",
+        help="Listar grupos de fichas para sub-agentes e salvar grupos-subagents.json",
     )
-    parser_avaliar_cruzadas.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_avaliar_cruzadas.add_argument("--provider", type=str, default="codex", help="Provider a usar")
-    parser_avaliar_cruzadas.add_argument("--model", type=str, default="codex-default", help="Modelo do provider")
-    parser_avaliar_cruzadas.add_argument("--validacoes-dir", type=str, help="Catálogo alternativo de validações cruzadas")
-    parser_avaliar_cruzadas.add_argument("--forcar", action="store_true", help="Reexecutar mesmo com cache válido")
-    parser_avaliar_cruzadas.set_defaults(func=cmd_avaliar_cruzadas)
+    parser_grupos.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
+    parser_grupos.add_argument("--tamanho-grupo", type=int, default=20, help="Quantidade de fichas por grupo")
+    parser_grupos.set_defaults(func=cmd_montar_grupos_subagents)
 
-    parser_reavaliar = subparsers.add_parser(
-        "reavaliar",
-        help="Reavaliar fichas ou validações cruzadas específicas por ID",
+    parser_avulso = subparsers.add_parser(
+        "montar-grupo-avulso",
+        help="Montar um grupo avulso de fichas para reavaliação por sub-agente",
     )
-    parser_reavaliar.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_reavaliar.add_argument("--ficha-id", action="append", help="Ficha específica a reavaliar")
-    parser_reavaliar.add_argument("--validacao-id", action="append", help="Validação cruzada específica a reavaliar")
-    parser_reavaliar.add_argument("--provider", type=str, default="codex", help="Provider a usar")
-    parser_reavaliar.add_argument("--model", type=str, default="codex-default", help="Modelo do provider")
-    parser_reavaliar.add_argument("--forcar", action="store_true", help="Reexecutar mesmo com cache válido")
-    parser_reavaliar.add_argument(
-        "--sem-relatorio",
-        action="store_true",
-        help="Salvar sobreposições avulsas sem consolidar nem regenerar o HTML",
-    )
-    parser_reavaliar.set_defaults(func=cmd_reavaliar)
+    parser_avulso.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
+    parser_avulso.add_argument("--ficha-id", action="append", required=True, help="Ficha a incluir no grupo avulso")
+    parser_avulso.set_defaults(func=cmd_montar_grupo_avulso)
 
-    parser_consolidar = subparsers.add_parser("consolidar", help="Consolidar resultados dos lotes válidos")
-    parser_consolidar.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_consolidar.add_argument(
-        "--modo-situacao",
+    parser_mesclar = subparsers.add_parser(
+        "mesclar-resultados-avulsos",
+        help="Mesclar respostas avulsas em resultados-subagents.json",
+    )
+    parser_mesclar.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
+    parser_mesclar.add_argument(
+        "--resultados-base",
         type=str,
-        choices=["padrao", "sintetico"],
-        default="padrao",
-        help="Nomenclatura da situação final do parecer",
+        default="resultados-subagents.json",
+        help="JSON base de resultados; relativo a arquivos-suporte quando não absoluto",
     )
-    parser_consolidar.set_defaults(func=cmd_consolidar)
+    parser_mesclar.add_argument(
+        "--resultados-avulsos",
+        type=str,
+        required=True,
+        help="JSON retornado pelo sub-agente avulso; relativo a arquivos-suporte quando não absoluto",
+    )
+    parser_mesclar.add_argument(
+        "--saida",
+        type=str,
+        help="Destino do JSON mesclado; padrão: sobrescreve --resultados-base",
+    )
+    parser_mesclar.set_defaults(func=cmd_mesclar_resultados_avulsos)
 
     parser_relatorio = subparsers.add_parser("gerar-relatorio-html", help="Gerar o relatório HTML final")
     parser_relatorio.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_relatorio.set_defaults(func=cmd_gerar_relatorio_html)
-
-    parser_tokens = subparsers.add_parser(
-        "contabilizar-tokens",
-        help="Consolidar uso de tokens registrado nas execuções da rodada",
+    parser_relatorio.add_argument(
+        "--resultados",
+        type=str,
+        default="resultados-subagents.json",
+        help="JSON coletado dos sub-agentes; relativo a arquivos-suporte quando não absoluto",
     )
-    parser_tokens.add_argument("--rodada-dir", type=str, required=True, help="Diretório da rodada")
-    parser_tokens.set_defaults(func=cmd_contabilizar_tokens)
+    parser_relatorio.set_defaults(func=cmd_gerar_relatorio_html)
 
     return parser
 
@@ -259,7 +139,7 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
-    return int(args.func(args))
+    return args.func(args)
 
 
 if __name__ == "__main__":

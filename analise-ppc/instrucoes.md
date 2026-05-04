@@ -2,9 +2,9 @@
 
 ## Resumo
 
-Esta skill executa análise IA-first de PPCs de cursos técnicos do IFPR a partir de PPC em Word (`.docx`). Internamente, ela converte o documento para `PPC.md` e trabalha com esse Markdown completo em cada lote, fichas JSON, validações cruzadas, consolidação determinística e relatório HTML estático em página única.
+Esta skill executa análise de PPC por sub-agentes dentro da conversa. Os scripts Python são deliberadamente pequenos: convertem o documento para `PPC.md`, montam grupos de fichas e renderizam o relatório HTML a partir do JSON coletado dos sub-agentes.
 
-O output padrão fica em `analise-ppc/output/<rodada>/`. Em novas rodadas, o arquivo que deve ser aberto pelo usuário fica sozinho na raiz da rodada como `relatorio-analise.html`; todos os insumos e artefatos de suporte ficam em `arquivos-suporte/`.
+O output padrão fica em `analise-ppc/output/<rodada>/`. O relatório final fica em `relatorio-analise.html`; os artefatos de suporte ficam em `arquivos-suporte/`.
 
 ## Dependências
 
@@ -16,59 +16,102 @@ python3 -m pip install -r .agents/skills/analise-ppc/requirements.txt
 
 Se a instalação estiver em `.claude/skills`, substitua o prefixo do caminho.
 
-`docx2pdf`, `pdf2image` e `pdfplumber` são opcionais para renderização da representação gráfica. A conversão principal para `PPC.md` não deve falhar se essas dependências opcionais não estiverem disponíveis.
-
 ## Fluxo recomendado
 
 Use `.agents/skills/analise-ppc` nos exemplos abaixo. Se a skill estiver instalada em `.claude/skills`, troque apenas o prefixo.
 
 ```bash
 python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py preparar-documento caminho/PPC.docx
-python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py gerar-batches --rodada-dir .agents/skills/analise-ppc/output/<rodada>
-python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py avaliar-todos --rodada-dir .agents/skills/analise-ppc/output/<rodada>
-python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py avaliar-cruzadas --rodada-dir .agents/skills/analise-ppc/output/<rodada>
-python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py contabilizar-tokens --rodada-dir .agents/skills/analise-ppc/output/<rodada>
-python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py consolidar --rodada-dir .agents/skills/analise-ppc/output/<rodada>
-python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py gerar-relatorio-html --rodada-dir .agents/skills/analise-ppc/output/<rodada>
+python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py montar-grupos-subagents --rodada-dir .agents/skills/analise-ppc/output/<rodada>
 ```
 
-## Subcomandos
+Depois disso, o agente principal deve:
 
-- `preparar-documento`: cria a rodada a partir de um arquivo `.docx` e gera `PPC.md`, `PPC-bruto.md` e artefatos estruturais.
-- `gerar-batches`: gera lotes estáveis a partir de `base-analise/fichas/`.
-- `pre-validar`: gera pré-validações determinísticas e contexto estrutural.
-- `avaliar-lote`: avalia um lote específico.
-- `avaliar-todos`: avalia todos os lotes pendentes ou os lotes indicados por `--batch-id`.
-- `avaliar-cruzadas`: executa validações transversais de coerência.
-- `reavaliar`: reexecuta fichas ou validações específicas por ID.
-- `contabilizar-tokens`: consolida metadados reais de uso das CLIs.
-- `consolidar`: consolida achados, resultados e parecer final.
-- `gerar-relatorio-html`: gera o relatório final em HTML.
+1. Ler `arquivos-suporte/PPC.md`.
+2. Ler `arquivos-suporte/grupos-subagents.json`.
+3. Ler `prompts/subagent-lote-fichas.md`.
+4. Spawnar um sub-agente por grupo.
+5. Passar a cada sub-agente o PPC completo, o prompt de trabalho, as fichas do grupo e os blocos de `contextos` do grupo.
+6. Coletar as respostas em `arquivos-suporte/resultados-subagents.json`.
+7. Fazer uma síntese transversal opcional usando `prompts/sintese-transversal.md`, o PPC completo, todos os resultados, `cnct_contexto` e `contexto_estrutural`; salvar o retorno em `alertas_transversais` dentro de `resultados-subagents.json`.
+8. Gerar o relatório:
 
-## Estrutura útil
+```bash
+python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py gerar-relatorio-html --rodada-dir .agents/skills/analise-ppc/output/<rodada> --resultados resultados-subagents.json
+```
 
-- `base-analise/fichas/`: catálogo canônico de fichas por lote.
-- `base-analise/validacoes-cruzadas/`: validações transversais.
-- `base-analise/dados/cnct/catalogo_cnct.csv`: catálogo CNCT empacotado com a skill.
-- `config/politica_parecer.json`: política interna de situação final.
-- `prompts/`: prompts usados nas avaliações por IA.
-- `templates/`: HTML, CSS e JavaScript do relatório.
-- `output/`: rodadas criadas em tempo de execução.
+## Contrato de resultados
+
+`resultados-subagents.json` deve conter:
+
+```json
+{
+  "metadata": {
+    "observacao": "opcional"
+  },
+  "grupos": [
+    {
+      "grupo_id": "grupo-001",
+      "resultados": [
+        {
+          "ficha_id": "CT-IDENT-01",
+          "estado": "ATENDE",
+          "confianca": 0.9,
+          "justificativa": "Decisão fundamentada no PPC.",
+          "evidencias": ["Trecho ou referência textual do PPC"],
+          "lacunas": [],
+          "revisao_humana_obrigatoria": false
+        }
+      ]
+    }
+  ]
+}
+```
+
+O renderizador valida campos obrigatórios, fichas duplicadas, fichas ausentes, fichas desconhecidas e quantidade mínima de evidências por ficha antes de gerar o HTML.
+
+## Contexto CNCT
+
+`montar-grupos-subagents` identifica a entrada provável do CNCT para o curso usando o catálogo interno em `base-analise/dados/cnct/catalogo_cnct.csv` e salva o resultado em:
+
+```text
+arquivos-suporte/cnct-contexto.json
+```
+
+O mesmo contexto aparece no topo de `grupos-subagents.json` como `cnct_contexto`. Grupos com fichas que mencionam CNCT ou `contexto_estrutural.cnct` recebem também `requer_contexto_cnct: true` e `contextos.cnct`. Passe esse bloco ao sub-agente junto com o PPC e as fichas do grupo.
+
+## Contexto estrutural e anexos visuais
+
+`montar-grupos-subagents` também salva:
+
+```text
+arquivos-suporte/contexto-estrutural-subagents.json
+```
+
+Esse bloco resume artefatos extraídos do DOCX, como identificação, matriz curricular, ementário e caminhos dos JSONs estruturados. Ele é incluído como `contextos.estrutura` em todos os grupos. Quando a representação gráfica do processo formativo é extraída e o grupo contém `CT-CURR-10`, o grupo recebe `contextos.anexos_visuais` com o caminho absoluto da imagem.
+
+## Reavaliação avulsa
+
+Para reavaliar fichas específicas sem refazer todos os grupos:
+
+```bash
+python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py montar-grupo-avulso --rodada-dir .agents/skills/analise-ppc/output/<rodada> --ficha-id CT-IDENT-01
+```
+
+Spawnar um sub-agente com o grupo avulso retornado, salvar a resposta em `arquivos-suporte/resultado-avulso.json` e mesclar:
+
+```bash
+python3 -B .agents/skills/analise-ppc/scripts/analise_ppc.py mesclar-resultados-avulsos --rodada-dir .agents/skills/analise-ppc/output/<rodada> --resultados-avulsos resultado-avulso.json
+```
+
+Depois, rode novamente `gerar-relatorio-html`.
 
 ## Entrega do relatório
 
-Ao concluir `gerar-relatorio-html` ou `reavaliar` com relatório, use o caminho `relatorio_html` ou a URL `relatorio_url` retornada pelo comando para avisar a pessoa:
+Ao concluir `gerar-relatorio-html`, use o caminho `relatorio_html` ou a URL `relatorio_url` retornada pelo comando para avisar a pessoa:
 
 ```text
 Relatório pronto: [abrir relatório](file:///.../relatorio-analise.html)
 ```
 
-Não peça para a pessoa procurar o arquivo dentro dos artefatos. O relatório final é autocontido: CSS, JavaScript e dados consolidados são embutidos no próprio HTML.
-
-## Observações operacionais
-
-- A preparação de `DOCX` é autocontida e gera `PPC.md`, `PPC-bruto.md` e `artefatos-conversao/` dentro de `arquivos-suporte/`.
-- A comparação com CNCT usa o CSV interno da skill em `base-analise/dados/cnct/catalogo_cnct.csv`
-- Quando a representação gráfica é extraída como imagem, o lote que contém a ficha `CT-CURR-10` recebe esse arquivo como anexo visual no provider `codex` (`codex exec --image`).
-- Providers sem suporte a anexos visuais neste fluxo não devem ser usados para fechar `CT-CURR-10` por análise visual.
-- Para regenerar `base-analise/indice.json`, execute `python3 -B .agents/skills/analise-ppc/scripts/gerar_indice_base_analise.py`.
+Não peça para a pessoa procurar o arquivo dentro dos artefatos.

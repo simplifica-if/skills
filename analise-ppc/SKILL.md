@@ -1,13 +1,13 @@
 ---
 name: analise-ppc
-description: Analisar Projetos Pedagógicos de Curso técnico do IFPR em Word DOCX, preparando rodadas, gerando lotes de fichas, executando avaliações por IA, validações cruzadas, consolidação, uso de tokens e relatório HTML final. Use quando o usuário solicitar análise de PPC, revisão de PPC, conformidade de Projeto Pedagógico de Curso, matriz curricular, ementário, CNCT ou parecer técnico-pedagógico sobre PPC.
+description: Analisar Projetos Pedagógicos de Curso técnico do IFPR em Word DOCX ou Markdown, preparando o PPC.md, coordenando sub-agentes na conversa com fichas canônicas e gerando relatório HTML determinístico. Use quando o usuário solicitar análise de PPC, revisão de PPC, conformidade de Projeto Pedagógico de Curso, matriz curricular, ementário, CNCT ou parecer técnico-pedagógico sobre PPC.
 allowed-tools: Read, Write, Glob, Grep, Bash
 argument-hint: [caminho-do-PPC.docx|ajuda]
 ---
 
 # Análise de PPC
 
-Skill autocontida para analisar PPCs de cursos técnicos do IFPR em Word (`.docx`). A skill contém scripts Python, fichas de análise, validações cruzadas, política de parecer, templates de relatório e o catálogo CNCT em `base-analise/dados/cnct/catalogo_cnct.csv`.
+Skill autocontida para analisar PPCs de cursos técnicos do IFPR em Word (`.docx`) ou Markdown (`.md`). A execução de IA ocorre apenas por sub-agentes na conversa atual. Os scripts Python fazem somente a preparação do documento, a organização dos grupos de fichas e a geração determinística do relatório HTML.
 
 ## Uso rápido
 
@@ -32,12 +32,11 @@ Read .claude/skills/analise-ppc/instrucoes.md
 ## Fluxo principal
 
 1. Preparar o documento para criar a rodada e o `PPC.md`.
-2. Gerar os batches a partir das fichas canônicas.
-3. Avaliar todos os lotes.
-4. Avaliar validações cruzadas.
-5. Contabilizar tokens.
-6. Consolidar resultados.
-7. Gerar o relatório HTML.
+2. Montar os grupos de fichas canônicas para sub-agentes, incluindo contexto CNCT, contexto estrutural e anexos visuais quando disponíveis.
+3. Spawnar um sub-agente por grupo na conversa atual.
+4. Coletar as respostas em `arquivos-suporte/resultados-subagents.json`.
+5. Opcionalmente executar síntese transversal por sub-agente.
+6. Gerar o relatório HTML determinístico com busca/filtros.
 
 Ao final, informe explicitamente o link de abertura do relatório retornado pelo comando. O relatório final fica em `output/<rodada>/relatorio-analise.html` e os arquivos de suporte da rodada ficam em `output/<rodada>/arquivos-suporte/`.
 

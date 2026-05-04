@@ -10,20 +10,12 @@ from pathlib import Path
 from typing import Any, Iterable
 
 APP_DIR = Path(__file__).resolve().parents[1]
-CONFIG_DIR = APP_DIR / "config"
 PROMPTS_DIR = APP_DIR / "prompts"
 BASE_ANALISE_DIR = APP_DIR / "base-analise"
 FICHAS_DIR = BASE_ANALISE_DIR / "fichas"
-VALIDACOES_CRUZADAS_DIR = BASE_ANALISE_DIR / "validacoes-cruzadas"
-CONTRATOS_DIR = BASE_ANALISE_DIR / "contratos"
-BASE_ANALISE_INDICE_PATH = BASE_ANALISE_DIR / "indice.json"
-TEMPLATES_DIR = APP_DIR / "templates"
 OUTPUT_DIR = APP_DIR / "output"
-POLITICA_PARECER_PATH = CONFIG_DIR / "politica_parecer.json"
 
-DEFAULT_BATCH_SIZE = 20
-DEFAULT_PROVIDER = "codex"
-DEFAULT_MODEL = "codex-default"
+DEFAULT_GROUP_SIZE = 20
 IDENTIFICACAO_PLACEHOLDERS = {
     "curso não identificado",
     "campus não identificado",
@@ -119,14 +111,6 @@ def load_fichas(fichas_dir: Path | None = None) -> list[dict[str, Any]]:
     return fichas
 
 
-def load_validacoes_cruzadas(validacoes_dir: Path | None = None) -> list[dict[str, Any]]:
-    diretorio = validacoes_dir or VALIDACOES_CRUZADAS_DIR
-    validacoes: list[dict[str, Any]] = []
-    for caminho in sorted(diretorio.glob("*.json")):
-        validacoes.append(read_json(caminho))
-    return validacoes
-
-
 def valor_identificacao_preenchido(valor: Any) -> bool:
     texto = str(valor or "").strip()
     return bool(texto) and texto.casefold() not in IDENTIFICACAO_PLACEHOLDERS
@@ -150,26 +134,11 @@ def round_paths(rodada_dir: Path) -> dict[str, Path]:
         "metadata": base_dir / "metadata.json",
         "manifesto": base_dir / "manifesto-rodada.json",
         "preparacao_docx": base_dir / "preparacao-docx.json",
-        "pre_validacoes": base_dir / "pre-validacoes.json",
-        "condicionais_rodada": base_dir / "condicionais-rodada.json",
-        "contexto_estrutural": base_dir / "contexto-estrutural.json",
-        "cnct_comparacao": base_dir / "cnct-comparacao.json",
-        "validacoes_cruzadas": base_dir / "validacoes-cruzadas.json",
-        "validacoes_cruzadas_status": base_dir / "validacoes-cruzadas.status.json",
-        "validacoes_cruzadas_prompt": base_dir / "validacoes-cruzadas.prompt.md",
-        "validacoes_cruzadas_resposta_bruta": base_dir / "validacoes-cruzadas.resposta-bruta.md",
-        "validacoes_cruzadas_catalogo": base_dir / "validacoes-cruzadas.catalogo.json",
-        "execucoes_avulsas_dir": base_dir / "execucoes-avulsas",
-        "execucoes_avulsas_fichas_dir": base_dir / "execucoes-avulsas" / "fichas",
-        "execucoes_avulsas_validacoes_dir": base_dir / "execucoes-avulsas" / "validacoes-cruzadas",
-        "sobreposicoes_fichas": base_dir / "execucoes-avulsas" / "sobreposicoes-fichas.json",
-        "sobreposicoes_validacoes_cruzadas": base_dir / "execucoes-avulsas" / "sobreposicoes-validacoes-cruzadas.json",
-        "uso_tokens": base_dir / "uso-tokens.json",
-        "batches_dir": base_dir / "batches",
-        "resultados_dir": base_dir / "resultados-lotes",
-        "resultados_fichas": base_dir / "resultados-fichas.json",
-        "achados": base_dir / "achados.json",
-        "parecer_final": base_dir / "parecer-final.json",
+        "cnct_contexto": base_dir / "cnct-contexto.json",
+        "contexto_estrutural_subagents": base_dir / "contexto-estrutural-subagents.json",
+        "grupos_avulsos_dir": base_dir / "grupos-avulsos",
+        "resultados_subagents": base_dir / "resultados-subagents.json",
+        "grupos_subagents": base_dir / "grupos-subagents.json",
         "relatorio_html": rodada_dir / "relatorio-analise.html",
     }
 
@@ -304,21 +273,17 @@ def safe_relpath(path: Path, base: Path) -> str:
 
 def update_manifesto_base(
     rodada_dir: Path,
-    provider: str = DEFAULT_PROVIDER,
-    model: str = DEFAULT_MODEL,
-    batch_size: int = DEFAULT_BATCH_SIZE,
     fichas_dir: Path | None = None,
 ) -> dict[str, Any]:
     caminhos = round_paths(rodada_dir)
+    prompt_subagent = PROMPTS_DIR / "subagent-lote-fichas.md"
     manifesto = {
         "rodada_id": rodada_dir.name,
         "rodada_dir": str(rodada_dir.resolve()),
         "ppc_sha256": sha256_file(caminhos["ppc"]),
         "fichas_sha256": sha256_catalogo_fichas(fichas_dir),
-        "prompt_base_sha256": sha256_file(PROMPTS_DIR / "lote_fichas.md"),
-        "batch_size": batch_size,
-        "provider_padrao": provider,
-        "modelo_padrao": model,
+        "prompt_subagent_sha256": sha256_file(prompt_subagent) if prompt_subagent.exists() else "",
+        "execucao": "subagents-na-conversa",
         "criado_em": now_iso(),
     }
     write_json(caminhos["manifesto"], manifesto)

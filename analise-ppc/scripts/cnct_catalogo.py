@@ -7,7 +7,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
-from common import APP_DIR, sha256_file
+from common import APP_DIR, read_json, round_paths, sha256_file, write_json
 
 CNCT_CATALOGO_PATH = APP_DIR / "base-analise" / "dados" / "cnct" / "catalogo_cnct.csv"
 CNCT_CAMPOS = (
@@ -36,14 +36,11 @@ def normalizar_texto_cnct(texto: Any) -> str:
 
 def normalizar_denominacao_cnct(texto: Any) -> str:
     normalizado = normalizar_texto_cnct(texto)
-    normalizado = re.sub(r"^curso\s+", "", normalizado)
-    return normalizado.strip()
+    return re.sub(r"^curso\s+", "", normalizado).strip()
 
 
 def extrair_numero_horas(valor: Any) -> int | None:
-    if valor is None:
-        return None
-    match = re.search(r"\d[\d.]*", str(valor))
+    match = re.search(r"\d[\d.]*", str(valor or ""))
     if not match:
         return None
     digitos = re.sub(r"\D", "", match.group(0))
@@ -64,7 +61,6 @@ def carregar_catalogo_cnct(catalogo_path: Path | None = None) -> list[dict[str, 
             denominacao = str(linha.get("Denominação do Curso") or "").strip()
             if not denominacao:
                 continue
-            carga_horaria_minima = linha.get("Carga Horária Mínima")
             campos_csv = {campo_csv: str(linha.get(campo_csv) or "").strip() for campo_csv, _ in CNCT_CAMPOS}
             curso = {
                 "indice": indice,
@@ -75,7 +71,7 @@ def carregar_catalogo_cnct(catalogo_path: Path | None = None) -> list[dict[str, 
             curso.update(
                 {
                     "denominacao_normalizada": normalizar_denominacao_cnct(denominacao),
-                    "carga_horaria_minima_horas": extrair_numero_horas(carga_horaria_minima),
+                    "carga_horaria_minima_horas": extrair_numero_horas(campos_csv["Carga Horária Mínima"]),
                 }
             )
             cursos.append(curso)
@@ -99,7 +95,17 @@ def _score_denominacao(consulta_normalizada: str, denominacao_normalizada: str) 
     return max(sequence_score, token_score)
 
 
-def _resumir_curso(curso: dict[str, Any], score: float, incluir_campos_completos: bool = False) -> dict[str, Any]:
+def _tipo_correspondencia(score: float) -> str:
+    if score >= 1:
+        return "EXATA"
+    if score >= 0.86:
+        return "ALTA_CONFIANCA"
+    if score >= 0.72:
+        return "POSSIVEL"
+    return "BAIXA_CONFIANCA"
+
+
+def _resumir_curso(curso: dict[str, Any], score: float, completo: bool = False) -> dict[str, Any]:
     resumo = {
         "indice": curso["indice"],
         "score": round(score, 4),
@@ -112,7 +118,7 @@ def _resumir_curso(curso: dict[str, Any], score: float, incluir_campos_completos
         "infraestrutura_minima": curso["infraestrutura_minima"],
         "legislacao_profissional": curso["legislacao_profissional"],
     }
-    if incluir_campos_completos:
+    if completo:
         for _, campo_normalizado in CNCT_CAMPOS:
             resumo[campo_normalizado] = curso[campo_normalizado]
         resumo["campos_csv"] = curso["campos_csv"]
@@ -123,7 +129,7 @@ def buscar_cursos_cnct(
     consulta: str,
     catalogo_path: Path | None = None,
     limite: int = 5,
-    incluir_campos_completos: bool = False,
+    completo: bool = False,
 ) -> list[dict[str, Any]]:
     consulta_normalizada = normalizar_denominacao_cnct(consulta)
     if not consulta_normalizada:
@@ -132,19 +138,9 @@ def buscar_cursos_cnct(
     for curso in carregar_catalogo_cnct(catalogo_path):
         score = _score_denominacao(consulta_normalizada, curso["denominacao_normalizada"])
         if score >= 0.55:
-            candidatos.append(_resumir_curso(curso, score, incluir_campos_completos=incluir_campos_completos))
+            candidatos.append(_resumir_curso(curso, score, completo=completo))
     candidatos.sort(key=lambda item: (-item["score"], item["denominacao"]))
     return candidatos[:limite]
-
-
-def _tipo_correspondencia(score: float) -> str:
-    if score >= 1:
-        return "EXATA"
-    if score >= 0.86:
-        return "ALTA_CONFIANCA"
-    if score >= 0.72:
-        return "POSSIVEL"
-    return "BAIXA_CONFIANCA"
 
 
 def _dados_extraidos(dados_conversao: dict[str, Any]) -> dict[str, Any]:
@@ -157,6 +153,16 @@ def _primeiro_valor_preenchido(*valores: Any) -> Any:
         if str(valor or "").strip():
             return valor
     return None
+
+
+def _read_json_if_exists(path_value: Any) -> dict[str, Any]:
+    if not path_value:
+        return {}
+    path = Path(str(path_value))
+    if not path.exists():
+        return {}
+    payload = read_json(path)
+    return payload if isinstance(payload, dict) else {}
 
 
 def _carga_horaria_ppc(dados: dict[str, Any], matriz_payload: dict[str, Any]) -> dict[str, Any]:
@@ -207,12 +213,7 @@ def comparar_ppc_com_cnct(
         }
 
     candidatos = buscar_cursos_cnct(str(curso_declarado or ""), caminho_catalogo)
-    candidatos_completos = buscar_cursos_cnct(
-        str(curso_declarado or ""),
-        caminho_catalogo,
-        limite=5,
-        incluir_campos_completos=True,
-    )
+    candidatos_completos = buscar_cursos_cnct(str(curso_declarado or ""), caminho_catalogo, limite=5, completo=True)
     correspondencia = candidatos[0] if candidatos and candidatos[0]["score"] >= 0.72 else None
     correspondencia_completa = candidatos_completos[0] if candidatos_completos and candidatos_completos[0]["score"] >= 0.72 else None
     comparacoes: dict[str, Any] = {}
@@ -242,13 +243,6 @@ def comparar_ppc_com_cnct(
                 "valor_cnct_minimo_horas": carga_minima,
                 "fonte_ppc": carga_ppc["fonte"],
             }
-    elif curso_declarado:
-        comparacoes["denominacao"] = {
-            "status": "INCONCLUSIVO",
-            "valor_ppc": curso_declarado,
-            "valor_cnct": None,
-            "detalhe": "Nenhuma correspondência CNCT atingiu o limiar mínimo de confiança.",
-        }
 
     return {
         "disponivel": True,
@@ -266,3 +260,14 @@ def comparar_ppc_com_cnct(
         else None,
         "comparacoes": comparacoes,
     }
+
+
+def gerar_contexto_cnct_rodada(rodada_dir: Path, catalogo_path: Path | None = None) -> dict[str, Any]:
+    caminhos = round_paths(rodada_dir)
+    metadata = read_json(caminhos["metadata"]) if caminhos["metadata"].exists() else {}
+    preparacao = read_json(caminhos["preparacao_docx"]) if caminhos["preparacao_docx"].exists() else {}
+    dados_conversao = _read_json_if_exists(preparacao.get("dados"))
+    matriz_payload = _read_json_if_exists(preparacao.get("matriz_curricular"))
+    contexto = comparar_ppc_com_cnct(metadata, dados_conversao, matriz_payload, catalogo_path=catalogo_path)
+    write_json(caminhos["cnct_contexto"], contexto)
+    return contexto

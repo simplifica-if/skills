@@ -3,11 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from pre_validacoes import gerar_pre_validacoes_rodada
 from common import (
-    DEFAULT_BATCH_SIZE,
-    DEFAULT_MODEL,
-    DEFAULT_PROVIDER,
     OUTPUT_DIR,
     copy_file,
     ensure_directory,
@@ -83,9 +79,6 @@ def _preparar_docx(arquivo: Path, caminhos: dict[str, Path]) -> dict[str, Any]:
 def preparar_documento(
     arquivo_entrada: Path,
     output_base: Path | None = None,
-    provider: str = DEFAULT_PROVIDER,
-    model: str = DEFAULT_MODEL,
-    batch_size: int = DEFAULT_BATCH_SIZE,
 ) -> dict[str, Any]:
     arquivo_entrada = arquivo_entrada.resolve()
     if not arquivo_entrada.exists():
@@ -96,8 +89,6 @@ def preparar_documento(
     rodada_dir = _criar_rodada(output_base or OUTPUT_DIR, arquivo_entrada.stem.lower().replace(" ", "-"))
     caminhos = round_paths(rodada_dir)
     ensure_directory(caminhos["suporte_dir"])
-    ensure_directory(caminhos["batches_dir"])
-    ensure_directory(caminhos["resultados_dir"])
 
     if arquivo_entrada.suffix.lower() == ".md":
         artefatos = _preparar_markdown(arquivo_entrada, caminhos)
@@ -122,21 +113,12 @@ def preparar_documento(
         metadata["artefatos_conversao_docx"] = artefatos["conversao_docx"]
 
     write_json(caminhos["metadata"], metadata)
-    manifesto = update_manifesto_base(
-        rodada_dir=rodada_dir,
-        provider=provider,
-        model=model,
-        batch_size=batch_size,
-    )
-    estrutural = gerar_pre_validacoes_rodada(rodada_dir)
+    manifesto = update_manifesto_base(rodada_dir=rodada_dir)
 
     return {
         "rodada_dir": rodada_dir,
         "metadata": caminhos["metadata"],
         "manifesto": caminhos["manifesto"],
-        "pre_validacoes": estrutural["pre_validacoes_path"],
-        "condicionais_rodada": estrutural["condicionais_path"],
-        "contexto_estrutural": estrutural["contexto_estrutural_path"],
         "ppc": caminhos["ppc"],
         "resumo": {
             "rodada_dir": safe_relpath(rodada_dir, Path.cwd()),
