@@ -1,6 +1,11 @@
 ---
 name: ifpr-design
-description: Identidade visual do IFPR (Instituto Federal do Paraná): cores, tipografia, logo, acessibilidade e padrões de aplicação em apresentações, páginas, documentos, materiais visuais e interfaces. Use sempre que o usuário pedir criação ou revisão de materiais que representem o IFPR, mesmo sem mencionar identidade visual explicitamente.
+description: >
+  Identidade visual do IFPR (Instituto Federal do Paraná): cores, tipografia,
+  logo, acessibilidade e padrões de aplicação em apresentações, páginas,
+  documentos, materiais visuais e interfaces. Use sempre que o usuário pedir
+  criação ou revisão de materiais que representem o IFPR, mesmo sem mencionar
+  identidade visual explicitamente.
 ---
 
 # IFPR Design
