@@ -12,7 +12,9 @@ Uso:
 
 Descrição:
   Instala skills deste repositório no projeto atual, criando symlinks em
-  .agents/skills e/ou .claude/skills, conforme esses diretórios existirem.
+  .agents/skills e/ou .claude/skills.
+
+  Se nenhum desses diretórios existir, pergunta se deseja criar um destino.
 
 Exemplos:
   instalar.sh
@@ -70,6 +72,57 @@ install_skill_into() {
   echo "Instalado: $target -> $skill_dir"
 }
 
+prompt_create_target_dirs() {
+  local answer
+
+  if [[ ! -t 0 ]]; then
+    echo "Erro: nenhum diretório .agents/skills ou .claude/skills encontrado em $PWD." >&2
+    echo "Crie um deles antes de executar novamente, por exemplo:" >&2
+    echo "  mkdir -p .agents/skills" >&2
+    exit 1
+  fi
+
+  cat >&2 <<EOF
+Nenhum diretório .agents/skills ou .claude/skills foi encontrado em $PWD.
+
+Escolha onde instalar as skills:
+  1) Criar .agents/skills (recomendado)
+  2) Criar .claude/skills
+  3) Criar ambos
+  4) Cancelar
+EOF
+
+  while true; do
+    read -r -p "Opção [1]: " answer
+    answer="${answer:-1}"
+
+    case "$answer" in
+      1)
+        mkdir -p "$PWD/.agents/skills"
+        target_dirs+=("$PWD/.agents/skills")
+        break
+        ;;
+      2)
+        mkdir -p "$PWD/.claude/skills"
+        target_dirs+=("$PWD/.claude/skills")
+        break
+        ;;
+      3)
+        mkdir -p "$PWD/.agents/skills" "$PWD/.claude/skills"
+        target_dirs+=("$PWD/.agents/skills" "$PWD/.claude/skills")
+        break
+        ;;
+      4|n|N|nao|Nao|não|Não)
+        echo "Instalação cancelada." >&2
+        exit 1
+        ;;
+      *)
+        echo "Opção inválida. Digite 1, 2, 3 ou 4." >&2
+        ;;
+    esac
+  done
+}
+
 if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   usage
   exit 0
@@ -82,8 +135,7 @@ for maybe_target in "$PWD/.agents/skills" "$PWD/.claude/skills"; do
 done
 
 if [[ "${#target_dirs[@]}" -eq 0 ]]; then
-  echo "Erro: nenhum diretório .agents/skills ou .claude/skills encontrado em $PWD." >&2
-  exit 1
+  prompt_create_target_dirs
 fi
 
 if [[ "${#requested_skills[@]}" -eq 0 ]]; then

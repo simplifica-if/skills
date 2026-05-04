@@ -18,7 +18,7 @@ Execute o instalador a partir da raiz do projeto alvo:
 /caminho/para/simplifica-if-skills/instalar.sh
 ```
 
-Por padrão, o instalador cria symlinks para todas as skills disponíveis em `.agents/skills` e/ou `.claude/skills`, conforme esses diretórios existirem no projeto.
+Por padrão, o instalador cria symlinks para todas as skills disponíveis em `.agents/skills` e/ou `.claude/skills`. Se nenhum desses diretórios existir no projeto alvo, ele pergunta se deve criar `.agents/skills`, `.claude/skills` ou ambos.
 
 Para instalar apenas uma ou mais skills específicas:
 
