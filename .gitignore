@@ -2,3 +2,7 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 output/
+
+# Symlinks criados pelo instalador local.
+.agents/skills/
+.claude/skills/
