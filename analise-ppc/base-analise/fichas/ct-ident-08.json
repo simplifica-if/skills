@@ -12,17 +12,23 @@
   "consultas": [
     "lei 9.394",
     "resolução cne/cp 1/2021",
+    "resolução cne/cp nº 1/2021",
+    "resolução cne/ceb nº 2/2024",
+    "resolução cne/ceb nº 02/2012",
+    "resolução cne/ceb nº 06/2012",
     "lei 14.945/2024"
   ],
   "referencias_normativas": [
     "Lei 9.394/1996",
-    "Resolução CNE/CP 1/2021"
+    "Lei nº 14.945/2024",
+    "Resolução CNE/CEB nº 2/2024",
+    "Resolução CNE/CP nº 1/2021"
   ],
   "pergunta": "As seções de identidade do curso usam base legal atualizada e coerente com a oferta proposta?",
-  "rubrica": "Checar se a fundamentação legal central do curso aparece de forma vigente e pertinente, sem dependência de atos revogados como eixo principal.",
-  "boa_evidencia": "Citações atuais e referências consistentes com a modalidade e a estrutura do curso.",
-  "ma_evidencia": "Base legal defasada, revogada ou incompleta para sustentar a proposta institucional.",
-  "escalonar_quando": "Escalonar se a fundamentação existir, mas houver dúvida sobre vigência ou suficiência normativa.",
+  "rubrica": "Checar se a fundamentação legal central do curso aparece de forma vigente e pertinente. Para curso técnico integrado ao Ensino Médio, verificar a presença ou harmonização com a Resolução CNE/CEB nº 2/2024 (DCNEM), a Resolução CNE/CP nº 1/2021 (DCN gerais da EPT), a Lei nº 14.945/2024 quando tratar do Ensino Médio e a LDB. Normas de 2012 podem ser citadas historicamente, mas não devem aparecer como fundamento vigente principal sem contextualização.",
+  "boa_evidencia": "Citações atuais e referências consistentes com a modalidade integrada, incluindo DCNEM 2024 e DCNEPT 2021 como marcos centrais ou expressamente harmonizados.",
+  "ma_evidencia": "Base legal defasada, revogada, incompleta ou dependente de Resolução CNE/CEB nº 02/2012 ou nº 06/2012 como eixo principal sem atualização para DCNEM 2024 e DCNEPT 2021.",
+  "escalonar_quando": "Escalonar se a fundamentação existir, mas houver dúvida sobre vigência ou suficiência normativa, especialmente quando a seção de concepção ou identidade usa atos de 2012 como referência central sem relação explícita com as normas mais recentes.",
   "evidencia_minima": 2,
   "estados_permitidos": [
     "ATENDE",

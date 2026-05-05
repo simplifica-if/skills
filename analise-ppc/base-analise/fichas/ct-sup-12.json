@@ -10,17 +10,23 @@
     "referências",
     "vigência normativa",
     "lei revogada",
-    "resolução desatualizada"
+    "resolução desatualizada",
+    "resolução cne/ceb nº 2/2024",
+    "resolução cne/cp nº 1/2021",
+    "resolução cne/ceb nº 02/2012",
+    "resolução cne/ceb nº 06/2012"
   ],
   "referencias_normativas": [
     "Lei 9.394/1996",
-    "Resolução CNE/CP 1/2021"
+    "Lei nº 14.945/2024",
+    "Resolução CNE/CEB nº 2/2024",
+    "Resolução CNE/CP nº 1/2021"
   ],
   "pergunta": "A base normativa citada pelo PPC está apresentada com sinais observáveis de vigência atual, sem depender de atos revogados ou superados?",
-  "rubrica": "Verificar se a lista de referências utiliza versões vigentes dos marcos centrais do curso e evita tratar atos revogados ou superados como fundamento atual sem contextualização.",
-  "boa_evidencia": "Referências normativas centrais reconhecíveis, em versões atuais, sem dependência visível de atos revogados.",
-  "ma_evidencia": "Uso de leis ou resoluções revogadas, superadas ou trocadas por versões posteriores ainda tratadas como vigentes.",
-  "escalonar_quando": "Escalonar se houver dúvida sobre a vigência de atos específicos ou sobre a substituição por versões mais recentes.",
+  "rubrica": "Verificar se a lista de referências e as seções normativas utilizam versões vigentes dos marcos centrais do curso e evitam tratar atos revogados ou superados como fundamento atual sem contextualização. Distinguir citação histórica de fundamento principal: normas de 2012 não devem gerar problema se aparecerem apenas contextualizadas, mas devem gerar diligência quando sustentarem a proposta como marco vigente principal no lugar da Resolução CNE/CEB nº 2/2024 (DCNEM) e da Resolução CNE/CP nº 1/2021 (DCNEPT).",
+  "boa_evidencia": "Referências normativas centrais reconhecíveis, em versões atuais, sem dependência visível de atos revogados ou superados; eventuais normas anteriores aparecem contextualizadas e harmonizadas com DCNEM 2024 e DCNEPT 2021.",
+  "ma_evidencia": "Uso de leis ou resoluções revogadas, superadas ou trocadas por versões posteriores ainda tratadas como vigentes, especialmente Resolução CNE/CEB nº 02/2012 ou nº 06/2012 como fundamento principal sem relação com Resolução CNE/CEB nº 2/2024 e Resolução CNE/CP nº 1/2021.",
+  "escalonar_quando": "Escalonar se houver dúvida sobre a vigência de atos específicos, sobre a substituição por versões mais recentes ou sobre a diferença entre citação contextual e fundamento normativo principal.",
   "evidencia_minima": 2,
   "estados_permitidos": [
     "ATENDE",

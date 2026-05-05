@@ -1,0 +1,26 @@
+{
+  "id": "VC-01-03-11-NORMAS",
+  "titulo": "Base normativa coerente entre fundamentos, concepção e referências",
+  "dominio": "validacao_cruzada",
+  "criticidade": "OBRIG",
+  "tipo": "consistencia",
+  "secoes_relacionadas": [
+    "01",
+    "03",
+    "11"
+  ],
+  "condicionais_relacionadas": [
+    "curso_tecnico_integrado"
+  ],
+  "pergunta": "As seções de fundamentos legais, concepção do curso e referências finais usam de modo coerente os marcos normativos atuais do Ensino Médio e da Educação Profissional e Tecnológica?",
+  "rubrica": "Comparar a seção de fundamentos legais, a seção de concepção do curso e a seção de referências. Para curso técnico integrado ao Ensino Médio, verificar se a Resolução CNE/CEB nº 2/2024 aparece como marco atual das DCNEM e se a Resolução CNE/CP nº 1/2021 aparece como marco atual das DCN gerais da EPT. Normas anteriores, como Resolução CNE/CEB nº 02/2012 e Resolução CNE/CEB nº 06/2012, podem ser citadas de forma histórica ou contextual, mas não devem aparecer em uma seção como fundamento vigente principal quando outra seção já aponta normas mais recentes.",
+  "boa_evidencia": "Fundamentos legais, concepção e referências finais apresentam DCNEM 2024 e DCNEPT 2021 de forma coerente; eventuais normas de 2012 estão contextualizadas e não substituem os marcos atuais.",
+  "ma_evidencia": "A concepção ou outra seção estruturante sustenta a proposta principalmente em Resolução CNE/CEB nº 02/2012 ou nº 06/2012 enquanto fundamentos legais ou referências apontam normas mais recentes, ou a seção de referências omite os marcos atuais aplicáveis.",
+  "evidencia_minima": 3,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

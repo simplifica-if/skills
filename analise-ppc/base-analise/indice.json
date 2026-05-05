@@ -1,11 +1,11 @@
 {
-  "gerado_em": "2026-04-29T09:12:27-03:00",
-  "base_analise_dir": "/Users/gustavo/code/simplifica-if-skills/analise-ppc/base-analise",
+  "base_analise_dir": "analise-ppc/base-analise",
+  "gerado_em": "2026-05-05T18:13:23+00:00",
   "resumo": {
     "total_fichas": 68,
-    "total_validacoes_cruzadas": 26,
+    "total_validacoes_cruzadas": 27,
     "total_contratos": 3,
-    "total_itens": 97
+    "total_itens": 98
   },
   "itens": [
     {
@@ -380,7 +380,7 @@
         "03"
       ],
       "referencias_normativas": [
-        "Resolução CNE/CP 1/2021"
+        "Resolução CNE/CP nº 1/2021"
       ],
       "arquivo": "fichas/ct-ident-05.json"
     },
@@ -422,7 +422,9 @@
       ],
       "referencias_normativas": [
         "Lei 9.394/1996",
-        "Resolução CNE/CP 1/2021"
+        "Lei nº 14.945/2024",
+        "Resolução CNE/CEB nº 2/2024",
+        "Resolução CNE/CP nº 1/2021"
       ],
       "arquivo": "fichas/ct-ident-08.json"
     },
@@ -663,7 +665,9 @@
       ],
       "referencias_normativas": [
         "Lei 9.394/1996",
-        "Resolução CNE/CP 1/2021"
+        "Lei nº 14.945/2024",
+        "Resolução CNE/CEB nº 2/2024",
+        "Resolução CNE/CP nº 1/2021"
       ],
       "arquivo": "fichas/ct-sup-09.json"
     },
@@ -702,7 +706,9 @@
       ],
       "referencias_normativas": [
         "Lei 9.394/1996",
-        "Resolução CNE/CP 1/2021"
+        "Lei nº 14.945/2024",
+        "Resolução CNE/CEB nº 2/2024",
+        "Resolução CNE/CP nº 1/2021"
       ],
       "arquivo": "fichas/ct-sup-12.json"
     },
@@ -730,6 +736,8 @@
         "11"
       ],
       "referencias_normativas": [
+        "Resolução CNE/CEB nº 2/2024",
+        "Resolução CNE/CP nº 1/2021",
         "Catálogo Nacional de Cursos Técnicos",
         "Plano de Desenvolvimento Institucional do IFPR",
         "Projeto Pedagógico Institucional do IFPR",
@@ -950,6 +958,20 @@
       ],
       "referencias_normativas": [],
       "arquivo": "fichas/ct-trans-06.json"
+    },
+    {
+      "categoria": "validacao_cruzada",
+      "id": "VC-01-03-11-NORMAS",
+      "titulo": "Base normativa coerente entre fundamentos, concepção e referências",
+      "dominio": "validacao_cruzada",
+      "criticidade": "OBRIG",
+      "tipo": "consistencia",
+      "secoes": [
+        "01",
+        "03",
+        "11"
+      ],
+      "arquivo": "validacoes-cruzadas/vc-01-03-11-normas.json"
     },
     {
       "categoria": "validacao_cruzada",

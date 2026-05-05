@@ -9,16 +9,18 @@
   "consultas": [
     "educação profissional e tecnológica",
     "trabalho como princípio educativo",
-    "formação integral"
+    "formação integral",
+    "resolução cne/cp nº 1/2021",
+    "resolução cne/ceb nº 06/2012"
   ],
   "referencias_normativas": [
-    "Resolução CNE/CP 1/2021"
+    "Resolução CNE/CP nº 1/2021"
   ],
   "pergunta": "A concepção do curso explicita a perspectiva de Educação Profissional e Tecnológica com base normativa e pedagógica reconhecível?",
-  "rubrica": "Verificar se o PPC articula EPT, trabalho, ciência, cultura e tecnologia para além de uma citação superficial.",
-  "boa_evidencia": "Seção conceitual que explicita princípios, base legal e visão formativa coerente com a EPT.",
-  "ma_evidencia": "Citações soltas sem desenvolvimento conceitual ou ausência de concepção pedagógica explícita.",
-  "escalonar_quando": "Escalonar se a seção mencionar EPT apenas nominalmente, sem explicar implicações curriculares.",
+  "rubrica": "Verificar se o PPC articula EPT, trabalho, ciência, cultura e tecnologia para além de uma citação superficial e se a concepção toma como referência normativa principal a Resolução CNE/CP nº 1/2021. A Resolução CNE/CEB nº 06/2012 pode aparecer como referência histórica ou contextual, mas não deve ser apresentada como fundamento vigente principal da EPT sem harmonização com a norma atual.",
+  "boa_evidencia": "Seção conceitual que explicita princípios, base legal atual e visão formativa coerente com a EPT, usando a Resolução CNE/CP nº 1/2021 como marco central.",
+  "ma_evidencia": "Citações soltas sem desenvolvimento conceitual, ausência de concepção pedagógica explícita ou uso da Resolução CNE/CEB nº 06/2012 como eixo normativo atual sem contextualização com a Resolução CNE/CP nº 1/2021.",
+  "escalonar_quando": "Escalonar se a seção mencionar EPT apenas nominalmente, sem explicar implicações curriculares, ou se a concepção usar normas anteriores como fundamento central sem indicar sua relação com a norma vigente.",
   "evidencia_minima": 2,
   "estados_permitidos": [
     "ATENDE",

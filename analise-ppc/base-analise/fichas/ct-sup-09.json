@@ -10,17 +10,23 @@
     "referências",
     "lei",
     "resolução",
-    "parecer"
+    "parecer",
+    "resolução cne/ceb nº 2/2024",
+    "resolução cne/cp nº 1/2021",
+    "resolução cne/ceb nº 02/2012",
+    "resolução cne/ceb nº 06/2012"
   ],
   "referencias_normativas": [
     "Lei 9.394/1996",
-    "Resolução CNE/CP 1/2021"
+    "Lei nº 14.945/2024",
+    "Resolução CNE/CEB nº 2/2024",
+    "Resolução CNE/CP nº 1/2021"
   ],
   "pergunta": "A seção de referências apresenta base normativa suficiente e sem sinais evidentes de defasagem crítica?",
-  "rubrica": "Checar se as referências normativas centrais aparecem e se a lista não depende apenas de atos revogados ou laterais.",
-  "boa_evidencia": "Seção de referências com leis e resoluções centrais para a oferta do curso.",
-  "ma_evidencia": "Referências normativas escassas, desatualizadas ou ausentes.",
-  "escalonar_quando": "Escalonar se as referências existirem, mas a suficiência normativa permanecer duvidosa.",
+  "rubrica": "Checar se as referências normativas centrais aparecem e se a lista não depende apenas de atos revogados, superados ou laterais. Em cursos técnicos integrados ao Ensino Médio, a seção de referências deve permitir localizar os marcos atuais de Ensino Médio e EPT: Resolução CNE/CEB nº 2/2024, Resolução CNE/CP nº 1/2021, LDB e Lei nº 14.945/2024 quando pertinente.",
+  "boa_evidencia": "Seção de referências com leis e resoluções centrais para a oferta do curso, incluindo DCNEM 2024 e DCNEPT 2021.",
+  "ma_evidencia": "Referências normativas escassas, desatualizadas, ausentes ou baseadas apenas em Resolução CNE/CEB nº 02/2012 e/ou nº 06/2012 sem os marcos atuais correspondentes.",
+  "escalonar_quando": "Escalonar se as referências existirem, mas a suficiência normativa permanecer duvidosa, ou se houver normas antigas nas referências sem as normas atuais equivalentes.",
   "evidencia_minima": 2,
   "estados_permitidos": [
     "ATENDE",

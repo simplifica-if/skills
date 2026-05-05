@@ -11,7 +11,7 @@ Você fará uma revisão transversal depois que todos os sub-agentes concluírem
 
 ## Tarefa
 
-Procure inconsistências que só aparecem ao comparar respostas de fichas diferentes, como divergências entre identificação, perfil do egresso, matriz, ementário, carga horária, AEE, estágio, infraestrutura e CNCT.
+Procure inconsistências que só aparecem ao comparar respostas de fichas diferentes, como divergências entre identificação, perfil do egresso, matriz, ementário, carga horária, AEE, estágio, infraestrutura, CNCT e base normativa. Em cursos técnicos integrados, verifique especialmente se fundamentos legais, concepção do curso e referências finais tratam de modo coerente a DCNEM vigente e as Diretrizes Curriculares Nacionais Gerais da Educação Profissional e Tecnológica.
 
 Não reescreva as respostas das fichas. Registre apenas alertas transversais úteis para a revisão humana.
 
