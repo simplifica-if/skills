@@ -29,7 +29,7 @@
   "rubrica": "Verificar se o PPC declara se o estágio é obrigatório ou não obrigatório, compara a obrigatoriedade com o CNCT quando houver campo aplicável, indica carga horária e período quando obrigatório, explicita que o estágio ocorre em áreas de formação coerentes com o perfil profissional, descreve modalidade de orientação, prevê orientação alternativa quando houver estudantes com necessidades educacionais específicas e referencia a Lei nº 11.788/2008, a Resolução Consup/IFPR nº 82/2022 e o Regulamento Geral de Estágio do campus quando aplicável.",
   "boa_evidencia": "Seção de estágio que distingue estágio obrigatório e não obrigatório, informa carga horária ou não obrigatoriedade, modalidade de orientação, eventual orientação alternativa, campo de realização, vínculo com perfil profissional e base normativa institucional.",
   "ma_evidencia": "Estágio citado sem definição de obrigatoriedade, carga horária, orientação, campo, relação com o perfil ou base normativa; ou ausência de justificativa quando o CNCT exigir estágio.",
-  "escalonar_quando": "Escalonar se o PPC mencionar estágio, mas não permitir concluir se ele é requisito de aprovação/certificação, se está incluído na matriz ou se atende às condições do CNCT e da regulamentação institucional.",
+  "escalonar_quando": "Escalonar se o PPC mencionar estágio, mas não permitir concluir se ele é requisito de aprovação/certificação, se há carga horária obrigatória diferente de zero na matriz ou se atende às condições do CNCT e da regulamentação institucional. Não escalonar apenas pela presença de linha-modelo de Estágio Supervisionado com carga horária zero quando o texto declarar que o estágio não é obrigatório.",
   "evidencia_minima": 3,
   "estados_permitidos": [
     "ATENDE",

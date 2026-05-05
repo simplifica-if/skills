@@ -11,9 +11,9 @@
     "tem_estagio"
   ],
   "pergunta": "As subseções de organização curricular tratam estágio, carga horária, matriz, orientação e convênios de forma consistente entre si?",
-  "rubrica": "Avaliar, dentro da seção 05, se a matriz, a seção de estágio, as características do estágio e os convênios mantêm a mesma decisão sobre obrigatoriedade, carga horária, inclusão na integralização, modalidade de orientação, trâmites e relação com campos de estágio.",
-  "boa_evidencia": "Matriz, texto de estágio e convênios indicam a mesma situação do estágio, com carga horária e trâmites compatíveis e sem contradições entre obrigatório, não obrigatório ou inexistente.",
-  "ma_evidencia": "A matriz inclui estágio que o texto diz não existir, há carga horária divergente, convênios são descritos sem previsão de estágio, ou a obrigatoriedade muda entre subseções.",
+  "rubrica": "Avaliar, dentro da seção 05, se a matriz, a seção de estágio, as características do estágio e os convênios mantêm a mesma decisão sobre obrigatoriedade, carga horária, inclusão na integralização, modalidade de orientação, trâmites e relação com campos de estágio. A presença de linhas padronizadas de Atividades Complementares ou Estágio Supervisionado na matriz, com carga horária efetiva zero, não caracteriza obrigatoriedade nem contradição quando o texto do PPC declarar que são opcionais, não obrigatórios ou não exigidos para integralização.",
+  "boa_evidencia": "Matriz, texto de estágio e convênios indicam a mesma situação do estágio, com carga horária e trâmites compatíveis e sem contradições entre obrigatório, não obrigatório ou inexistente. Linhas-modelo de Atividades Complementares ou Estágio Supervisionado com carga horária zero são aceitáveis quando o texto confirma ausência de obrigatoriedade.",
+  "ma_evidencia": "Há contradição quando estágio ou atividades complementares aparecem com carga horária obrigatória diferente de zero, são computados nos totais obrigatórios, são exigidos para aprovação/certificação/diploma, ou quando a matriz e a seção narrativa divergem sobre obrigatoriedade. Não tratar como má evidência a mera presença de linha-modelo com carga horária zero.",
   "evidencia_minima": 3,
   "estados_permitidos": [
     "ATENDE",

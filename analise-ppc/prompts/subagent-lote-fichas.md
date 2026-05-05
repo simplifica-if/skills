@@ -23,6 +23,18 @@ Você está revisando um Projeto Pedagógico de Curso técnico do IFPR.
 9. Use `contexto_estrutural` para conferir totais, componentes, ementário e caminhos de artefatos, sem substituir a leitura do PPC.
 10. Retorne somente JSON válido, sem Markdown e sem texto antes ou depois.
 
+## Convenções de matriz do modelo IFPR
+
+Não trate como inconsistência a mera presença de Atividades Complementares (AC) ou Estágio Supervisionado (ES) na matriz com carga horária zero. Essa presença pode ser uma linha-padrão do modelo.
+
+Considere consistente quando:
+
+- a carga horária de AC/ES for 0;
+- o texto declarar que AC/ES são opcionais, não obrigatórios ou não exigidos;
+- AC/ES não forem somados à carga horária obrigatória de integralização.
+
+Escalone apenas se houver carga horária obrigatória diferente de zero, exigência para aprovação/certificação/diploma, inclusão nos totais obrigatórios ou divergência textual clara entre a matriz e a seção narrativa.
+
 ## Saída obrigatória
 
 ```json

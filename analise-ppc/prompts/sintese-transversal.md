@@ -15,6 +15,23 @@ Procure inconsistências que só aparecem ao comparar respostas de fichas difere
 
 Não reescreva as respostas das fichas. Registre apenas alertas transversais úteis para a revisão humana.
 
+## Convenções de matriz do modelo IFPR
+
+Não gere alerta transversal apenas porque Atividades Complementares (AC) ou Estágio Supervisionado (ES) aparecem na matriz com carga horária zero. Essa presença pode ser uma linha-padrão do modelo.
+
+Considere consistente quando:
+
+- a carga horária de AC/ES for 0;
+- o texto declarar que AC/ES são opcionais, não obrigatórios ou não exigidos;
+- AC/ES não forem somados à carga horária obrigatória de integralização.
+
+Gere alerta somente se houver:
+
+- carga horária obrigatória diferente de zero;
+- texto dizendo que é obrigatório, mas matriz com zero;
+- matriz ou totais computando AC/ES como carga obrigatória;
+- exigência de AC/ES para aprovação, certificação ou diploma.
+
 ## Saída obrigatória
 
 Retorne somente JSON válido:

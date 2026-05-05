@@ -87,10 +87,98 @@ def _resolver_path_artefato(valor: Any) -> str | None:
 
 
 def _resumo_matriz(matriz: dict[str, Any]) -> dict[str, Any]:
+    componentes = _iter_componentes_matriz(matriz)
+    convencoes = _convencoes_linhas_modelo_matriz(matriz)
+    series = matriz.get("series") if isinstance(matriz.get("series"), list) else matriz.get("anos")
     return {
         "totais": matriz.get("totais", {}),
-        "componentes_total": len(matriz.get("componentes", [])) if isinstance(matriz.get("componentes"), list) else None,
-        "series_total": len(matriz.get("series", [])) if isinstance(matriz.get("series"), list) else None,
+        "componentes_total": len(componentes) if componentes else None,
+        "series_total": len(series) if isinstance(series, list) else None,
+        "convencoes_linhas_modelo": convencoes,
+    }
+
+
+def _iter_componentes_matriz(matriz: dict[str, Any]) -> list[dict[str, Any]]:
+    componentes: list[dict[str, Any]] = []
+    componentes_raiz = matriz.get("componentes")
+    if isinstance(componentes_raiz, list):
+        componentes.extend(item for item in componentes_raiz if isinstance(item, dict))
+    for chave_grupo in ("anos", "series"):
+        grupos = matriz.get(chave_grupo)
+        if not isinstance(grupos, list):
+            continue
+        for grupo in grupos:
+            if not isinstance(grupo, dict):
+                continue
+            itens = grupo.get("componentes")
+            if isinstance(itens, list):
+                componentes.extend(item for item in itens if isinstance(item, dict))
+    return componentes
+
+
+def _valor_inteiro(valor: Any) -> int | None:
+    if isinstance(valor, bool):
+        return None
+    if isinstance(valor, int):
+        return valor
+    if isinstance(valor, float) and valor.is_integer():
+        return int(valor)
+    if isinstance(valor, str):
+        somente_digitos = "".join(caractere for caractere in valor if caractere.isdigit())
+        return int(somente_digitos) if somente_digitos else None
+    return None
+
+
+def _carga_horaria_efetiva(componente: dict[str, Any]) -> int | None:
+    valores = [
+        componente.get("ch_hora_relogio_cnct"),
+        componente.get("ch_hora_relogio"),
+        componente.get("ch_hora_aula"),
+        componente.get("carga_horaria"),
+    ]
+    numericos = [valor_convertido for valor in valores if (valor_convertido := _valor_inteiro(valor)) is not None]
+    if not numericos:
+        return None
+    return max(numericos)
+
+
+def _linha_modelo_matriz(componentes: list[dict[str, Any]], termos: tuple[str, ...]) -> dict[str, Any]:
+    encontrados: list[dict[str, Any]] = []
+    for componente in componentes:
+        nome = str(componente.get("nome") or componente.get("componente") or componente.get("titulo") or "")
+        nome_normalizado = nome.casefold()
+        if not nome or not any(termo in nome_normalizado for termo in termos):
+            continue
+        carga = _carga_horaria_efetiva(componente)
+        encontrados.append(
+            {
+                "nome": nome,
+                "carga_horaria_efetiva": carga,
+                "linha_modelo_sem_obrigatoriedade": carga == 0,
+            }
+        )
+    if not encontrados:
+        return {
+            "linha_presente_na_matriz": False,
+            "interpretacao": "nao_identificada_no_artefato_estruturado",
+        }
+    todas_zero = all(item["carga_horaria_efetiva"] == 0 for item in encontrados)
+    return {
+        "linha_presente_na_matriz": True,
+        "linhas": encontrados,
+        "interpretacao": "linha_modelo_sem_obrigatoriedade" if todas_zero else "carga_horaria_informada_requer_conferencia",
+    }
+
+
+def _convencoes_linhas_modelo_matriz(matriz: dict[str, Any]) -> dict[str, Any]:
+    componentes = _iter_componentes_matriz(matriz)
+    return {
+        "observacao": (
+            "Linhas de Atividades Complementares ou Estágio Supervisionado com carga horária efetiva zero "
+            "podem ser linhas-padrão do modelo e não indicam obrigatoriedade por si só."
+        ),
+        "atividades_complementares": _linha_modelo_matriz(componentes, ("atividade complementar", "atividades complementares")),
+        "estagio_supervisionado": _linha_modelo_matriz(componentes, ("estágio supervisionado", "estagio supervisionado")),
     }
 
 
