@@ -1,6 +1,6 @@
 {
   "base_analise_dir": "analise-ppc/base-analise",
-  "gerado_em": "2026-05-05T18:13:23+00:00",
+  "gerado_em": "2026-05-05T18:21:42+00:00",
   "resumo": {
     "total_fichas": 68,
     "total_validacoes_cruzadas": 27,
@@ -179,7 +179,7 @@
         "05"
       ],
       "referencias_normativas": [
-        "Resolução CNE/CP 1/2021"
+        "Resolução IFPR nº 190/2024"
       ],
       "arquivo": "fichas/ct-curr-13.json"
     },

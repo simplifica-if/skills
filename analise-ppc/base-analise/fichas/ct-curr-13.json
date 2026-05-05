@@ -10,16 +10,20 @@
     "aproveitamento de estudos",
     "critérios de aproveitamento",
     "procedimentos de solicitação",
-    "documentação necessária"
+    "documentação necessária",
+    "Resolução Consup/IFPR nº 190",
+    "Resolução IFPR nº 190/2024",
+    "capítulo III",
+    "seção V"
   ],
   "referencias_normativas": [
-    "Resolução CNE/CP 1/2021"
+    "Resolução IFPR nº 190/2024"
   ],
   "pergunta": "O PPC trata o aproveitamento de estudos com critérios, documentação e procedimento minimamente definidos?",
-  "rubrica": "Verificar se o texto descreve como o estudante solicita o aproveitamento, quais critérios orientam a análise e quais documentos ou condicionantes são exigidos.",
-  "boa_evidencia": "Seção específica com critérios objetivos, documentação exigida, etapas do pedido e parâmetros de equivalência.",
-  "ma_evidencia": "Menção genérica ao aproveitamento sem regras, fluxo, documentação ou critérios observáveis.",
-  "escalonar_quando": "Escalonar se o PPC citar o aproveitamento de estudos, mas não deixar claro como ele é processado ou quais parâmetros orientam a decisão.",
+  "rubrica": "Verificar se o texto define o aproveitamento de estudos formalizados, delimita sua aplicação a componentes curriculares ou módulos cursados com êxito em curso de mesmo nível de ensino, indica o critério de equivalência de conteúdos com as ementas do PPC e referencia de modo específico a Resolução IFPR nº 190/2024, preferencialmente capítulo III, seção V. Não exigir que o PPC reproduza todo o fluxo administrativo, prazos, formulários ou instâncias quando esses detalhes forem remetidos de forma clara à norma institucional vigente.",
+  "boa_evidencia": "Seção específica que referencia a Resolução IFPR nº 190/2024, define o que pode ser aproveitado, exige análise documental e explicita equivalência de conteúdos entre componentes cursados com êxito e ementas do PPC.",
+  "ma_evidencia": "Menção genérica ao aproveitamento sem norma institucional específica, sem delimitar o que pode ser aproveitado, sem critério de equivalência ou sem indicar análise documental.",
+  "escalonar_quando": "Escalonar se o PPC citar o aproveitamento de estudos, mas não deixar claro se segue a Resolução IFPR nº 190/2024, se a referência normativa estiver incorreta ou se faltar critério mínimo de equivalência documental.",
   "evidencia_minima": 2,
   "estados_permitidos": [
     "ATENDE",
