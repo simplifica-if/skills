@@ -21,7 +21,8 @@ from subagents import (
     montar_grupo_avulso,
     montar_grupos_subagents,
 )
-from common import FICHAS_DIR, read_json, round_paths, write_json
+from common import BASE_ANALISE_DIR, FICHAS_DIR, read_json, round_paths, write_json
+from gerar_indice_base_analise import gerar_indice
 
 
 def _markdown_base() -> str:
@@ -104,12 +105,27 @@ def test_preparar_documento_cria_rodada_markdown_basica(tmp_path: Path) -> None:
 def test_fichas_sao_agrupadas_em_blocos_estaveis_de_20() -> None:
     fichas = carregar_fichas_ordenadas()
     grupos = agrupar_fichas(fichas, tamanho_grupo=20)
+    total_fichas = len(fichas)
+    intervalos_esperados = [
+        f"{inicio}-{min(inicio + 19, total_fichas)}" for inicio in range(1, total_fichas + 1, 20)
+    ]
+    totais_esperados = [
+        min(20, total_fichas - indice) for indice in range(0, total_fichas, 20)
+    ]
 
-    assert len(fichas) == 68
-    assert [grupo["intervalo"] for grupo in grupos] == ["1-20", "21-40", "41-60", "61-68"]
-    assert [grupo["total_fichas"] for grupo in grupos] == [20, 20, 20, 8]
+    assert total_fichas == len(list(FICHAS_DIR.glob("*.json")))
+    assert [grupo["intervalo"] for grupo in grupos] == intervalos_esperados
+    assert [grupo["total_fichas"] for grupo in grupos] == totais_esperados
     assert grupos[0]["grupo_id"] == "grupo-001"
-    assert grupos[-1]["grupo_id"] == "grupo-004"
+    assert grupos[-1]["grupo_id"] == f"grupo-{len(grupos):03d}"
+
+
+def test_indice_base_analise_esta_atualizado() -> None:
+    indice_path = BASE_ANALISE_DIR / "indice.json"
+    atual = read_json(indice_path)
+    esperado = gerar_indice(gerado_em=atual["gerado_em"])
+
+    assert atual == esperado
 
 
 def test_montar_grupos_subagents_salva_payload_na_rodada(tmp_path: Path) -> None:
@@ -120,8 +136,8 @@ def test_montar_grupos_subagents_salva_payload_na_rodada(tmp_path: Path) -> None
 
     assert caminhos["grupos_subagents"].exists()
     assert payload["ppc_markdown"] == str(caminhos["ppc"])
-    assert payload["total_fichas"] == 68
-    assert len(payload["grupos"]) == 4
+    assert payload["total_fichas"] == len(list(FICHAS_DIR.glob("*.json")))
+    assert len(payload["grupos"]) == (payload["total_fichas"] + 19) // 20
     assert caminhos["cnct_contexto"].exists()
     assert caminhos["contexto_estrutural_subagents"].exists()
     assert payload["cnct_contexto"]["correspondencia"]["denominacao"] == "Técnico em Informática"
@@ -166,7 +182,7 @@ def test_gerar_relatorio_html_aceita_resultados_validos(tmp_path: Path) -> None:
     payload = gerar_relatorio_html(rodada_dir, Path("resultados-subagents.json"))
 
     assert payload["relatorio_html"] == caminhos["relatorio_html"]
-    assert payload["total_fichas"] == 68
+    assert payload["total_fichas"] == len(list(FICHAS_DIR.glob("*.json")))
     assert payload["total_alertas_transversais"] == 0
     html = caminhos["relatorio_html"].read_text(encoding="utf-8")
     assert "Análise de PPC · sub-agentes na conversa" in html

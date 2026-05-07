@@ -2,10 +2,10 @@
   "base_analise_dir": "analise-ppc/base-analise",
   "gerado_em": "2026-05-05T18:21:42+00:00",
   "resumo": {
-    "total_fichas": 68,
+    "total_fichas": 69,
     "total_validacoes_cruzadas": 27,
     "total_contratos": 3,
-    "total_itens": 98
+    "total_itens": 99
   },
   "itens": [
     {
@@ -958,6 +958,21 @@
       ],
       "referencias_normativas": [],
       "arquivo": "fichas/ct-trans-06.json"
+    },
+    {
+      "categoria": "ficha",
+      "id": "CT-TRANS-07",
+      "titulo": "Dimensionamento de vagas compatível com infraestrutura e interesse público",
+      "dominio": "transversal",
+      "criticidade": "REC",
+      "secoes": [
+        "01",
+        "02",
+        "08",
+        "09"
+      ],
+      "referencias_normativas": [],
+      "arquivo": "fichas/ct-trans-07.json"
     },
     {
       "categoria": "validacao_cruzada",

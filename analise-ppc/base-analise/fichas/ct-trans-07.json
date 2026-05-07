@@ -1,0 +1,37 @@
+{
+  "id": "CT-TRANS-07",
+  "titulo": "Dimensionamento de vagas compatível com infraestrutura e interesse público",
+  "dominio": "transversal",
+  "criticidade": "REC",
+  "secoes_preferenciais": [
+    "01",
+    "02",
+    "08",
+    "09"
+  ],
+  "consultas": [
+    "número de vagas",
+    "vagas ofertadas",
+    "mínimo de vagas",
+    "máximo de vagas",
+    "oferta de vagas",
+    "justificativa da oferta",
+    "demanda regional",
+    "infraestrutura",
+    "laboratórios",
+    "capacidade instalada"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC dimensiona o número de vagas de modo compatível com a infraestrutura disponível, a demanda social e o uso responsável dos recursos públicos?",
+  "rubrica": "Verificar se o PPC informa o número de vagas ofertadas por turma, período ou processo seletivo, distinguindo oferta regular, capacidade máxima e eventual mínimo para abertura de turma. Quando a oferta prevista ou autorizada puder ficar abaixo de 40 vagas, exigir justificativa objetiva, como limitação real de laboratório, segurança, estágio, corpo docente, fase de implantação, baixa demanda documentada ou outra condição institucional verificável. Faixas amplas, como mínimo de 20 e máximo de 80 vagas, devem explicar os critérios de definição da quantidade efetivamente ofertada, para evitar subutilização da infraestrutura do campus e restrição injustificada da oferta pública.",
+  "boa_evidencia": "O PPC informa a oferta regular de vagas em patamar compatível com a capacidade instalada, ou justifica de modo concreto eventual oferta inferior a 40 vagas, distinguindo mínimo de abertura, vagas ofertadas e capacidade máxima.",
+  "ma_evidencia": "O PPC prevê oferta inferior a 40 vagas, ou faixa que permite oferta de 20 ou 30 vagas, sem justificar a limitação diante da infraestrutura, da demanda e da capacidade institucional; ou mistura mínimo de abertura com número de vagas ofertadas.",
+  "escalonar_quando": "Escalonar sempre que o número de vagas ofertadas for inferior a 40 sem justificativa clara; quando houver faixa ampla de vagas sem critérios de aplicação; ou quando parecer haver subutilização de laboratórios, salas, docentes ou demais recursos públicos.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}
