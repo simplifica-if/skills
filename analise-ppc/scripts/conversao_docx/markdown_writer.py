@@ -368,6 +368,7 @@ class PPCConverter:
 
         # 5. Extrair dados
         self._extract_data()
+        self._canonicalize_matrix_markdown()
 
         if verbose:
             print(f"  - {len(self._data.get('dados_extraidos', {}))} campos de dados extraídos")
@@ -390,6 +391,7 @@ class PPCConverter:
                 'total_tabelas': sum(1 for e in self._elements if e.type == ElementType.TABLE),
             }
         }
+        generic_matrix_candidates: List[Dict] = []
 
         # Extrair dados das seções
         hints = self.section_detector.extract_data_hints(self._sections)
@@ -425,12 +427,21 @@ class PPCConverter:
                 # 3. Tentar matriz curricular PPC (extrator especializado)
                 ppc_matrix = self.matrix_extractor.extract_ppc_matrix_data(normalized)
                 if ppc_matrix and ppc_matrix.get('anos'):
-                    self._data['matriz_curricular'] = ppc_matrix
+                    self._data['matriz_curricular'] = self.matrix_extractor.merge_matrix_data(
+                        self._data.get('matriz_curricular'),
+                        ppc_matrix,
+                    )
                 elif not self._data.get('matriz_curricular'):
                     # Fallback para extrator genérico
                     matrix = self.matrix_extractor.extract_matrix_data(normalized)
                     if matrix:
-                        self._data['matriz_curricular'] = matrix
+                        generic_matrix_candidates.append(matrix)
+
+        if not self._data.get('matriz_curricular') and generic_matrix_candidates:
+            self._data['matriz_curricular'] = max(
+                generic_matrix_candidates,
+                key=self.matrix_extractor.score_matrix,
+            )
 
         # Adicionar estatísticas do ementário
         if 'ementario' in self._data:
@@ -445,6 +456,13 @@ class PPCConverter:
                     len(c.get('bibliografia_complementar', [])) for c in em['componentes']
                 )
             }
+
+    def _canonicalize_matrix_markdown(self) -> None:
+        """Substitui a matriz no Markdown normalizado por uma versão canônica."""
+        matriz = self._data.get('matriz_curricular')
+        if not matriz:
+            return
+        self._markdown = self.matrix_extractor.replace_matrix_markdown(self._markdown, matriz)
 
     def _detect_graphic_representation(self) -> None:
         """
@@ -603,6 +621,7 @@ class PPCConverter:
                     resultado_normalizacao = self.markdown_normalizer.normalize(self._markdown_bruto)
                     self._markdown_bruto = resultado_normalizacao.markdown_bruto
                     self._markdown = resultado_normalizacao.markdown_normalizado
+                    self._canonicalize_matrix_markdown()
 
         # Salvar Markdown
         if md_path:
