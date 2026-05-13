@@ -549,12 +549,17 @@ class DocxReader:
             # Buscar células tanto diretamente quanto dentro de sdt
             # (Google Docs wraps cells in sdt elements)
             for tc in tr.findall('.//' + qn('w:tc')):
-                # Extrair texto de todos os parágrafos da célula
-                text_parts = []
-                for t_elem in tc.findall('.//' + qn('w:t')):
-                    if t_elem.text:
-                        text_parts.append(t_elem.text)
-                text = ''.join(text_parts)
+                # Extrair texto preservando parágrafos internos da célula.
+                paragraphs = []
+                for p_elem in tc.findall('.//' + qn('w:p')):
+                    text_parts = []
+                    for t_elem in p_elem.findall('.//' + qn('w:t')):
+                        if t_elem.text:
+                            text_parts.append(t_elem.text)
+                    paragraph_text = ''.join(text_parts).strip()
+                    if paragraph_text:
+                        paragraphs.append(paragraph_text)
+                text = '\n'.join(paragraphs)
 
                 # Detectar merge vertical e horizontal
                 tc_pr = tc.find(qn('w:tcPr'))

@@ -386,6 +386,7 @@ class EmentarioExtractor:
         Preservar essas fronteiras evita fundir referências antes das heurísticas
         mais permissivas entrarem em ação.
         """
+        texto = re.sub(r'<br\s*/?>', '\n', texto, flags=re.IGNORECASE)
         texto = texto.replace('\r\n', '\n').replace('\r', '\n')
         linhas = [linha.strip() for linha in texto.split('\n')]
 

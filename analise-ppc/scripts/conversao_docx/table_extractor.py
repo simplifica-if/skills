@@ -163,16 +163,15 @@ class TableExtractor:
         if not text:
             return ''
 
-        # Remover quebras de linha internas (substituir por espaço)
-        text = re.sub(r'[\r\n]+', ' ', text)
+        text = text.replace('\r\n', '\n').replace('\r', '\n')
 
-        # Normalizar espaços múltiplos
-        text = re.sub(r'\s+', ' ', text)
+        linhas = []
+        for linha in text.split('\n'):
+            linha = re.sub(r'[ \t\f\v]+', ' ', linha).strip()
+            if linha:
+                linhas.append(linha.replace('|', '\\|'))
 
-        # Escapar caracteres especiais do Markdown
-        text = text.replace('|', '\\|')
-
-        return text.strip()
+        return '<br>'.join(linhas)
 
     def to_markdown(
         self,
