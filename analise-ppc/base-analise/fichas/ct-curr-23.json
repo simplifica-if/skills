@@ -1,0 +1,33 @@
+{
+  "id": "CT-CURR-23",
+  "titulo": "Distribuição semanal das aulas e contraturnos explicitada",
+  "dominio": "curriculo",
+  "criticidade": "OBRIG",
+  "secoes_preferenciais": [
+    "01",
+    "05"
+  ],
+  "consultas": [
+    "horário de oferta",
+    "turno",
+    "contraturno",
+    "aulas semanais",
+    "distribuição semanal",
+    "grade semanal",
+    "organização semanal",
+    "matriz curricular"
+  ],
+  "referencias_normativas": [],
+  "pergunta": "O PPC explicita como a carga semanal de aulas da matriz será distribuída entre turno regular e contraturno?",
+  "rubrica": "Verificar se o PPC torna auditável a compatibilidade entre o horário de oferta declarado, a quantidade de aulas semanais da matriz e a organização prática da semana letiva. Não exigir grade fixa com dias e componentes definitivos, mas exigir uma descrição mínima do modelo de distribuição, como quantidade de aulas diárias no turno regular, quantidade de contraturnos semanais, quantidade de aulas por contraturno e critério institucional para definição dos dias conforme disponibilidade docente e de espaços.",
+  "boa_evidencia": "Texto ou quadro que, além do horário geral de oferta e do subtotal de aulas semanais, descreve o arranjo semanal previsto, por exemplo: 5 aulas pela manhã em todos os dias letivos e 3 aulas em dois contraturnos, com dias definidos periodicamente conforme organização docente e disponibilidade de laboratórios/salas.",
+  "ma_evidencia": "O PPC informa apenas a janela de horário de funcionamento ou o turno/contraturno e apresenta subtotal de aulas semanais na matriz, mas não explica como essas aulas serão distribuídas ao longo da semana.",
+  "escalonar_quando": "Escalonar se a matriz indicar carga semanal que depende de contraturno, mas o PPC não demonstrar quantos contraturnos serão usados, quantas aulas ocorrerão em cada contraturno ou qual regra organizará essa distribuição.",
+  "evidencia_minima": 2,
+  "estados_permitidos": [
+    "ATENDE",
+    "NAO_ATENDE",
+    "INCONCLUSIVO",
+    "NAO_APLICAVEL"
+  ]
+}

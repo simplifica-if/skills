@@ -1,11 +1,11 @@
 {
   "base_analise_dir": "analise-ppc/base-analise",
-  "gerado_em": "2026-05-05T18:21:42+00:00",
+  "gerado_em": "2026-05-14T14:07:23+00:00",
   "resumo": {
-    "total_fichas": 69,
+    "total_fichas": 70,
     "total_validacoes_cruzadas": 27,
     "total_contratos": 3,
-    "total_itens": 99
+    "total_itens": 100
   },
   "itens": [
     {
@@ -318,6 +318,19 @@
         "Resolução CONSUP/IFPR 148/2023"
       ],
       "arquivo": "fichas/ct-curr-22.json"
+    },
+    {
+      "categoria": "ficha",
+      "id": "CT-CURR-23",
+      "titulo": "Distribuição semanal das aulas e contraturnos explicitada",
+      "dominio": "curriculo",
+      "criticidade": "OBRIG",
+      "secoes": [
+        "01",
+        "05"
+      ],
+      "referencias_normativas": [],
+      "arquivo": "fichas/ct-curr-23.json"
     },
     {
       "categoria": "ficha",
